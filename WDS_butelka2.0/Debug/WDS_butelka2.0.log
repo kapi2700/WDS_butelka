@@ -1,2 +1,9 @@
 ﻿  WDS_butelka2.0.cpp
+  obiekt3D.cpp
+C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\obiekt3D.cpp(111,39): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\obiekt3D.cpp(127,36): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\obiekt3D.cpp(141,37): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\obiekt3D.cpp(155,35): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  scena.cpp
+  Generating Code...
   WDS_butelka2.0.vcxproj -> C:\Users\kapi2\source\repos\WDS_butelka2.0\Debug\WDS_butelka2.0.exe

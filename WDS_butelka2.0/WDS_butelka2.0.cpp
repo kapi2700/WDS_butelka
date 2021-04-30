@@ -15,7 +15,7 @@ scena s;
 
 
 
-void initGL() {
+void initGL() {                           //initialize openGL
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f); // Set background color to black and opaque
     glClearDepth(1.0f);                   // Set background depth to farthest
     glEnable(GL_DEPTH_TEST);   // Enable depth testing for z-culling
@@ -26,7 +26,7 @@ void initGL() {
     glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);  // Nice perspective corrections
 }
 
-void display() {
+void display() {                //What to display
     int w[3];                   //Variable to store verticie data
     float radius = 5.0f;
     double time=(((double)glutGet(GLUT_ELAPSED_TIME))/500);

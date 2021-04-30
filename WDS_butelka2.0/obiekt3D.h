@@ -1,3 +1,12 @@
+/*****************************************************************//**
+ * \file   obiekt3D.h
+ * \brief   * Klasa obiektu 3D, pozwala na wyœwietlanie obiektów zapisanych w 
+ * formacie .obj, z³o¿onych z samych trójk¹tów.
+ * 
+ * \author Kacper Grabowski
+ * \date   April 2021
+ *********************************************************************/
+
 #pragma once
 #include <iostream>
 #include <fstream>
@@ -5,6 +14,10 @@
 
 using namespace std;
 
+/**
+ * Struktura pomocnicza pozwalaj¹ca na zapisywanie w niej parametrów
+ * plików w formacie .obj.
+ */
 typedef struct Model
 {
     int vertices;
@@ -27,7 +40,11 @@ public:
     float** normals;
     int** faces;
 
-
+    /**
+     * Inicjalizacja obiektu3D za pomoc¹ nazwy pliku.
+     * 
+     * \param nazwa nazwa pliku .obj
+     */
     obiekt3D(string nazwa);
 
     ~obiekt3D();

@@ -1,6 +1,7 @@
 #include "obiekt3D.h"
 
-obiekt3D::obiekt3D(string nazwa)
+
+obiekt3D::obiekt3D(string nazwa)            //initialize obiekt3D using file with "name".obj
 {
 	string filepathOBJ = nazwa + ".obj";
     ifstream inOBJ;
