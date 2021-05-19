@@ -24,12 +24,36 @@
     <ClCompile Include="scena.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="macierz_rot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wektor3D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="woda.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="kropla.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="obiekt3D.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="scena.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="macierz_rot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="wektor3D.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="woda.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="kropla.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

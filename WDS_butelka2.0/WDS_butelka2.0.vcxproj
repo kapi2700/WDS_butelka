@@ -142,13 +142,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="kropla.cpp" />
+    <ClCompile Include="macierz_rot.cpp" />
     <ClCompile Include="obiekt3D.cpp" />
     <ClCompile Include="scena.cpp" />
     <ClCompile Include="WDS_butelka2.0.cpp" />
+    <ClCompile Include="wektor3D.cpp" />
+    <ClCompile Include="woda.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="kropla.h" />
+    <ClInclude Include="macierz_rot.h" />
     <ClInclude Include="obiekt3D.h" />
     <ClInclude Include="scena.h" />
+    <ClInclude Include="wektor3D.h" />
+    <ClInclude Include="woda.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

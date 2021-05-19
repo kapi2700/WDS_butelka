@@ -1,6 +1,13 @@
-#include <string>
-#include <iostream>
-#include <fstream>
+/*****************************************************************//**
+ * \file   WDS_butelka2.0.cpp
+ * \brief  Program wyœwietlaj¹cy butelkê z wod¹
+ * 
+ * Zadaniem programu jest zczytywanie danych z sensorów znajduj¹cych siê
+ * w telefonie, i wyœwietlanie na ich podstawie butelki z wod¹.
+ * 
+ * \author kapi2
+ * \date   May 2021
+ *********************************************************************/
 #include <windows.h>  // for MS Windows
 #include <GL/glut.h>  // GLUT, include glu.h and gl.h
 
@@ -11,9 +18,36 @@ using namespace std;
 
 
 char title[] = "Butelka";
-scena s;
+scena s(500);
 
 
+GLfloat mat_specular[] = { 1.0, 1.0,1.0,1.0 };
+GLfloat mat_shininess[] = { 50.0 };
+GLfloat light_position[] = { 1.0,1.0,1.0,0.0 };
+
+int stopienObrotu = 0;
+float kat = 0;
+
+/**
+ * Funkcja obs³uguj¹ca klawiaturê.
+ * 
+ * \param key - wcisniety przycisk
+ */
+void keyboard(unsigned char key, int x, int y)
+{
+    switch (key)
+    {
+    case 'a':
+        kat += 0.1;
+        glutPostRedisplay();
+        break;
+
+    case 'd':
+        kat -= 0.1;
+        glutPostRedisplay();
+        break;
+    }
+}
 
 void initGL() {                           //initialize openGL
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f); // Set background color to black and opaque
@@ -27,17 +61,17 @@ void initGL() {                           //initialize openGL
 }
 
 void display() {                //What to display
-    int w[3];                   //Variable to store verticie data
     float radius = 5.0f;
-    double time=(((double)glutGet(GLUT_ELAPSED_TIME))/500);
+    double time=(((double)glutGet(GLUT_ELAPSED_TIME))/5000);
 
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // Clear color and depth buffers
     glMatrixMode(GL_MODELVIEW);     // To operate on model-view matrix
     glLoadIdentity();
 
-    gluLookAt(sin(time) * radius, 0, cos(time) * radius, 0, 0, 0, 0, 1, 0); //rotate camera around the objects
+    //gluLookAt(sin(time) * radius, 0, cos(time) * radius, 0, 0, 0, 0, 1, 0); //rotate camera around the objects
+    gluLookAt(sin(kat) * radius, 0, cos(kat) * radius, 0, 0, 0, 0, 1, 0); //rucha kamera za pomoca a i d
 
-
+    /*
     glBegin(GL_QUADS);                // Begin drawing square
 
     glColor3f(1.0f, 0.0f, 0.0f);     // Red
@@ -47,29 +81,41 @@ void display() {                //What to display
     glVertex3f(1.0f, -1.0f, 1.0f);
 
     glEnd();
+    */
+    
 
+    //s.w.rysuj();
     
     
     glBegin(GL_TRIANGLES);            //Begin drawing the bottle as traingles
-    
-    glColor4f(0.4335f, 0.8476f, 1.0f, 0.5f);
     for (unsigned int i = 0; i < s.ob.size(); i++)
     {
-        for (int j = 0; j < s.ob[i].model.faces; j++)
-        {
-            w[0] = s.ob[i].faces[j][0]-1;
-            w[1] = s.ob[i].faces[j][3]-1;
-            w[2] = s.ob[i].faces[j][6]-1;
-            for (unsigned int k = 0; k < 3; k++)
-            {
-                glVertex3f(s.ob[i].positions[w[k]][0], s.ob[i].positions[w[k]][1], s.ob[i].positions[w[k]][2]);
-            }
-        }
+        s.ob[i].rysuj();
     }
-    
     glEnd();   // Done drawing the bottle
 
+    //if (stopienObrotu > 2)
+    //{
+        for (unsigned int i = 0; i < s.ob.size(); i++)
+        {
+            s.ob[i].nowyObrot();
+        }
+        //stopienObrotu = 0;
+    //}
+
+    /*
+    for (unsigned int i = 0; i < s.ob.size(); i++)
+    {
+        s.ob[i].stopniuj(stopienObrotu);
+        stopienObrotu++;
+    }
+    */
     
+    
+
+
+
+
     
     glutSwapBuffers();  // Swap the front and back frame buffers (double buffering)
     glutPostRedisplay();
@@ -94,8 +140,11 @@ void reshape(GLsizei width, GLsizei height) {  // GLsizei for non-negative integ
 
 int main(int argc, char** argv)
 {
-    obiekt3D butelka("butelka");
+    
+    obiekt3D butelka("butelka", 0.4335f, 0.8476f, 1.0f, 0.5f);
     s.ob.push_back(butelka);
+
+
 
     glutInit(&argc, argv);            // Initialize GLUT
     glutInitDisplayMode(GLUT_DOUBLE); // Enable double buffered mode
@@ -104,6 +153,7 @@ int main(int argc, char** argv)
     glutCreateWindow(title);          // Create window with the given title
     glutDisplayFunc(display);       // Register callback handler for window re-paint event
     glutReshapeFunc(reshape);       // Register callback handler for window re-size event
+    glutKeyboardFunc(keyboard);
     initGL();                       // Our own OpenGL initialization
     glutMainLoop();                 // Enter the infinite event-processing loop
 

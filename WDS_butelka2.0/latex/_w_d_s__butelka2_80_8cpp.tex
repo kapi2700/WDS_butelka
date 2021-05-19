@@ -1,0 +1,139 @@
+\hypertarget{_w_d_s__butelka2_80_8cpp}{}\doxysection{Dokumentacja pliku WDS\+\_\+butelka2.0.cpp}
+\label{_w_d_s__butelka2_80_8cpp}\index{WDS\_butelka2.0.cpp@{WDS\_butelka2.0.cpp}}
+
+
+Program wyświetlający butelkę z wodą  
+
+
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$GL/glut.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}obiekt3\+D.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}scena.\+h\char`\"{}}\newline
+\doxysubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_w_d_s__butelka2_80_8cpp_aef7ba2f69afb2d954545f64c7fe24b14}{keyboard}} (unsigned char key, int x, int y)
+\item 
+void \mbox{\hyperlink{_w_d_s__butelka2_80_8cpp_a12791d9e49a2fd3306290a226864aba4}{init\+GL}} ()
+\item 
+void \mbox{\hyperlink{_w_d_s__butelka2_80_8cpp_a1e5b20fed15743656bb6d2e6a6ea6269}{display}} ()
+\item 
+void \mbox{\hyperlink{_w_d_s__butelka2_80_8cpp_a0447aef09d3c4464e6f8d81340f3a4b0}{reshape}} (GLsizei width, GLsizei height)
+\item 
+int \mbox{\hyperlink{_w_d_s__butelka2_80_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\doxysubsection*{Zmienne}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{_w_d_s__butelka2_80_8cpp_a58a6b319a4aba2259f60972473a2018d}{title}} \mbox{[}$\,$\mbox{]} = \char`\"{}Butelka\char`\"{}
+\item 
+\mbox{\hyperlink{classscena}{scena}} \mbox{\hyperlink{_w_d_s__butelka2_80_8cpp_a0db3474bdd8edb293feda413b4a1a9b9}{s}} (500)
+\item 
+GLfloat \mbox{\hyperlink{_w_d_s__butelka2_80_8cpp_a519f0f0bcbeb85e0ddcc911b92fcff1b}{mat\+\_\+specular}} \mbox{[}$\,$\mbox{]} = \{ 1.\+0, 1.\+0,1.\+0,1.\+0 \}
+\item 
+GLfloat \mbox{\hyperlink{_w_d_s__butelka2_80_8cpp_adfc8820858e84f99762a3f27350fc384}{mat\+\_\+shininess}} \mbox{[}$\,$\mbox{]} = \{ 50.\+0 \}
+\item 
+GLfloat \mbox{\hyperlink{_w_d_s__butelka2_80_8cpp_a9150217d8e8a347844efee8624dd5ee4}{light\+\_\+position}} \mbox{[}$\,$\mbox{]} = \{ 1.\+0,1.\+0,1.\+0,0.\+0 \}
+\item 
+int \mbox{\hyperlink{_w_d_s__butelka2_80_8cpp_ae57cfb921bbbb45aecf61c795051d070}{stopien\+Obrotu}} = 0
+\item 
+float \mbox{\hyperlink{_w_d_s__butelka2_80_8cpp_afd539d1a13ae0f676020ce114bceb904}{kat}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Program wyświetlający butelkę z wodą 
+
+Zadaniem programu jest zczytywanie danych z sensorów znajdujących się w telefonie, i wyświetlanie na ich podstawie butelki z wodą.
+
+\begin{DoxyAuthor}{Autor}
+kapi2 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Data}
+May 2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Dokumentacja funkcji}
+\mbox{\Hypertarget{_w_d_s__butelka2_80_8cpp_a1e5b20fed15743656bb6d2e6a6ea6269}\label{_w_d_s__butelka2_80_8cpp_a1e5b20fed15743656bb6d2e6a6ea6269}} 
+\index{WDS\_butelka2.0.cpp@{WDS\_butelka2.0.cpp}!display@{display}}
+\index{display@{display}!WDS\_butelka2.0.cpp@{WDS\_butelka2.0.cpp}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily void display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_w_d_s__butelka2_80_8cpp_a12791d9e49a2fd3306290a226864aba4}\label{_w_d_s__butelka2_80_8cpp_a12791d9e49a2fd3306290a226864aba4}} 
+\index{WDS\_butelka2.0.cpp@{WDS\_butelka2.0.cpp}!initGL@{initGL}}
+\index{initGL@{initGL}!WDS\_butelka2.0.cpp@{WDS\_butelka2.0.cpp}}
+\doxysubsubsection{\texorpdfstring{initGL()}{initGL()}}
+{\footnotesize\ttfamily void init\+GL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_w_d_s__butelka2_80_8cpp_aef7ba2f69afb2d954545f64c7fe24b14}\label{_w_d_s__butelka2_80_8cpp_aef7ba2f69afb2d954545f64c7fe24b14}} 
+\index{WDS\_butelka2.0.cpp@{WDS\_butelka2.0.cpp}!keyboard@{keyboard}}
+\index{keyboard@{keyboard}!WDS\_butelka2.0.cpp@{WDS\_butelka2.0.cpp}}
+\doxysubsubsection{\texorpdfstring{keyboard()}{keyboard()}}
+{\footnotesize\ttfamily void keyboard (\begin{DoxyParamCaption}\item[{unsigned char}]{key,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+Funkcja obsługująca klawiaturę.
+
+
+\begin{DoxyParams}{Parametry}
+{\em key} & -\/ wcisniety przycisk \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_w_d_s__butelka2_80_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{_w_d_s__butelka2_80_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{WDS\_butelka2.0.cpp@{WDS\_butelka2.0.cpp}!main@{main}}
+\index{main@{main}!WDS\_butelka2.0.cpp@{WDS\_butelka2.0.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_w_d_s__butelka2_80_8cpp_a0447aef09d3c4464e6f8d81340f3a4b0}\label{_w_d_s__butelka2_80_8cpp_a0447aef09d3c4464e6f8d81340f3a4b0}} 
+\index{WDS\_butelka2.0.cpp@{WDS\_butelka2.0.cpp}!reshape@{reshape}}
+\index{reshape@{reshape}!WDS\_butelka2.0.cpp@{WDS\_butelka2.0.cpp}}
+\doxysubsubsection{\texorpdfstring{reshape()}{reshape()}}
+{\footnotesize\ttfamily void reshape (\begin{DoxyParamCaption}\item[{GLsizei}]{width,  }\item[{GLsizei}]{height }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Dokumentacja zmiennych}
+\mbox{\Hypertarget{_w_d_s__butelka2_80_8cpp_afd539d1a13ae0f676020ce114bceb904}\label{_w_d_s__butelka2_80_8cpp_afd539d1a13ae0f676020ce114bceb904}} 
+\index{WDS\_butelka2.0.cpp@{WDS\_butelka2.0.cpp}!kat@{kat}}
+\index{kat@{kat}!WDS\_butelka2.0.cpp@{WDS\_butelka2.0.cpp}}
+\doxysubsubsection{\texorpdfstring{kat}{kat}}
+{\footnotesize\ttfamily float kat = 0}
+
+\mbox{\Hypertarget{_w_d_s__butelka2_80_8cpp_a9150217d8e8a347844efee8624dd5ee4}\label{_w_d_s__butelka2_80_8cpp_a9150217d8e8a347844efee8624dd5ee4}} 
+\index{WDS\_butelka2.0.cpp@{WDS\_butelka2.0.cpp}!light\_position@{light\_position}}
+\index{light\_position@{light\_position}!WDS\_butelka2.0.cpp@{WDS\_butelka2.0.cpp}}
+\doxysubsubsection{\texorpdfstring{light\_position}{light\_position}}
+{\footnotesize\ttfamily GLfloat light\+\_\+position\mbox{[}$\,$\mbox{]} = \{ 1.\+0,1.\+0,1.\+0,0.\+0 \}}
+
+\mbox{\Hypertarget{_w_d_s__butelka2_80_8cpp_adfc8820858e84f99762a3f27350fc384}\label{_w_d_s__butelka2_80_8cpp_adfc8820858e84f99762a3f27350fc384}} 
+\index{WDS\_butelka2.0.cpp@{WDS\_butelka2.0.cpp}!mat\_shininess@{mat\_shininess}}
+\index{mat\_shininess@{mat\_shininess}!WDS\_butelka2.0.cpp@{WDS\_butelka2.0.cpp}}
+\doxysubsubsection{\texorpdfstring{mat\_shininess}{mat\_shininess}}
+{\footnotesize\ttfamily GLfloat mat\+\_\+shininess\mbox{[}$\,$\mbox{]} = \{ 50.\+0 \}}
+
+\mbox{\Hypertarget{_w_d_s__butelka2_80_8cpp_a519f0f0bcbeb85e0ddcc911b92fcff1b}\label{_w_d_s__butelka2_80_8cpp_a519f0f0bcbeb85e0ddcc911b92fcff1b}} 
+\index{WDS\_butelka2.0.cpp@{WDS\_butelka2.0.cpp}!mat\_specular@{mat\_specular}}
+\index{mat\_specular@{mat\_specular}!WDS\_butelka2.0.cpp@{WDS\_butelka2.0.cpp}}
+\doxysubsubsection{\texorpdfstring{mat\_specular}{mat\_specular}}
+{\footnotesize\ttfamily GLfloat mat\+\_\+specular\mbox{[}$\,$\mbox{]} = \{ 1.\+0, 1.\+0,1.\+0,1.\+0 \}}
+
+\mbox{\Hypertarget{_w_d_s__butelka2_80_8cpp_a0db3474bdd8edb293feda413b4a1a9b9}\label{_w_d_s__butelka2_80_8cpp_a0db3474bdd8edb293feda413b4a1a9b9}} 
+\index{WDS\_butelka2.0.cpp@{WDS\_butelka2.0.cpp}!s@{s}}
+\index{s@{s}!WDS\_butelka2.0.cpp@{WDS\_butelka2.0.cpp}}
+\doxysubsubsection{\texorpdfstring{s}{s}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classscena}{scena}} s(500) (\begin{DoxyParamCaption}\item[{500}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_w_d_s__butelka2_80_8cpp_ae57cfb921bbbb45aecf61c795051d070}\label{_w_d_s__butelka2_80_8cpp_ae57cfb921bbbb45aecf61c795051d070}} 
+\index{WDS\_butelka2.0.cpp@{WDS\_butelka2.0.cpp}!stopienObrotu@{stopienObrotu}}
+\index{stopienObrotu@{stopienObrotu}!WDS\_butelka2.0.cpp@{WDS\_butelka2.0.cpp}}
+\doxysubsubsection{\texorpdfstring{stopienObrotu}{stopienObrotu}}
+{\footnotesize\ttfamily int stopien\+Obrotu = 0}
+
+\mbox{\Hypertarget{_w_d_s__butelka2_80_8cpp_a58a6b319a4aba2259f60972473a2018d}\label{_w_d_s__butelka2_80_8cpp_a58a6b319a4aba2259f60972473a2018d}} 
+\index{WDS\_butelka2.0.cpp@{WDS\_butelka2.0.cpp}!title@{title}}
+\index{title@{title}!WDS\_butelka2.0.cpp@{WDS\_butelka2.0.cpp}}
+\doxysubsubsection{\texorpdfstring{title}{title}}
+{\footnotesize\ttfamily char title\mbox{[}$\,$\mbox{]} = \char`\"{}Butelka\char`\"{}}
+
