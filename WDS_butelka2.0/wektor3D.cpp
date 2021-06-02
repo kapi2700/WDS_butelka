@@ -18,12 +18,22 @@ void wektor3D::mnozenie(macierz_rot m)
 	}
 }
 
+
 wektor3D::wektor3D()
 {
 	for (int i = 0; i < 3; i++)
 	{
 		p[i] = 0;
 	}
+}
+
+float wektor3D::odlegloscY()
+{
+	float ret;
+
+	ret = (float)(sqrt(((double)p[0] * p[0] + (double)p[2] * p[2])));
+
+	return ret;
 }
 
 

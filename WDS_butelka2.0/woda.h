@@ -15,10 +15,25 @@
 
 using namespace std;
 
+/**
+ * Klasa zawierajaca krople wody.
+ */
+
 class woda
 {
+	/**
+	 * Zmienne przechowywujace kat obrotu wody.
+	 */
+	float kx, ky, kz;
 public:
+	/**
+	 * Zmienna przechowywujaca kazda krople wody.
+	 */
 	vector<kropla> k;
+	/**
+	 * Ilosc kropli wody.
+	 */
+	int l;
 	woda() {}
 	/**
 	 * Inicjuje krople wody.
@@ -31,5 +46,20 @@ public:
 	 * 
 	 */
 	void rysuj();
+	/**
+	 * Obraca woda wzgledem 0,0,0.
+	 * 
+	 * Wykorzystywane do obracania wody, podczas obracania butelki
+	 * 
+	 * \param x - kat w osi x
+	 * \param y - kat w osi y
+	 * \param z - kat w osi z
+	 */
+	void obroc(float x, float y, float z);
+	/**
+	 * Grawitacja dzialajaca na wode.
+	 * 
+	 */
+	void grawitacja();
 };
 

@@ -14,11 +14,12 @@
 #include "obiekt3D.h"
 #include "scena.h"
 
+
 using namespace std;
 
 
 char title[] = "Butelka";
-scena s(500);
+static scena s(10);
 
 
 GLfloat mat_specular[] = { 1.0, 1.0,1.0,1.0 };
@@ -62,7 +63,7 @@ void initGL() {                           //initialize openGL
 
 void display() {                //What to display
     float radius = 5.0f;
-    double time=(((double)glutGet(GLUT_ELAPSED_TIME))/5000);
+    double time = (((double)glutGet(GLUT_ELAPSED_TIME)) / 5000);
 
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // Clear color and depth buffers
     glMatrixMode(GL_MODELVIEW);     // To operate on model-view matrix
@@ -71,52 +72,22 @@ void display() {                //What to display
     //gluLookAt(sin(time) * radius, 0, cos(time) * radius, 0, 0, 0, 0, 1, 0); //rotate camera around the objects
     gluLookAt(sin(kat) * radius, 0, cos(kat) * radius, 0, 0, 0, 0, 1, 0); //rucha kamera za pomoca a i d
 
+    s.rysuj();
+
     /*
-    glBegin(GL_QUADS);                // Begin drawing square
-
-    glColor3f(1.0f, 0.0f, 0.0f);     // Red
-    glVertex3f(1.0f, 1.0f, 1.0f);
-    glVertex3f(-1.0f, 1.0f, 1.0f);
-    glVertex3f(-1.0f, -1.0f, 1.0f);
-    glVertex3f(1.0f, -1.0f, 1.0f);
-
-    glEnd();
-    */
-    
-
-    //s.w.rysuj();
-    
-    
+    s.w.rysuj();
     glBegin(GL_TRIANGLES);            //Begin drawing the bottle as traingles
     for (unsigned int i = 0; i < s.ob.size(); i++)
     {
         s.ob[i].rysuj();
     }
-    glEnd();   // Done drawing the bottle
-
-    //if (stopienObrotu > 2)
-    //{
-        for (unsigned int i = 0; i < s.ob.size(); i++)
-        {
-            s.ob[i].nowyObrot();
-        }
-        //stopienObrotu = 0;
-    //}
-
-    /*
-    for (unsigned int i = 0; i < s.ob.size(); i++)
-    {
-        s.ob[i].stopniuj(stopienObrotu);
-        stopienObrotu++;
-    }
+    glEnd();
     */
-    
-    
 
+    s.obrot();
 
+    s.w.grawitacja();
 
-
-    
     glutSwapBuffers();  // Swap the front and back frame buffers (double buffering)
     glutPostRedisplay();
 }
@@ -143,7 +114,6 @@ int main(int argc, char** argv)
     
     obiekt3D butelka("butelka", 0.4335f, 0.8476f, 1.0f, 0.5f);
     s.ob.push_back(butelka);
-
 
 
     glutInit(&argc, argv);            // Initialize GLUT

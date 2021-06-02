@@ -1,4 +1,7 @@
-﻿  WDS_butelka2.0.cpp
-C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\WDS_butelka2.0.cpp(26,19): warning C4305: '+=': truncation from 'double' to 'float'
-C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\WDS_butelka2.0.cpp(31,19): warning C4305: '-=': truncation from 'double' to 'float'
+﻿  scena.cpp
+C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\scena.cpp(86,27): warning C4018: '<': signed/unsigned mismatch
+  wektor3D.cpp
+  woda.cpp
+C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\woda.cpp(46,19): warning C4305: '=': truncation from 'double' to 'float'
+  Generating Code...
   WDS_butelka2.0.vcxproj -> C:\Users\kapi2\source\repos\WDS_butelka2.0\Debug\WDS_butelka2.0.exe

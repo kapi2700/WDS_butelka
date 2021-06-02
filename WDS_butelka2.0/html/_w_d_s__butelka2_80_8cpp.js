@@ -9,7 +9,6 @@ var _w_d_s__butelka2_80_8cpp =
     [ "light_position", "_w_d_s__butelka2_80_8cpp.html#a9150217d8e8a347844efee8624dd5ee4", null ],
     [ "mat_shininess", "_w_d_s__butelka2_80_8cpp.html#adfc8820858e84f99762a3f27350fc384", null ],
     [ "mat_specular", "_w_d_s__butelka2_80_8cpp.html#a519f0f0bcbeb85e0ddcc911b92fcff1b", null ],
-    [ "s", "_w_d_s__butelka2_80_8cpp.html#a0db3474bdd8edb293feda413b4a1a9b9", null ],
     [ "stopienObrotu", "_w_d_s__butelka2_80_8cpp.html#ae57cfb921bbbb45aecf61c795051d070", null ],
     [ "title", "_w_d_s__butelka2_80_8cpp.html#a58a6b319a4aba2259f60972473a2018d", null ]
 ];

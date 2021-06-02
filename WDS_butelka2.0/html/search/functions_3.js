@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['macierz_5frot_81',['macierz_rot',['../classmacierz__rot.html#aaccb10f0f05bcd18a7e1a0b71a83b7ec',1,'macierz_rot']]],
-  ['main_82',['main',['../_w_d_s__butelka2_80_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'WDS_butelka2.0.cpp']]],
-  ['mnozenie_83',['mnozenie',['../classwektor3_d.html#afc98fdfa34a557eb1f681bcd2e2b3ce3',1,'wektor3D']]]
+  ['keyboard_92',['keyboard',['../_w_d_s__butelka2_80_8cpp.html#aef7ba2f69afb2d954545f64c7fe24b14',1,'WDS_butelka2.0.cpp']]],
+  ['kolizja_93',['kolizja',['../classkropla.html#af831f38beb7eb2a72db34f4d5b51a4ce',1,'kropla::kolizja(wektor3D ruch, kropla a)'],['../classkropla.html#a180465469c3069fc6f79eb07c36429d7',1,'kropla::kolizja(wektor3D ruch)']]],
+  ['kropla_94',['kropla',['../classkropla.html#ab2f70331611766b7a9eb733663a53a47',1,'kropla']]]
 ];

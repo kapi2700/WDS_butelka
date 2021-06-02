@@ -23,11 +23,12 @@
 
 using namespace std;
 
-#define PI 3.14159265
-
-
 static bool polaczenie = false;
 
+
+/**
+ * Struktura wykorzystywana podczas zczytywania danych z pliku .obj.
+ */
 typedef struct Model
 {
     int vertices;
@@ -39,26 +40,63 @@ typedef struct Model
 Model;
 
 
-
+/**
+ * Klasa obiektow zczytywanych z plikow .obj.
+ */
 class obiekt3D
 {
 public:
+    /**
+     * Struktura wykorzystywana podczas zczytywania danych z pliku .obj.
+     */
     Model model;
 
+    /**
+     * Aktualne pozycje wszystkich wierzcho³ków trójk¹tów.
+     */
     wektor3D* positions;
+    /**
+     * Pozycje pocz¹tkowe wszystkich wieszcho³ków trójk¹tów.
+     */
     wektor3D* positionsStart;
+
+    /**
+     * Zmiena wykorzytywana do zbierania danych z pliku .obj.
+     */
     float** texels;
+    /**
+     * Zmiena wykorzytywana do zbierania danych z pliku .obj.
+     */
     float** normals;
+    /**
+     * Zmiena wykorzytywana do zbierania danych z pliku .obj.
+     */
     int** faces;
 
+    
+    /**
+     * Kolor obiektu, RGB.
+     */
     float color[3];
+    /**
+     * Przezroczystoœæ obiektu.
+     */
     float alpha;
 
+    /**
+     * Ostatni k¹t obrotu w osi x.
+     */
     float ostatnikx;
+    /**
+     * Ostatni k¹t obrotu w osi y.
+     */
     float ostatniky;
 
-    float kx[3];
-    float ky[3];
+    ///**
+    // * .
+    // */
+    //float kx[3];
+    //float ky[3];
 
     /**
      * Inicjalizacja obiektu3D za pomoc¹ nazwy pliku.
@@ -68,32 +106,19 @@ public:
     obiekt3D(string nazwa, float r, float g, float b, float a);
 
     ~obiekt3D();
-    /**
-     * Obraca macierz na podstawie danych przekazywanych przez sensory w telefonie.
-     */
-    void nowyObrot();
 
     /**
      * Obraca obiekt, o dane k¹ty, wzglêdem pozycji pocz¹tkowej.
      * 
      * \param x k¹t obrotu w osi x
      * \param y k¹t obrotu w osi y
+     * \param z k¹t obrotu w osi z
      */
-    void obroc(float x, float y);
+    void obroc(float x, float y, float z);
 
     /**
      * Rysuje obiekt3D, nale¿y umieœciæ pomiêdzy glBegin(GL_TRIANGLES); oraz glEnd();.
      */
     void rysuj();
-
-    /**
-     * Obraca obiekt, wykonywana po wczesniejszejj funkcji nowyObrot, inicjalizujacej kx oraz ky
-     * odpowiednimi k¹tami. Zaimplementowane w celu zmniejszenia skokowosci obrotów.
-     * 
-     * Funkcja nie wykorzystywana.
-     * 
-     * \param stopien od 0 do 2, ile razy zostal juz wykonany dany obrot.
-     */
-    void stopniuj(int stopien);
 };
 

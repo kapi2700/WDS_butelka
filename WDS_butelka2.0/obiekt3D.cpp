@@ -198,20 +198,25 @@ obiekt3D::~obiekt3D()
     delete[](faces);
 }
 
-void obiekt3D::obroc(float x, float y)
+void obiekt3D::obroc(float x, float y, float z)
 {
     x = x * (float)PI / 180.0f;
     y = y * (float)PI / 180.0f;
+    z = z * (float)PI / 180.0f;
 
     macierz_rot macx(x, 'x');
     macierz_rot macy(y, 'y');
+    macierz_rot macz(z, 'z');
     
 
     for (int i = 0; i < model.positions; i++)
     {
         positions[i] = positionsStart[i];
+        //positions[i].mnozenie(macz);
         positions[i].mnozenie(macx);
         positions[i].mnozenie(macy);
+        
+       
     }
 }
 
@@ -232,103 +237,28 @@ void obiekt3D::rysuj()
     }
 }
 
-void obiekt3D::nowyObrot()
+wektor3D operator + (wektor3D a, wektor3D b)
 {
-    ifstream plikDane("Node/orientation.txt");
-    string line;
-    string vars[3];
-    int iloscDanych = 0;
-    float* x = new float[10];
-    float* y = new float[10];
-    float obrx, obry;
-    int whichVar = 0;
-    float tmpx = 0, tmpy = 0;
-
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < 3; i++)
     {
-        x[i] = 0;
-        y[i] = 0;
+        a.p[i] = a.p[i] + b.p[i];
     }
-
-    iloscDanych = 0;
-    while (getline(plikDane, line)&&(iloscDanych<9))
-    {
-        whichVar = 0;
-        if (line != "")
-        {
-            for (unsigned int i = 0; i < line.size(); i++)      //Podzia³ stringa na 3
-            {
-                if (line[i] != ',')
-                {
-                    vars[whichVar] += line[i];
-                }
-                else
-                {
-                    whichVar++;
-                }
-
-            }
-
-
-            x[iloscDanych] = stof(vars[1]);
-            y[iloscDanych] = -stof(vars[0]);
-            //z = stof(vars[2]);
-            iloscDanych++;
-
-
-
-            polaczenie = true;
-
-        }
-    }
-    if (iloscDanych == 0)
-    {
-        polaczenie = false;
-    }
-
-    plikDane.close();
-
-    plikDane.open("Node/orientation.txt", std::ofstream::out | std::ofstream::trunc); //wyczyszczenie pliku
-    plikDane.close();
-
-
-    if (polaczenie)
-    {
-        obrx = 0;
-        obry = 0;
-        for (int i = 0; i < iloscDanych; i++)
-        {
-            obrx += x[i];
-            obry += y[i];
-        }
-
-        obrx = obrx / iloscDanych;
-        obry = obry / iloscDanych;
-
-        obroc(obrx + 90.0f, obry);
-        /*
-        tmpx = ((ostatnikx - obrx) / 3);
-        tmpy = ((ostatniky - obry) / 3);
-
-        for (int i = 1; i <= 3; i++)
-        {
-            kx[i-1] = (ostatnikx + tmpx * i);
-            ky[i-1] = (ostatniky + tmpy * i);
-        }
-
-        ostatnikx = obrx;
-        ostatniky = obry;
-        */
-
-    }
-
-
-
-    delete[](x);
-    delete[](y);
+    return a;
 }
 
-void obiekt3D::stopniuj(int stopien)
+wektor3D operator - (wektor3D a, wektor3D b)
 {
-    obroc(kx[stopien] - 90.0f, -ky[stopien]);
+    for (int i = 0; i < 3; i++)
+    {
+        a.p[i] = a.p[i] - b.p[i];
+    }
+    return a;
+}
+
+bool operator==(wektor3D a, wektor3D b)
+{
+    for (int i = 0; i < 3; i++)
+        if (a.p[i] != b.p[i])
+            return false;
+    return true;
 }

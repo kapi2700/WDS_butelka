@@ -12,13 +12,22 @@
 \mbox{\hyperlink{classwoda_a32c6585c84442f165930aeea00cc5f3b}{woda}} (int n)
 \item 
 void \mbox{\hyperlink{classwoda_a1e880357af1561afcd9f4497ab82b140}{rysuj}} ()
+\item 
+void \mbox{\hyperlink{classwoda_ac58770e4d137a3867e76a5dbf2ec346e}{obroc}} (float x, float y, float z)
+\item 
+void \mbox{\hyperlink{classwoda_abfd7503dc26fdf1b22a45d098056fde8}{grawitacja}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Atrybuty publiczne}
 \begin{DoxyCompactItemize}
 \item 
 vector$<$ \mbox{\hyperlink{classkropla}{kropla}} $>$ \mbox{\hyperlink{classwoda_a65fde90da81632683e94025719288bb5}{k}}
+\item 
+int \mbox{\hyperlink{classwoda_a6956521cc9d782c218e9633872de546e}{l}}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Opis szczegółowy}
+Klasa zawierajaca krople wody. 
 
 \doxysubsection{Dokumentacja konstruktora i destruktora}
 \mbox{\Hypertarget{classwoda_a4bfece140550117f312aab46ef77ca4e}\label{classwoda_a4bfece140550117f312aab46ef77ca4e}} 
@@ -43,6 +52,31 @@ Inicjuje krople wody.
 
 
 \doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{classwoda_abfd7503dc26fdf1b22a45d098056fde8}\label{classwoda_abfd7503dc26fdf1b22a45d098056fde8}} 
+\index{woda@{woda}!grawitacja@{grawitacja}}
+\index{grawitacja@{grawitacja}!woda@{woda}}
+\doxysubsubsection{\texorpdfstring{grawitacja()}{grawitacja()}}
+{\footnotesize\ttfamily void woda\+::grawitacja (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Grawitacja dzialajaca na wode. \mbox{\Hypertarget{classwoda_ac58770e4d137a3867e76a5dbf2ec346e}\label{classwoda_ac58770e4d137a3867e76a5dbf2ec346e}} 
+\index{woda@{woda}!obroc@{obroc}}
+\index{obroc@{obroc}!woda@{woda}}
+\doxysubsubsection{\texorpdfstring{obroc()}{obroc()}}
+{\footnotesize\ttfamily void woda\+::obroc (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{z }\end{DoxyParamCaption})}
+
+Obraca woda wzgledem 0,0,0.
+
+Wykorzystywane do obracania wody, podczas obracania butelki
+
+
+\begin{DoxyParams}{Parametry}
+{\em x} & -\/ kat w osi x \\
+\hline
+{\em y} & -\/ kat w osi y \\
+\hline
+{\em z} & -\/ kat w osi z \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classwoda_a1e880357af1561afcd9f4497ab82b140}\label{classwoda_a1e880357af1561afcd9f4497ab82b140}} 
 \index{woda@{woda}!rysuj@{rysuj}}
 \index{rysuj@{rysuj}!woda@{woda}}
@@ -58,7 +92,13 @@ Rysuje wszystkie krople składające się na wodę.
 \doxysubsubsection{\texorpdfstring{k}{k}}
 {\footnotesize\ttfamily vector$<$\mbox{\hyperlink{classkropla}{kropla}}$>$ woda\+::k}
 
+Zmienna przechowywujaca kazda krople wody. \mbox{\Hypertarget{classwoda_a6956521cc9d782c218e9633872de546e}\label{classwoda_a6956521cc9d782c218e9633872de546e}} 
+\index{woda@{woda}!l@{l}}
+\index{l@{l}!woda@{woda}}
+\doxysubsubsection{\texorpdfstring{l}{l}}
+{\footnotesize\ttfamily int woda\+::l}
 
+Ilosc kropli wody. 
 
 Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
 \item 

@@ -1,9 +1,7 @@
 var searchData=
 [
-  ['s_39',['s',['../_w_d_s__butelka2_80_8cpp.html#a0db3474bdd8edb293feda413b4a1a9b9',1,'WDS_butelka2.0.cpp']]],
-  ['scena_40',['scena',['../classscena.html',1,'scena'],['../classscena.html#a77d185d535469329187248af744d1a79',1,'scena::scena()']]],
-  ['scena_2ecpp_41',['scena.cpp',['../scena_8cpp.html',1,'']]],
-  ['scena_2eh_42',['scena.h',['../scena_8h.html',1,'']]],
-  ['stopienobrotu_43',['stopienObrotu',['../_w_d_s__butelka2_80_8cpp.html#ae57cfb921bbbb45aecf61c795051d070',1,'WDS_butelka2.0.cpp']]],
-  ['stopniuj_44',['stopniuj',['../classobiekt3_d.html#a365ea9cb7288492ab7d7e9afa1237da1',1,'obiekt3D']]]
+  ['r_46',['r',['../classkropla.html#a574a1e7dcb1999173115cdeb1edae837',1,'kropla']]],
+  ['reshape_47',['reshape',['../_w_d_s__butelka2_80_8cpp.html#a0447aef09d3c4464e6f8d81340f3a4b0',1,'WDS_butelka2.0.cpp']]],
+  ['ruch_48',['ruch',['../classkropla.html#ac47c98278213d8bc14891da7c142c8e7',1,'kropla']]],
+  ['rysuj_49',['rysuj',['../classkropla.html#a82e8ecd74ec1926cdcef78a8cffa4bc8',1,'kropla::rysuj()'],['../classobiekt3_d.html#a33f368c6946f9c1a11d2d111a152743b',1,'obiekt3D::rysuj()'],['../classscena.html#acbeaad76c7ea16ae2ae839d08e9051b8',1,'scena::rysuj()'],['../classwoda.html#a1e880357af1561afcd9f4497ab82b140',1,'woda::rysuj()']]]
 ];

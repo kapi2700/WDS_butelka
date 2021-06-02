@@ -13,6 +13,9 @@
 class wektor3D
 {
 public:
+	/**
+	 * Wspó³rzêdne 3D.
+	 */
 	float p[3];
 	/**
 	 * Mno¿y wektor przez macierz rotacji 3x3.
@@ -21,5 +24,24 @@ public:
 	 */
 	void mnozenie(macierz_rot m);
 	wektor3D();
+
+	/**
+	 * Odleg³oœæ punktu od osi Y.
+	 * 
+	 * \return - odleglosc od osi Y
+	 */
+	float odlegloscY();
 };
 
+/**
+ * Dodawanie wektorow.
+ */
+wektor3D operator + (wektor3D a, wektor3D b);
+/**
+ * Odejmowanie wektorow.
+ */
+wektor3D operator - (wektor3D a, wektor3D b);
+/**
+ * Porównywanie wektorów.
+ */
+bool operator == (wektor3D a, wektor3D b);

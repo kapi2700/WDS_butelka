@@ -8,6 +8,8 @@
 #pragma once
 #include <math.h>
 
+#define PI 3.14159265
+
 
 /**
  * Klasa macierz rotacji.
@@ -15,6 +17,9 @@
 class macierz_rot
 {
 public:
+	/**
+	 * Wartoœci macierzy.
+	 */
 	float p[3][3];
 
 	/**

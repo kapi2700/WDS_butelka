@@ -10,8 +10,40 @@
 void \mbox{\hyperlink{classkropla_a82e8ecd74ec1926cdcef78a8cffa4bc8}{rysuj}} ()
 \item 
 \mbox{\hyperlink{classkropla_ab2f70331611766b7a9eb733663a53a47}{kropla}} ()
+\item 
+\mbox{\hyperlink{classkropla_a41d1803ec3673f980768562ac704f110}{$\sim$kropla}} ()
+\item 
+void \mbox{\hyperlink{classkropla_a1f922a1406ddcedb9ad21675bf155f80}{obroc}} (float x, float y, float z)
+\item 
+float \mbox{\hyperlink{classkropla_af7ddee788b65ad4155f2f5032c39f9eb}{odleglosc}} (\mbox{\hyperlink{classwektor3_d}{wektor3D}} start)
+\item 
+bool \mbox{\hyperlink{classkropla_af831f38beb7eb2a72db34f4d5b51a4ce}{kolizja}} (\mbox{\hyperlink{classwektor3_d}{wektor3D}} \mbox{\hyperlink{classkropla_ac47c98278213d8bc14891da7c142c8e7}{ruch}}, \mbox{\hyperlink{classkropla}{kropla}} a)
+\item 
+void \mbox{\hyperlink{classkropla_ac47c98278213d8bc14891da7c142c8e7}{ruch}} (\mbox{\hyperlink{classwektor3_d}{wektor3D}} wek)
+\item 
+bool \mbox{\hyperlink{classkropla_a180465469c3069fc6f79eb07c36429d7}{kolizja}} (\mbox{\hyperlink{classwektor3_d}{wektor3D}} \mbox{\hyperlink{classkropla_ac47c98278213d8bc14891da7c142c8e7}{ruch}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classwektor3_d}{wektor3D}} \mbox{\hyperlink{classkropla_a298c61d745bb599d61bfa203ae58e2ad}{p}}
+\item 
+\mbox{\hyperlink{classwektor3_d}{wektor3D}} \mbox{\hyperlink{classkropla_a2cf6d5b9da1bf37fe5d5588cd7f4acae}{wew}}
+\item 
+float \mbox{\hyperlink{classkropla_a574a1e7dcb1999173115cdeb1edae837}{r}}
+\item 
+float \mbox{\hyperlink{classkropla_a9d92b8ed91afaaa1d38b71f487b6cf42}{kx}}
+\item 
+float \mbox{\hyperlink{classkropla_abd7b767dee09303c5fb683fea75bd285}{ky}}
+\item 
+float \mbox{\hyperlink{classkropla_a90947f022a09baebc8bd085a2d34e2c5}{kz}}
+\item 
+bool \mbox{\hyperlink{classkropla_ae4f8fe6b5eaac01567bb3951660a3ccf}{wewnatrz}}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Opis szczegółowy}
+Klasa definiujaca krople. 
 
 \doxysubsection{Dokumentacja konstruktora i destruktora}
 \mbox{\Hypertarget{classkropla_ab2f70331611766b7a9eb733663a53a47}\label{classkropla_ab2f70331611766b7a9eb733663a53a47}} 
@@ -20,9 +52,95 @@ void \mbox{\hyperlink{classkropla_a82e8ecd74ec1926cdcef78a8cffa4bc8}{rysuj}} ()
 \doxysubsubsection{\texorpdfstring{kropla()}{kropla()}}
 {\footnotesize\ttfamily kropla\+::kropla (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+\mbox{\Hypertarget{classkropla_a41d1803ec3673f980768562ac704f110}\label{classkropla_a41d1803ec3673f980768562ac704f110}} 
+\index{kropla@{kropla}!````~kropla@{$\sim$kropla}}
+\index{````~kropla@{$\sim$kropla}!kropla@{kropla}}
+\doxysubsubsection{\texorpdfstring{$\sim$kropla()}{~kropla()}}
+{\footnotesize\ttfamily kropla\+::$\sim$kropla (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 
 
 \doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{classkropla_a180465469c3069fc6f79eb07c36429d7}\label{classkropla_a180465469c3069fc6f79eb07c36429d7}} 
+\index{kropla@{kropla}!kolizja@{kolizja}}
+\index{kolizja@{kolizja}!kropla@{kropla}}
+\doxysubsubsection{\texorpdfstring{kolizja()}{kolizja()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool kropla\+::kolizja (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classwektor3_d}{wektor3D}}}]{ruch }\end{DoxyParamCaption})}
+
+Sprawdza, czy kropla będzie kolidować z butelką.
+
+
+\begin{DoxyParams}{Parametry}
+{\em ruch} & -\/ ruch jaki kropla ma wykonać \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+-\/ true -\/ kolizja, false -\/ brak kolizji 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classkropla_af831f38beb7eb2a72db34f4d5b51a4ce}\label{classkropla_af831f38beb7eb2a72db34f4d5b51a4ce}} 
+\index{kropla@{kropla}!kolizja@{kolizja}}
+\index{kolizja@{kolizja}!kropla@{kropla}}
+\doxysubsubsection{\texorpdfstring{kolizja()}{kolizja()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool kropla\+::kolizja (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classwektor3_d}{wektor3D}}}]{ruch,  }\item[{\mbox{\hyperlink{classkropla}{kropla}}}]{a }\end{DoxyParamCaption})}
+
+Sprawdza czy kropla będzie kolidować z inną kroplą.
+
+
+\begin{DoxyParams}{Parametry}
+{\em ruch} & -\/ wokonywany ruch \\
+\hline
+{\em a} & -\/ kropla, z którą jest sprawdzana kolizja \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+-\/ true -\/ kolizja, false -\/ brak kolizji 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classkropla_a1f922a1406ddcedb9ad21675bf155f80}\label{classkropla_a1f922a1406ddcedb9ad21675bf155f80}} 
+\index{kropla@{kropla}!obroc@{obroc}}
+\index{obroc@{obroc}!kropla@{kropla}}
+\doxysubsubsection{\texorpdfstring{obroc()}{obroc()}}
+{\footnotesize\ttfamily void kropla\+::obroc (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{z }\end{DoxyParamCaption})}
+
+Obraca krople wzgledem środka współrzędnych.
+
+
+\begin{DoxyParams}{Parametry}
+{\em x} & -\/ kąt x \\
+\hline
+{\em y} & -\/ kąt y \\
+\hline
+{\em z} & -\/ kąt z \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classkropla_af7ddee788b65ad4155f2f5032c39f9eb}\label{classkropla_af7ddee788b65ad4155f2f5032c39f9eb}} 
+\index{kropla@{kropla}!odleglosc@{odleglosc}}
+\index{odleglosc@{odleglosc}!kropla@{kropla}}
+\doxysubsubsection{\texorpdfstring{odleglosc()}{odleglosc()}}
+{\footnotesize\ttfamily float kropla\+::odleglosc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classwektor3_d}{wektor3D}}}]{start }\end{DoxyParamCaption})}
+
+Sprawdza odleglosc kropli, od podanego wektora.
+
+
+\begin{DoxyParams}{Parametry}
+{\em start} & -\/ wektor od ktorego sprawdzana jest odleglosc \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+-\/ otrzymana odleglosc 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classkropla_ac47c98278213d8bc14891da7c142c8e7}\label{classkropla_ac47c98278213d8bc14891da7c142c8e7}} 
+\index{kropla@{kropla}!ruch@{ruch}}
+\index{ruch@{ruch}!kropla@{kropla}}
+\doxysubsubsection{\texorpdfstring{ruch()}{ruch()}}
+{\footnotesize\ttfamily void kropla\+::ruch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classwektor3_d}{wektor3D}}}]{wek }\end{DoxyParamCaption})}
+
+Wykonuje ruch kropli.
+
+
+\begin{DoxyParams}{Parametry}
+{\em wek} & -\/ jak kropla powinna się ruszyć \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classkropla_a82e8ecd74ec1926cdcef78a8cffa4bc8}\label{classkropla_a82e8ecd74ec1926cdcef78a8cffa4bc8}} 
 \index{kropla@{kropla}!rysuj@{rysuj}}
 \index{rysuj@{rysuj}!kropla@{kropla}}
@@ -30,6 +148,51 @@ void \mbox{\hyperlink{classkropla_a82e8ecd74ec1926cdcef78a8cffa4bc8}{rysuj}} ()
 {\footnotesize\ttfamily void kropla\+::rysuj (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 Rysuje krople na ekranie. 
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\mbox{\Hypertarget{classkropla_a9d92b8ed91afaaa1d38b71f487b6cf42}\label{classkropla_a9d92b8ed91afaaa1d38b71f487b6cf42}} 
+\index{kropla@{kropla}!kx@{kx}}
+\index{kx@{kx}!kropla@{kropla}}
+\doxysubsubsection{\texorpdfstring{kx}{kx}}
+{\footnotesize\ttfamily float kropla\+::kx}
+
+Kąt obrotu kropli względem środka układu współrzędnych. \mbox{\Hypertarget{classkropla_abd7b767dee09303c5fb683fea75bd285}\label{classkropla_abd7b767dee09303c5fb683fea75bd285}} 
+\index{kropla@{kropla}!ky@{ky}}
+\index{ky@{ky}!kropla@{kropla}}
+\doxysubsubsection{\texorpdfstring{ky}{ky}}
+{\footnotesize\ttfamily float kropla\+::ky}
+
+\mbox{\Hypertarget{classkropla_a90947f022a09baebc8bd085a2d34e2c5}\label{classkropla_a90947f022a09baebc8bd085a2d34e2c5}} 
+\index{kropla@{kropla}!kz@{kz}}
+\index{kz@{kz}!kropla@{kropla}}
+\doxysubsubsection{\texorpdfstring{kz}{kz}}
+{\footnotesize\ttfamily float kropla\+::kz}
+
+\mbox{\Hypertarget{classkropla_a298c61d745bb599d61bfa203ae58e2ad}\label{classkropla_a298c61d745bb599d61bfa203ae58e2ad}} 
+\index{kropla@{kropla}!p@{p}}
+\index{p@{p}!kropla@{kropla}}
+\doxysubsubsection{\texorpdfstring{p}{p}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classwektor3_d}{wektor3D}} kropla\+::p}
+
+Wektor polozenia kropli. \mbox{\Hypertarget{classkropla_a574a1e7dcb1999173115cdeb1edae837}\label{classkropla_a574a1e7dcb1999173115cdeb1edae837}} 
+\index{kropla@{kropla}!r@{r}}
+\index{r@{r}!kropla@{kropla}}
+\doxysubsubsection{\texorpdfstring{r}{r}}
+{\footnotesize\ttfamily float kropla\+::r}
+
+Promień kropli. \mbox{\Hypertarget{classkropla_a2cf6d5b9da1bf37fe5d5588cd7f4acae}\label{classkropla_a2cf6d5b9da1bf37fe5d5588cd7f4acae}} 
+\index{kropla@{kropla}!wew@{wew}}
+\index{wew@{wew}!kropla@{kropla}}
+\doxysubsubsection{\texorpdfstring{wew}{wew}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classwektor3_d}{wektor3D}} kropla\+::wew}
+
+Wektor polozenia kropli wewnatrz butelki. \mbox{\Hypertarget{classkropla_ae4f8fe6b5eaac01567bb3951660a3ccf}\label{classkropla_ae4f8fe6b5eaac01567bb3951660a3ccf}} 
+\index{kropla@{kropla}!wewnatrz@{wewnatrz}}
+\index{wewnatrz@{wewnatrz}!kropla@{kropla}}
+\doxysubsubsection{\texorpdfstring{wewnatrz}{wewnatrz}}
+{\footnotesize\ttfamily bool kropla\+::wewnatrz}
+
+Zmienna mówiąca czy kropla jest wewnątrz butelki. 
 
 Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
 \item 
