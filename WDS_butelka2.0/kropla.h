@@ -73,6 +73,8 @@ public:
 	 * \param ruch - wokonywany ruch
 	 * \param a - kropla, z któr¹ jest sprawdzana kolizja
 	 * \return  - true - kolizja, false - brak kolizji
+	 * \retval - true - kolizja
+	 * 
 	 */
 	bool kolizja(wektor3D ruch, kropla a);
 	/**

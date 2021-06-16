@@ -19,7 +19,9 @@ using namespace std;
 
 
 char title[] = "Butelka";
-static scena s(10);
+obiekt3D butelka("butelka", 0.4335f, 0.8476f, 1.0f, 0.5f);
+bool restart = false;
+static scena* s=NULL;
 
 
 GLfloat mat_specular[] = { 1.0, 1.0,1.0,1.0 };
@@ -47,6 +49,9 @@ void keyboard(unsigned char key, int x, int y)
         kat -= 0.1;
         glutPostRedisplay();
         break;
+    //case 'r':       //restart sceny
+    //    restart = true;
+    //    break;
     }
 }
 
@@ -62,6 +67,15 @@ void initGL() {                           //initialize openGL
 }
 
 void display() {                //What to display
+
+    //if (restart)
+    //{
+    //    delete s;
+    //    s = new scena(100);
+    //    s->ob.push_back(butelka);
+    //    restart = false;
+    //}
+
     float radius = 5.0f;
     double time = (((double)glutGet(GLUT_ELAPSED_TIME)) / 5000);
 
@@ -72,21 +86,12 @@ void display() {                //What to display
     //gluLookAt(sin(time) * radius, 0, cos(time) * radius, 0, 0, 0, 0, 1, 0); //rotate camera around the objects
     gluLookAt(sin(kat) * radius, 0, cos(kat) * radius, 0, 0, 0, 0, 1, 0); //rucha kamera za pomoca a i d
 
-    s.rysuj();
-
-    /*
-    s.w.rysuj();
-    glBegin(GL_TRIANGLES);            //Begin drawing the bottle as traingles
-    for (unsigned int i = 0; i < s.ob.size(); i++)
+    if (s != NULL)
     {
-        s.ob[i].rysuj();
+        s->rysuj();
+        s->obrot();
+        s->w.grawitacja();
     }
-    glEnd();
-    */
-
-    s.obrot();
-
-    s.w.grawitacja();
 
     glutSwapBuffers();  // Swap the front and back frame buffers (double buffering)
     glutPostRedisplay();
@@ -111,10 +116,8 @@ void reshape(GLsizei width, GLsizei height) {  // GLsizei for non-negative integ
 
 int main(int argc, char** argv)
 {
-    
-    obiekt3D butelka("butelka", 0.4335f, 0.8476f, 1.0f, 0.5f);
-    s.ob.push_back(butelka);
-
+    s = new scena(100);
+    s->ob.push_back(butelka);
 
     glutInit(&argc, argv);            // Initialize GLUT
     glutInitDisplayMode(GLUT_DOUBLE); // Enable double buffered mode

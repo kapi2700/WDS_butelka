@@ -2,6 +2,12 @@
 
 woda::woda(int n)
 {
+	wektor3D pom;
+
+	pom.p[0] = 0;
+	pom.p[1] = 0;
+	pom.p[2] = 0;
+
 	l = n;
 
 	kropla* kr;
@@ -10,8 +16,19 @@ woda::woda(int n)
 		kr = new kropla;
 		k.push_back(*kr);
 		delete kr;
+
+		for (int j = 0; j < i - 1; j++)
+		{
+			if (k[i].kolizja(pom, k[j]))		//jesli nowa kropla koliduje z inna jest ona usuwana, oraz ilosc kropli 
+			{									//zmniejszana w celu ponownej proby wylosowania jej polozenia
+				i--;
+				k.pop_back();
+				break;
+			}
+		}
+
 	}
-	
+
 }
 
 void woda::rysuj()
@@ -45,7 +62,7 @@ void woda::grawitacja()
 		pom.p[0] = 0;
 		pom.p[1] = -0.01;
 		pom.p[2] = 0;
-		
+
 		mozna = !k[i].kolizja(pom);
 		if (mozna)
 		{
@@ -56,6 +73,7 @@ void woda::grawitacja()
 					if (k[i].kolizja(pom, k[j]))
 					{
 						mozna = false;
+						break;
 					}
 				}
 			}
@@ -63,6 +81,222 @@ void woda::grawitacja()
 		if (mozna)
 		{
 			k[i].ruch(pom);
+		}
+
+		if (!mozna)		//jesli nie mozna bezposrednio w dol, sprawdzamy kolejne molzwiosci
+		{
+			pom.p[0] = 0;
+			pom.p[1] = -0.002;
+			pom.p[2] = 0.009;
+
+			mozna = !k[i].kolizja(pom);
+			if (mozna)
+			{
+				for (int j = 0; j < l; j++)
+				{
+					if (i != j)
+					{
+						if (k[i].kolizja(pom, k[j]))
+						{
+							mozna = false;
+							break;
+						}
+					}
+				}
+			}
+			if (mozna)
+			{
+				k[i].ruch(pom);
+			}
+		}
+
+		if (!mozna)		//jesli nie mozna bezposrednio w dol, sprawdzamy kolejne molzwiosci
+		{
+			pom.p[0] = 0;
+			pom.p[1] = -0.002;
+			pom.p[2] = 0.009;
+
+			mozna = !k[i].kolizja(pom);
+			if (mozna)
+			{
+				for (int j = 0; j < l; j++)
+				{
+					if (i != j)
+					{
+						if (k[i].kolizja(pom, k[j]))
+						{
+							mozna = false;
+							break;
+						}
+					}
+				}
+			}
+			if (mozna)
+			{
+				k[i].ruch(pom);
+			}
+		}
+
+		if (!mozna)		//jesli nie mozna bezposrednio w dol, sprawdzamy kolejne molzwiosci
+		{
+			pom.p[0] = -0.009;
+			pom.p[1] = -0.002;
+			pom.p[2] = 0;
+
+			mozna = !k[i].kolizja(pom);
+			if (mozna)
+			{
+				for (int j = 0; j < l; j++)
+				{
+					if (i != j)
+					{
+						if (k[i].kolizja(pom, k[j]))
+						{
+							mozna = false;
+							break;
+						}
+					}
+				}
+			}
+			if (mozna)
+			{
+				k[i].ruch(pom);
+			}
+		}
+
+		if (!mozna)		//jesli nie mozna bezposrednio w dol, sprawdzamy kolejne molzwiosci
+		{
+			pom.p[0] = 0.009;
+			pom.p[1] = -0.002;
+			pom.p[2] = 0;
+
+			mozna = !k[i].kolizja(pom);
+			if (mozna)
+			{
+				for (int j = 0; j < l; j++)
+				{
+					if (i != j)
+					{
+						if (k[i].kolizja(pom, k[j]))
+						{
+							mozna = false;
+							break;
+						}
+					}
+				}
+			}
+			if (mozna)
+			{
+				k[i].ruch(pom);
+			}
+		}
+
+		if (!mozna)		//jesli nie mozna bezposrednio w dol, sprawdzamy kolejne molzwiosci
+		{
+			pom.p[0] = 0.002;
+			pom.p[1] = 0;
+			pom.p[2] = 0;
+
+			mozna = !k[i].kolizja(pom);
+			if (mozna)
+			{
+				for (int j = 0; j < l; j++)
+				{
+					if (i != j)
+					{
+						if (k[i].kolizja(pom, k[j]))
+						{
+							mozna = false;
+							break;
+						}
+					}
+				}
+			}
+			if (mozna)
+			{
+				k[i].ruch(pom);
+			}
+		}
+
+		if (!mozna)		//jesli nie mozna bezposrednio w dol, sprawdzamy kolejne molzwiosci
+		{
+			pom.p[0] = -0.002;
+			pom.p[1] = 0;
+			pom.p[2] = 0;
+
+			mozna = !k[i].kolizja(pom);
+			if (mozna)
+			{
+				for (int j = 0; j < l; j++)
+				{
+					if (i != j)
+					{
+						if (k[i].kolizja(pom, k[j]))
+						{
+							mozna = false;
+							break;
+						}
+					}
+				}
+			}
+			if (mozna)
+			{
+				k[i].ruch(pom);
+			}
+		}
+
+		if (!mozna)		//jesli nie mozna bezposrednio w dol, sprawdzamy kolejne molzwiosci
+		{
+			pom.p[0] = 0;
+			pom.p[1] = 0;
+			pom.p[2] = 0.002;
+
+			mozna = !k[i].kolizja(pom);
+			if (mozna)
+			{
+				for (int j = 0; j < l; j++)
+				{
+					if (i != j)
+					{
+						if (k[i].kolizja(pom, k[j]))
+						{
+							mozna = false;
+							break;
+						}
+					}
+				}
+			}
+			if (mozna)
+			{
+				k[i].ruch(pom);
+			}
+		}
+
+		if (!mozna)		//jesli nie mozna bezposrednio w dol, sprawdzamy kolejne molzwiosci
+		{
+			pom.p[0] = 0;
+			pom.p[1] = 0;
+			pom.p[2] = -0.002;
+
+			mozna = !k[i].kolizja(pom);
+			if (mozna)
+			{
+				for (int j = 0; j < l; j++)
+				{
+					if (i != j)
+					{
+						if (k[i].kolizja(pom, k[j]))
+						{
+							mozna = false;
+							break;
+						}
+					}
+				}
+			}
+			if (mozna)
+			{
+				k[i].ruch(pom);
+			}
 		}
 	}
 }

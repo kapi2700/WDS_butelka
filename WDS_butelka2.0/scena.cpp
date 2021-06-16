@@ -19,6 +19,29 @@ void scena::obrot()
     int whichVar = 0;
     float tmpx = 0, tmpy = 0;
 
+
+
+
+
+
+    ////=====================Do Testow=====================
+    ////================Butelka do gory nogami=============
+    //obrx = 90.0f;
+    //obry = 0.0f;
+    //obrz = 0.0f;
+    //for (int i = 0; i < ob.size(); i++)
+    //{
+    //    ob[i].obroc(obrx + 90.0f, obry, obrz);
+    //}
+    //w.obroc(obrx + 90.0f, obry, obrz);
+    //
+    //return;
+    ////===================================================
+
+
+
+
+
     for (int i = 0; i < 10; i++)
     {
         x[i] = 0;
@@ -27,7 +50,7 @@ void scena::obrot()
     }
 
     iloscDanych = 0;
-    while (getline(plikDane, line) && (iloscDanych < 9))
+    while (getline(plikDane, line) && (iloscDanych < 1))
     {
         whichVar = 0;
         if (line != "")
@@ -90,11 +113,6 @@ void scena::obrot()
         w.obroc(obrx + 90.0f, obry, obrz);
     }
 }
-
-//void scena::init(int n)
-//{
-//
-//}
 
 void scena::rysuj()
 {

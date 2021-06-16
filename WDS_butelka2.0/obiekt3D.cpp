@@ -36,12 +36,9 @@ obiekt3D::obiekt3D(string nazwa, float r, float g, float b, float a)            
 
     while (!inOBJ.eof())
     {
-        // 5
         string line;
         getline(inOBJ, line);
         string type = line.substr(0, 2);
-
-        // 6
         if (type.compare("v ") == 0)
             model.positions++;
         else if (type.compare("vt") == 0)
@@ -51,12 +48,7 @@ obiekt3D::obiekt3D(string nazwa, float r, float g, float b, float a)            
         else if (type.compare("f ") == 0)
             model.faces++;
     }
-
-    // 7
     model.vertices = model.faces * 3;
-
-    // 8
-    // Close OBJ file
     inOBJ.close();
 
     // Creating variables to store obj data

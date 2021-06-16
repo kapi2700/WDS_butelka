@@ -14,7 +14,7 @@ void kropla::rysuj()
 kropla::kropla()
 {
 	bool czydobre = false;
-	r = 0.05;
+	r = 0.05;						//promien kropli
 	kx = 0;
 	ky = 0;
 	kz = 0;
@@ -23,13 +23,12 @@ kropla::kropla()
 	while (!czydobre)
 	{
 		p.p[0] = ((float)(rand() % 8000)) / 10000 - 0.4f;
+		p.p[1] = ((float)(rand() % 8000)) / 10000 - 0.4f;
 		p.p[2] = ((float)(rand() % 8000)) / 10000 - 0.4f;
 
 		if ((p.odlegloscY() < 0.4))
 			czydobre = true;
 	}
-
-	p.p[1] = 0;
 
 	wew = p;
 	wewnatrz = true;
@@ -54,12 +53,10 @@ void kropla::obroc(float x, float y, float z)
 	//p = pstart;
 	p.mnozenie(macy);
 	p.mnozenie(macx);
-	//p.mnozenie(macz);
 
 	macx = { x, 'x' };
 	macy = { y, 'y' };
 
-	//p.mnozenie(macz);
 	p.mnozenie(macx);
 	p.mnozenie(macy);
 
@@ -70,8 +67,8 @@ void kropla::obroc(float x, float y, float z)
 
 void kropla::ruch(wektor3D wek)
 {
-	macierz_rot macx(-kx, 'x');
-	macierz_rot macy(-ky, 'y');
+	macierz_rot macx(kx, 'x');
+	macierz_rot macy(ky, 'y');
 
 	p = p + wek;
 	wek.mnozenie(macx);
@@ -95,24 +92,23 @@ bool kropla::kolizja(wektor3D ruch)
 	poruchuwew = wew + ruch;
 
 
-
-	if (poruchuwew.p[1] < (-1+r))										//sprawdzanie butelki
+	if (poruchuwew.p[1] < (-1+r))												//kropla na spodzie butelki
 		return true;
-	if ((poruchuwew.p[1] >= (-1+r)) && (poruchuwew.p[1] < (1.1-r)))
+	if ((poruchuwew.p[1] >= (-1+r)) && (poruchuwew.p[1] < (1.1-r)))				//kropla w g³ównej czêœci butelki
 	{
-		if (poruchuwew.odlegloscY() > (0.5 - r))
+		if (poruchuwew.odlegloscY() > (0.5 - r-0.05))
 		{
 			return true;
 		}
 	}
-	else if ((poruchuwew.p[1] >= (1.1 - r)) && (poruchuwew.p[1] <= 1.5 + r))
+	else if ((poruchuwew.p[1] >= (1.1 - r)) && (poruchuwew.p[1] <= 1.5 + r))	//kropla w w¹skiej czêœci butelki
 	{
 		if (poruchuwew.odlegloscY() > (0.15 - r))
 		{
 			return true;
 		}
 	}
-	else if ((poruchuwew.p[1] > 1.5 + r))
+	else if ((poruchuwew.p[1] > 1.5 + r))										
 	{
 		wewnatrz = false;
 		return false;
