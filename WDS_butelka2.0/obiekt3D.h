@@ -27,6 +27,8 @@ static bool polaczenie = false;
 
 
 /**
+ * \brief Struktura wykorzystywana podczas zczytywania danych z pliku .obj.
+ * 
  * Struktura wykorzystywana podczas zczytywania danych z pliku .obj.
  */
 typedef struct Model
@@ -41,82 +43,111 @@ Model;
 
 
 /**
- * Klasa obiektow zczytywanych z plikow .obj.
+ * \brief Klasa obiektow zczytywanych z plikow .obj.
+ * 
+ * Klasa ta zawiera informacje na temat po³o¿enia wierzcho³ków obiektu3D (butelki). Pozwala ona
+ * na wygodne obracanie oraz rysowanie obiektu3D (butelki).
  */
 class obiekt3D
 {
 public:
     /**
-     * Struktura wykorzystywana podczas zczytywania danych z pliku .obj.
+     * \brief Struktura wykorzystywana podczas zczytywania danych z pliku .obj.
+     * 
+     * Struktura wykorzystywana podczas zczytywania danych z pliku .obj. Zawiera informacje o iloœci danych
      */
     Model model;
 
     /**
-     * Aktualne pozycje wszystkich wierzcho³ków trójk¹tów.
+     * \brief Aktualne pozycje wszystkich wierzcho³ków trójk¹tów.
+     * 
+     * Aktualne pozycje wszystkich wierzcho³ków trójk¹tów. zmieniane s¹ podczas wykonywania metody obroc.
      */
     wektor3D* positions;
     /**
-     * Pozycje pocz¹tkowe wszystkich wieszcho³ków trójk¹tów.
+     * \brief Pozycje pocz¹tkowe wszystkich wieszcho³ków trójk¹tów.
+     * 
+     * Pozycje pocz¹tkowe wszystkich wieszcho³ków trójk¹tów. Ich wartoœæ siê nie zmienia. S¹ one wykorzystywane do obliczenia
+     * nowego po³o¿enia wierzcho³ków obiektu.
      */
     wektor3D* positionsStart;
 
     /**
+     * \brief Zmiena wykorzytywana do zbierania danych z pliku .obj.
+     * 
      * Zmiena wykorzytywana do zbierania danych z pliku .obj.
      */
     float** texels;
     /**
+     * \brief Zmiena wykorzytywana do zbierania danych z pliku .obj.
+     * 
      * Zmiena wykorzytywana do zbierania danych z pliku .obj.
      */
     float** normals;
     /**
+     * \biref Zmiena wykorzytywana do zbierania danych z pliku .obj.
+     * 
      * Zmiena wykorzytywana do zbierania danych z pliku .obj.
      */
     int** faces;
 
     
     /**
-     * Kolor obiektu, RGB.
+     * \biref Kolor obiektu, RGB.
+     * 
+     * Zmienna zawieraj¹ca informacje o kolorze obiektu3D. Wartoœæ jest ustalana podczas inicjalizacji obiektu. Format danych: RGB
      */
     float color[3];
     /**
-     * Przezroczystoœæ obiektu.
+     * \brief Przezroczystoœæ obiektu.
+     * 
+     * Zmienna informuj¹ca o przezroczystoœci obiektu3D. Wartoœæ jest ustalana podczas inicjalizacji obiektu.
      */
     float alpha;
 
     /**
-     * Ostatni k¹t obrotu w osi x.
+     * \brief Ostatni k¹t obrotu w osi x.
+     * 
+     * Zawiera informacje o wartoœci k¹tu podczas poprzedniego obrotu w stopniach wzglêdem osi x.
      */
     float ostatnikx;
     /**
-     * Ostatni k¹t obrotu w osi y.
+     * \brief Ostatni k¹t obrotu w osi y.
+     * 
+     * Zawiera informacje o wartoœci k¹tu podczas poprzedniego obrotu w stopniach wzglêdem osi y.
      */
     float ostatniky;
 
-    ///**
-    // * .
-    // */
-    //float kx[3];
-    //float ky[3];
-
     /**
-     * Inicjalizacja obiektu3D za pomoc¹ nazwy pliku.
+     * \brief Inicjalizacja obiektu3D za pomoc¹ nazwy pliku.
      * 
-     * \param nazwa nazwa pliku .obj
+     * Inicjalizuje obiekt na podstawie pliku w formacie .obj. Podawana jest równie¿ informacja o kolorze i
+     * przezroczystoœci obiektu.
+     * 
+     * \param nazwa - nazwa pliku .obj
+     * \param r - kolor czerwony 0-1
+     * \param g - kolor zielony 0-1
+     * \param b - kolor niebieski 0-1
+     * \param a - przeroczystoœæ obiektu 0-1
      */
     obiekt3D(string nazwa, float r, float g, float b, float a);
 
     ~obiekt3D();
 
     /**
-     * Obraca obiekt, o dane k¹ty, wzglêdem pozycji pocz¹tkowej.
+     * \brief Obraca obiekt o podane k¹ty, wzglêdem pozycji pocz¹tkowej.
      * 
-     * \param x k¹t obrotu w osi x
-     * \param y k¹t obrotu w osi y
-     * \param z k¹t obrotu w osi z
+     * Obraca obbiekt o podane k¹ty, wzglêdem pozycji pocz¹tkowej. K¹ty powinny byæ podane w stopniach.
+     * 
+     * \param x - k¹t obrotu w osi x
+     * \param y - k¹t obrotu w osi y
+     * \param z - k¹t obrotu w osi z
      */
     void obroc(float x, float y, float z);
 
     /**
+     * \brief Rysuje obiekt3D.
+     * 
      * Rysuje obiekt3D, nale¿y umieœciæ pomiêdzy glBegin(GL_TRIANGLES); oraz glEnd();.
      */
     void rysuj();

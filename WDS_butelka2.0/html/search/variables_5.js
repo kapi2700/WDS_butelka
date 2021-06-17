@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['mat_5fshininess_124',['mat_shininess',['../_w_d_s__butelka2_80_8cpp.html#adfc8820858e84f99762a3f27350fc384',1,'WDS_butelka2.0.cpp']]],
-  ['mat_5fspecular_125',['mat_specular',['../_w_d_s__butelka2_80_8cpp.html#a519f0f0bcbeb85e0ddcc911b92fcff1b',1,'WDS_butelka2.0.cpp']]],
-  ['model_126',['model',['../classobiekt3_d.html#a28a674f40a5ac31c219122f3871f5507',1,'obiekt3D']]]
+  ['l_125',['l',['../classwoda.html#a6956521cc9d782c218e9633872de546e',1,'woda']]],
+  ['light_5fposition_126',['light_position',['../_w_d_s__butelka2_80_8cpp.html#a9150217d8e8a347844efee8624dd5ee4',1,'WDS_butelka2.0.cpp']]]
 ];

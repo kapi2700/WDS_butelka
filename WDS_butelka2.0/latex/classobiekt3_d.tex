@@ -2,46 +2,53 @@
 \label{classobiekt3_d}\index{obiekt3D@{obiekt3D}}
 
 
+Klasa obiektow zczytywanych z plikow .obj.  
+
+
+
+
 {\ttfamily \#include $<$obiekt3\+D.\+h$>$}
 
 \doxysubsection*{Metody publiczne}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classobiekt3_d_a2c6d03ad93feb729adf148c38107f22e}{obiekt3D}} (string nazwa, float r, float g, float b, float a)
-\begin{DoxyCompactList}\small\item\em $\ast$$\ast$ \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Inicjalizacja obiektu3D za pomocą nazwy pliku. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classobiekt3_d_a7a8683e31a0bf6ea587edd9f8d58abf5}{$\sim$obiekt3D}} ()
 \item 
 void \mbox{\hyperlink{classobiekt3_d_af354b163a4da9969404db3bdba62f1ee}{obroc}} (float x, float y, float z)
-\item 
+\begin{DoxyCompactList}\small\item\em Obraca obiekt o podane kąty, względem pozycji początkowej. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classobiekt3_d_a33f368c6946f9c1a11d2d111a152743b}{rysuj}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Rysuje \mbox{\hyperlink{classobiekt3_d}{obiekt3D}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atrybuty publiczne}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{struct_model}{Model}} \mbox{\hyperlink{classobiekt3_d_a28a674f40a5ac31c219122f3871f5507}{model}}
-\item 
+\begin{DoxyCompactList}\small\item\em Struktura wykorzystywana podczas zczytywania danych z pliku .obj. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classwektor3_d}{wektor3D}} $\ast$ \mbox{\hyperlink{classobiekt3_d_a477f969cc9caac37a7383e5660ebfa9c}{positions}}
-\item 
+\begin{DoxyCompactList}\small\item\em Aktualne pozycje wszystkich wierzchołków trójkątów. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classwektor3_d}{wektor3D}} $\ast$ \mbox{\hyperlink{classobiekt3_d_aefc0b7e149cdf6e564de0e45716ce0bf}{positions\+Start}}
-\item 
+\begin{DoxyCompactList}\small\item\em Pozycje początkowe wszystkich wieszchołków trójkątów. \end{DoxyCompactList}\item 
 float $\ast$$\ast$ \mbox{\hyperlink{classobiekt3_d_a52bb3aab6fa2a629c41531cf1d047a8b}{texels}}
-\item 
+\begin{DoxyCompactList}\small\item\em Zmiena wykorzytywana do zbierania danych z pliku .obj. \end{DoxyCompactList}\item 
 float $\ast$$\ast$ \mbox{\hyperlink{classobiekt3_d_a78ac17d2768c857374999a466f068482}{normals}}
-\item 
+\begin{DoxyCompactList}\small\item\em Zmiena wykorzytywana do zbierania danych z pliku .obj. \end{DoxyCompactList}\item 
 int $\ast$$\ast$ \mbox{\hyperlink{classobiekt3_d_abaefc0363f647a22b993ac1ac45daf8f}{faces}}
 \item 
 float \mbox{\hyperlink{classobiekt3_d_a109bd50141b9ab8722406df36d7d6167}{color}} \mbox{[}3\mbox{]}
 \item 
 float \mbox{\hyperlink{classobiekt3_d_a696cc5b198651f3f0e5e237f08e7bcbd}{alpha}}
-\item 
+\begin{DoxyCompactList}\small\item\em Przezroczystość obiektu. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{classobiekt3_d_a386e6bd06bea328230c6060c285e55f0}{ostatnikx}}
-\item 
+\begin{DoxyCompactList}\small\item\em Ostatni kąt obrotu w osi x. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{classobiekt3_d_ac27740e29927a4afd419aa12e987f065}{ostatniky}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Ostatni kąt obrotu w osi y. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Opis szczegółowy}
 Klasa obiektow zczytywanych z plikow .obj. 
+
+Klasa ta zawiera informacje na temat położenia wierzchołków obiektu3D (butelki). Pozwala ona na wygodne obracanie oraz rysowanie obiektu3D (butelki). 
 
 \doxysubsection{Dokumentacja konstruktora i destruktora}
 \mbox{\Hypertarget{classobiekt3_d_a2c6d03ad93feb729adf148c38107f22e}\label{classobiekt3_d_a2c6d03ad93feb729adf148c38107f22e}} 
@@ -52,13 +59,21 @@ Klasa obiektow zczytywanych z plikow .obj.
 
 
 
-$\ast$$\ast$ 
+Inicjalizacja obiektu3D za pomocą nazwy pliku. 
 
-Inicjalizacja obiektu3D za pomocą nazwy pliku.
+Inicjalizuje obiekt na podstawie pliku w formacie .obj. Podawana jest również informacja o kolorze i przezroczystości obiektu.
 
 
 \begin{DoxyParams}{Parametry}
-{\em nazwa} & nazwa pliku .obj \\
+{\em nazwa} & -\/ nazwa pliku .obj \\
+\hline
+{\em r} & -\/ kolor czerwony 0-\/1 \\
+\hline
+{\em g} & -\/ kolor zielony 0-\/1 \\
+\hline
+{\em b} & -\/ kolor niebieski 0-\/1 \\
+\hline
+{\em a} & -\/ przeroczystość obiektu 0-\/1 \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classobiekt3_d_a7a8683e31a0bf6ea587edd9f8d58abf5}\label{classobiekt3_d_a7a8683e31a0bf6ea587edd9f8d58abf5}} 
@@ -76,15 +91,19 @@ Inicjalizacja obiektu3D za pomocą nazwy pliku.
 \doxysubsubsection{\texorpdfstring{obroc()}{obroc()}}
 {\footnotesize\ttfamily void obiekt3\+D\+::obroc (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{z }\end{DoxyParamCaption})}
 
-Obraca obiekt, o dane kąty, względem pozycji początkowej.
+
+
+Obraca obiekt o podane kąty, względem pozycji początkowej. 
+
+Obraca obbiekt o podane kąty, względem pozycji początkowej. Kąty powinny być podane w stopniach.
 
 
 \begin{DoxyParams}{Parametry}
-{\em x} & kąt obrotu w osi x \\
+{\em x} & -\/ kąt obrotu w osi x \\
 \hline
-{\em y} & kąt obrotu w osi y \\
+{\em y} & -\/ kąt obrotu w osi y \\
 \hline
-{\em z} & kąt obrotu w osi z \\
+{\em z} & -\/ kąt obrotu w osi z \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classobiekt3_d_a33f368c6946f9c1a11d2d111a152743b}\label{classobiekt3_d_a33f368c6946f9c1a11d2d111a152743b}} 
@@ -92,6 +111,10 @@ Obraca obiekt, o dane kąty, względem pozycji początkowej.
 \index{rysuj@{rysuj}!obiekt3D@{obiekt3D}}
 \doxysubsubsection{\texorpdfstring{rysuj()}{rysuj()}}
 {\footnotesize\ttfamily void obiekt3\+D\+::rysuj (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Rysuje \mbox{\hyperlink{classobiekt3_d}{obiekt3D}}. 
 
 Rysuje \mbox{\hyperlink{classobiekt3_d}{obiekt3D}}, należy umieścić pomiędzy gl\+Begin(\+GL\+\_\+\+TRIANGLES); oraz gl\+End();. 
 
@@ -102,17 +125,25 @@ Rysuje \mbox{\hyperlink{classobiekt3_d}{obiekt3D}}, należy umieścić pomiędzy
 \doxysubsubsection{\texorpdfstring{alpha}{alpha}}
 {\footnotesize\ttfamily float obiekt3\+D\+::alpha}
 
-Przezroczystość obiektu. \mbox{\Hypertarget{classobiekt3_d_a109bd50141b9ab8722406df36d7d6167}\label{classobiekt3_d_a109bd50141b9ab8722406df36d7d6167}} 
+
+
+Przezroczystość obiektu. 
+
+Zmienna informująca o przezroczystości obiektu3D. Wartość jest ustalana podczas inicjalizacji obiektu. \mbox{\Hypertarget{classobiekt3_d_a109bd50141b9ab8722406df36d7d6167}\label{classobiekt3_d_a109bd50141b9ab8722406df36d7d6167}} 
 \index{obiekt3D@{obiekt3D}!color@{color}}
 \index{color@{color}!obiekt3D@{obiekt3D}}
 \doxysubsubsection{\texorpdfstring{color}{color}}
 {\footnotesize\ttfamily float obiekt3\+D\+::color\mbox{[}3\mbox{]}}
 
-Kolor obiektu, RGB. \mbox{\Hypertarget{classobiekt3_d_abaefc0363f647a22b993ac1ac45daf8f}\label{classobiekt3_d_abaefc0363f647a22b993ac1ac45daf8f}} 
+\textbackslash{}biref Kolor obiektu, RGB.
+
+Zmienna zawierająca informacje o kolorze obiektu3D. Wartość jest ustalana podczas inicjalizacji obiektu. Format danych\+: RGB \mbox{\Hypertarget{classobiekt3_d_abaefc0363f647a22b993ac1ac45daf8f}\label{classobiekt3_d_abaefc0363f647a22b993ac1ac45daf8f}} 
 \index{obiekt3D@{obiekt3D}!faces@{faces}}
 \index{faces@{faces}!obiekt3D@{obiekt3D}}
 \doxysubsubsection{\texorpdfstring{faces}{faces}}
 {\footnotesize\ttfamily int$\ast$$\ast$ obiekt3\+D\+::faces}
+
+\textbackslash{}biref Zmiena wykorzytywana do zbierania danych z pliku .obj.
 
 Zmiena wykorzytywana do zbierania danych z pliku .obj. \mbox{\Hypertarget{classobiekt3_d_a28a674f40a5ac31c219122f3871f5507}\label{classobiekt3_d_a28a674f40a5ac31c219122f3871f5507}} 
 \index{obiekt3D@{obiekt3D}!model@{model}}
@@ -120,11 +151,19 @@ Zmiena wykorzytywana do zbierania danych z pliku .obj. \mbox{\Hypertarget{classo
 \doxysubsubsection{\texorpdfstring{model}{model}}
 {\footnotesize\ttfamily \mbox{\hyperlink{struct_model}{Model}} obiekt3\+D\+::model}
 
-Struktura wykorzystywana podczas zczytywania danych z pliku .obj. \mbox{\Hypertarget{classobiekt3_d_a78ac17d2768c857374999a466f068482}\label{classobiekt3_d_a78ac17d2768c857374999a466f068482}} 
+
+
+Struktura wykorzystywana podczas zczytywania danych z pliku .obj. 
+
+Struktura wykorzystywana podczas zczytywania danych z pliku .obj. Zawiera informacje o ilości danych \mbox{\Hypertarget{classobiekt3_d_a78ac17d2768c857374999a466f068482}\label{classobiekt3_d_a78ac17d2768c857374999a466f068482}} 
 \index{obiekt3D@{obiekt3D}!normals@{normals}}
 \index{normals@{normals}!obiekt3D@{obiekt3D}}
 \doxysubsubsection{\texorpdfstring{normals}{normals}}
 {\footnotesize\ttfamily float$\ast$$\ast$ obiekt3\+D\+::normals}
+
+
+
+Zmiena wykorzytywana do zbierania danych z pliku .obj. 
 
 Zmiena wykorzytywana do zbierania danych z pliku .obj. \mbox{\Hypertarget{classobiekt3_d_a386e6bd06bea328230c6060c285e55f0}\label{classobiekt3_d_a386e6bd06bea328230c6060c285e55f0}} 
 \index{obiekt3D@{obiekt3D}!ostatnikx@{ostatnikx}}
@@ -132,29 +171,49 @@ Zmiena wykorzytywana do zbierania danych z pliku .obj. \mbox{\Hypertarget{classo
 \doxysubsubsection{\texorpdfstring{ostatnikx}{ostatnikx}}
 {\footnotesize\ttfamily float obiekt3\+D\+::ostatnikx}
 
-Ostatni kąt obrotu w osi x. \mbox{\Hypertarget{classobiekt3_d_ac27740e29927a4afd419aa12e987f065}\label{classobiekt3_d_ac27740e29927a4afd419aa12e987f065}} 
+
+
+Ostatni kąt obrotu w osi x. 
+
+Zawiera informacje o wartości kątu podczas poprzedniego obrotu w stopniach względem osi x. \mbox{\Hypertarget{classobiekt3_d_ac27740e29927a4afd419aa12e987f065}\label{classobiekt3_d_ac27740e29927a4afd419aa12e987f065}} 
 \index{obiekt3D@{obiekt3D}!ostatniky@{ostatniky}}
 \index{ostatniky@{ostatniky}!obiekt3D@{obiekt3D}}
 \doxysubsubsection{\texorpdfstring{ostatniky}{ostatniky}}
 {\footnotesize\ttfamily float obiekt3\+D\+::ostatniky}
 
-Ostatni kąt obrotu w osi y. \mbox{\Hypertarget{classobiekt3_d_a477f969cc9caac37a7383e5660ebfa9c}\label{classobiekt3_d_a477f969cc9caac37a7383e5660ebfa9c}} 
+
+
+Ostatni kąt obrotu w osi y. 
+
+Zawiera informacje o wartości kątu podczas poprzedniego obrotu w stopniach względem osi y. \mbox{\Hypertarget{classobiekt3_d_a477f969cc9caac37a7383e5660ebfa9c}\label{classobiekt3_d_a477f969cc9caac37a7383e5660ebfa9c}} 
 \index{obiekt3D@{obiekt3D}!positions@{positions}}
 \index{positions@{positions}!obiekt3D@{obiekt3D}}
 \doxysubsubsection{\texorpdfstring{positions}{positions}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classwektor3_d}{wektor3D}}$\ast$ obiekt3\+D\+::positions}
 
-Aktualne pozycje wszystkich wierzchołków trójkątów. \mbox{\Hypertarget{classobiekt3_d_aefc0b7e149cdf6e564de0e45716ce0bf}\label{classobiekt3_d_aefc0b7e149cdf6e564de0e45716ce0bf}} 
+
+
+Aktualne pozycje wszystkich wierzchołków trójkątów. 
+
+Aktualne pozycje wszystkich wierzchołków trójkątów. zmieniane są podczas wykonywania metody obroc. \mbox{\Hypertarget{classobiekt3_d_aefc0b7e149cdf6e564de0e45716ce0bf}\label{classobiekt3_d_aefc0b7e149cdf6e564de0e45716ce0bf}} 
 \index{obiekt3D@{obiekt3D}!positionsStart@{positionsStart}}
 \index{positionsStart@{positionsStart}!obiekt3D@{obiekt3D}}
 \doxysubsubsection{\texorpdfstring{positionsStart}{positionsStart}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classwektor3_d}{wektor3D}}$\ast$ obiekt3\+D\+::positions\+Start}
 
-Pozycje początkowe wszystkich wieszchołków trójkątów. \mbox{\Hypertarget{classobiekt3_d_a52bb3aab6fa2a629c41531cf1d047a8b}\label{classobiekt3_d_a52bb3aab6fa2a629c41531cf1d047a8b}} 
+
+
+Pozycje początkowe wszystkich wieszchołków trójkątów. 
+
+Pozycje początkowe wszystkich wieszchołków trójkątów. Ich wartość się nie zmienia. Są one wykorzystywane do obliczenia nowego położenia wierzchołków obiektu. \mbox{\Hypertarget{classobiekt3_d_a52bb3aab6fa2a629c41531cf1d047a8b}\label{classobiekt3_d_a52bb3aab6fa2a629c41531cf1d047a8b}} 
 \index{obiekt3D@{obiekt3D}!texels@{texels}}
 \index{texels@{texels}!obiekt3D@{obiekt3D}}
 \doxysubsubsection{\texorpdfstring{texels}{texels}}
 {\footnotesize\ttfamily float$\ast$$\ast$ obiekt3\+D\+::texels}
+
+
+
+Zmiena wykorzytywana do zbierania danych z pliku .obj. 
 
 Zmiena wykorzytywana do zbierania danych z pliku .obj. 
 

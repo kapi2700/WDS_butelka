@@ -2,13 +2,18 @@
 \label{classmacierz__rot}\index{macierz\_rot@{macierz\_rot}}
 
 
+Klasa macierz rotacji.  
+
+
+
+
 {\ttfamily \#include $<$macierz\+\_\+rot.\+h$>$}
 
 \doxysubsection*{Metody publiczne}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classmacierz__rot_aaccb10f0f05bcd18a7e1a0b71a83b7ec}{macierz\+\_\+rot}} (float a, char o)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Inicjuje macierz wartościami do macierzy rotacji w wybranej osi. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atrybuty publiczne}
 \begin{DoxyCompactItemize}
 \item 
@@ -19,6 +24,8 @@ float \mbox{\hyperlink{classmacierz__rot_a28b75fc6a45b85dbdcf3ac352221536f}{p}} 
 \doxysubsection{Opis szczegółowy}
 Klasa macierz rotacji. 
 
+Klasa pozwalająca na wygodny obracanie obiektów klasy \mbox{\hyperlink{classwektor3_d}{wektor3D}}. 
+
 \doxysubsection{Dokumentacja konstruktora i destruktora}
 \mbox{\Hypertarget{classmacierz__rot_aaccb10f0f05bcd18a7e1a0b71a83b7ec}\label{classmacierz__rot_aaccb10f0f05bcd18a7e1a0b71a83b7ec}} 
 \index{macierz\_rot@{macierz\_rot}!macierz\_rot@{macierz\_rot}}
@@ -26,13 +33,17 @@ Klasa macierz rotacji.
 \doxysubsubsection{\texorpdfstring{macierz\_rot()}{macierz\_rot()}}
 {\footnotesize\ttfamily macierz\+\_\+rot\+::macierz\+\_\+rot (\begin{DoxyParamCaption}\item[{float}]{a,  }\item[{char}]{o }\end{DoxyParamCaption})}
 
-Inicjuje macierz wartościami do macierzy rotacji w wybranej osi.
+
+
+Inicjuje macierz wartościami do macierzy rotacji w wybranej osi. 
+
+Macierz ta powinna być później wykorzystana podczas wykonywania metody \mbox{\hyperlink{classwektor3_d_afc98fdfa34a557eb1f681bcd2e2b3ce3}{wektor3\+D\+::mnozenie}}.
 
 
 \begin{DoxyParams}{Parametry}
-{\em a-\/} & kąt obrotu \\
+{\em a} & -\/ kąt obrotu w stopniach \\
 \hline
-{\em o-\/} & oś obrotu \\
+{\em o} & -\/ oś obrotu, powinna wynosic \textquotesingle{}x\textquotesingle{}, \textquotesingle{}y\textquotesingle{} lub \textquotesingle{}z\textquotesingle{} \\
 \hline
 \end{DoxyParams}
 

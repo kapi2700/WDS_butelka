@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['grawitacja_4',['grawitacja',['../classwoda.html#abfd7503dc26fdf1b22a45d098056fde8',1,'woda']]]
+  ['faces_4',['faces',['../struct_model.html#aa0ad6bceba309b4ceb3ff6c97471b535',1,'Model::faces()'],['../classobiekt3_d.html#abaefc0363f647a22b993ac1ac45daf8f',1,'obiekt3D::faces()']]]
 ];

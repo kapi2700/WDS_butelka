@@ -90,13 +90,18 @@ $(document).ready(function(){initNavTree('classscena.html',''); initResizable();
 </div><!--header-->
 <div class="contents">
 
+<p>Klasa scena.  
+ <a href="classscena.html#details">Więcej...</a></p>
+
 <p><code>#include &lt;<a class="el" href="scena_8h_source.html">scena.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Metody publiczne</h2></td></tr>
 <tr class="memitem:a77d185d535469329187248af744d1a79"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscena.html#a77d185d535469329187248af744d1a79">scena</a> (int n)</td></tr>
+<tr class="memdesc:a77d185d535469329187248af744d1a79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicjuje klase scena.  <a href="classscena.html#a77d185d535469329187248af744d1a79">Więcej...</a><br /></td></tr>
 <tr class="separator:a77d185d535469329187248af744d1a79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82f85b563d970cf045a0488bf00e0d4a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscena.html#a82f85b563d970cf045a0488bf00e0d4a">obrot</a> ()</td></tr>
+<tr class="memdesc:a82f85b563d970cf045a0488bf00e0d4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obrot obiektow na scenie.  <a href="classscena.html#a82f85b563d970cf045a0488bf00e0d4a">Więcej...</a><br /></td></tr>
 <tr class="separator:a82f85b563d970cf045a0488bf00e0d4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acbeaad76c7ea16ae2ae839d08e9051b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscena.html#acbeaad76c7ea16ae2ae839d08e9051b8">rysuj</a> ()</td></tr>
 <tr class="separator:acbeaad76c7ea16ae2ae839d08e9051b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -104,11 +109,15 @@ Metody publiczne</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Atrybuty publiczne</h2></td></tr>
 <tr class="memitem:aa0c19416c885c927091c9090f8477260"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="classobiekt3_d.html">obiekt3D</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscena.html#aa0c19416c885c927091c9090f8477260">ob</a></td></tr>
+<tr class="memdesc:aa0c19416c885c927091c9090f8477260"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obiekty znajdujace sie na scenie (poza wodą).  <a href="classscena.html#aa0c19416c885c927091c9090f8477260">Więcej...</a><br /></td></tr>
 <tr class="separator:aa0c19416c885c927091c9090f8477260"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f0ad4a3d6d1fd88c78e437177ba856a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classwoda.html">woda</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscena.html#a6f0ad4a3d6d1fd88c78e437177ba856a">w</a></td></tr>
 <tr class="separator:a6f0ad4a3d6d1fd88c78e437177ba856a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>Klasa scena. </p>
+<p>Klasa scena zawiera wszystkie wyświetlane obiekty. Pozwala na łatwe obracanie obietków znajdująych się w niej oraz wyświetlanie ich. </p>
+</div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
 <a id="a77d185d535469329187248af744d1a79"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a77d185d535469329187248af744d1a79">&#9670;&nbsp;</a></span>scena()</h2>
 
@@ -124,10 +133,12 @@ Atrybuty publiczne</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Inicjuje klase scena.</p>
+
+<p>Inicjuje klase scena. </p>
+<p>Inicjuje klase scena. Nie zmienia informacji dotyczących pola ob. Inicjuje ona tylko wartość m oraz w.</p>
 <dl class="params"><dt>Parametry</dt><dd>
   <table class="params">
-    <tr><td class="paramname">n-</td><td>ilość kropli wody </td></tr>
+    <tr><td class="paramname">n</td><td>- ilość kropli wody </td></tr>
   </table>
   </dd>
 </dl>
@@ -149,7 +160,9 @@ Atrybuty publiczne</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Obruć wszystko, co znajduje się na scenie. </p>
+
+<p>Obrot obiektow na scenie. </p>
+<p>Pozwala na proste zczytanie z odpowiedniego pliku danych dotyczących obrotu oraz obrót na ich podstawie wszystkich obiektów znajdujących się na scenie, poza kroplami znajdującymi się poza butelką. </p>
 
 </div>
 </div>
@@ -167,6 +180,7 @@ Atrybuty publiczne</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>\biref Rysuje wszystkie obiekty należące do sceny.</p>
 <p>Rysuje wszystkie obiekty należące do sceny. </p>
 
 </div>
@@ -183,6 +197,8 @@ Atrybuty publiczne</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Obiekty znajdujace sie na scenie (poza wodą). </p>
 <p>Obiekty znajdujace sie na scenie (poza wodą). </p>
 
 </div>
@@ -198,7 +214,8 @@ Atrybuty publiczne</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>woda znajdująca się na scenie. </p>
+<p>\bief Woda znajdująca się na scenie.</p>
+<p>Woda znajdująca się na scenie. </p>
 
 </div>
 </div>

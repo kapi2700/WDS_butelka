@@ -18,40 +18,75 @@
 using namespace std;
 
 /**
- * Klasa definiujaca krople.
+ * \brief Klasa Kropla
+ * 
+ * Klasa definiujaca krople, zawiera wszystkie informacje o jej po³o¿eniu oraz ostatnich obrotach.
+ * Pozwala na wygodne wykonywanie ruchów oraz sprawdzanie kolizji
  */
 class kropla
 {
 public:
 	/**
-	 * Wektor polozenia kropli.
+	 * \brief Wektor polozenia kropli.
+	 * 
+	 * Zawiera informacje o po³o¿eniu kropli, wykorzystuje klasê wektor3D.
 	 */
 	wektor3D p;
 	/**
-	 * Wektor polozenia kropli wewnatrz butelki.
+	 * \biref Wektor polozenia kropli wewnatrz butelki.
+	 * 
+	 * Zawiera informacje o po³o¿eniu kropli, wzglêdem uk³adu wspó³rzêdnych obróconego, zgodenie z butelk¹,
+	 * wykorzystuje klasê wektor3D
 	 */
 	wektor3D wew;	//wspolrzedne po obróceniu
 	/**
-	 * Promieñ kropli.
+	 * \brief Promieñ kropli.
+	 * 
+	 * Promieñ kropli, jego wartoœæ jest sta³a i jest ustawiana podczas inicjalizowania kropli.
 	 */
 	float r;
 	/**
-	 * K¹t obrotu kropli wzglêdem œrodka uk³adu wspó³rzêdnych.
+	 * \brief K¹t x.
+	 * 
+	 * K¹t wzglêdem osi x, obrotu kropli wzglêdem œrodka uk³adu wspó³rzêdnych.
 	 */
-	float kx, ky, kz;
+	float kx;
 	/**
-	 * Zmienna mówi¹ca czy kropla jest wewn¹trz butelki.
+	 * \brief K¹t y.
+	 * 
+	 * K¹t wzglêdem osi y, obrotu kropli wzglêdem œrodka uk³adu wspó³rzêdnych.
+	 */
+	float ky;
+	/**
+	 * \brief K¹t z.
+	 * 
+	 * K¹t wzglêdem osi z, obrotu kropli wzglêdem œrodka uk³adu wspó³rzêdnych.
+	 */
+	float kz;
+	/**
+	 * \brief Zmienna mówi¹ca, czy kropla jest wewn¹trz butelki
+	 * 
+	 * Zmienna mówi¹ca czy kropla jest wewn¹trz butelki, true- kropla znajduje sie wewnatrz butelki, false- kropla znajduje sie na zewnatrz butelki
 	 */
 	bool wewnatrz;
 	/**
-	 * Rysuje krople na ekranie.
+	 * \brief Rysuje krople na ekranie.
 	 * 
+	 * Metoda odpowiadaj¹ca, za rysowanie kropli na ekranie. Jej po³o¿enie jest definiowane za pomoc¹ pola p.
 	 */
 	void rysuj();
+	
+	/**
+	 * \brief Inicjalizuje klasê obiekt kropla.
+	 * 
+	 * Podczas inicjalizowania, nadaje wartoœæ r=0.05 oraz sprawdza, czy jej po³o¿enie nie bêdzie kolidowaæ z pozosta³ymi kroplami
+	 */
 	kropla();
 	~kropla();
 	/**
-	 * Obraca krople wzgledem œrodka wspó³rzêdnych.
+	 * \brief Obraca krople wzgledem œrodka wspó³rzêdnych.
+	 * 
+	 * Obracanie kropli wykonwane jest, wraz z obrotem butelki, nie potrzeba sprawdzaæ kolizji podczas wykonywania tej metody.
 	 * 
 	 * \param x - k¹t x
 	 * \param y - k¹t y
@@ -61,33 +96,46 @@ public:
 
 	//void grawitacja();
 	/**
-	 * Sprawdza odleglosc kropli, od podanego wektora.
+	 * \brief Sprawdza odleglosc kropli, od podanego wektora.
+	 * 
+	 * Metoda pozwalaj¹ca na ³atwe ustalenie odleg³oœci kroli, wzglêdem œrodka innego obiektu.
 	 * 
 	 * \param start - wektor od ktorego sprawdzana jest odleglosc
 	 * \return - otrzymana odleglosc
 	 */
 	float odleglosc(wektor3D start);
+	
 	/**
-	 * Sprawdza czy kropla bêdzie kolidowaæ z inn¹ kropl¹.
+	 * \brief Sprawdza czy kropla bêdzie kolidowaæ z inn¹ kropl¹.
+	 * 
+	 * Pozwala na proste sprawdzenie mo¿liwoœci ruchu. Wykorzystywane do symulowania grawitacji
 	 * 
 	 * \param ruch - wokonywany ruch
 	 * \param a - kropla, z któr¹ jest sprawdzana kolizja
-	 * \return  - true - kolizja, false - brak kolizji
-	 * \retval - true - kolizja
+	 * \return  informacje o kolizji
+	 * \retval true - kolizja
+	 * \retval false - brak kolizji
 	 * 
 	 */
 	bool kolizja(wektor3D ruch, kropla a);
+	
 	/**
-	 * Wykonuje ruch kropli.
+	 * \brief Wykonuje ruch kropli.
+	 * 
+	 * Metoda ta zmienia dane o po³o¿eniu kropli zmieniaj¹c pola p oraz wew klasy kropla.
 	 * 
 	 * \param wek - jak kropla powinna siê ruszyæ
 	 */
 	void ruch(wektor3D wek);
 	/**
-	 * Sprawdza, czy kropla bêdzie kolidowaæ z butelk¹.
+	 * \brief Sprawdza, czy kropla bêdzie kolidowaæ z butelk¹.
+	 * 
+	 * Pozwala na proste sprwadzenie mo¿liwoœci ruchu. W tej metodzie, butelka jest przybli¿ana do dwóch po³¹czonych ze sob¹ walców.
 	 * 
 	 * \param ruch - ruch jaki kropla ma wykonaæ
-	 * \return - true - kolizja, false - brak kolizji
+	 * \return  informacje o kolizji
+	 * \retval true - kolizja
+	 * \retval false - brak kolizji
 	 */
 	bool kolizja(wektor3D ruch);
 };

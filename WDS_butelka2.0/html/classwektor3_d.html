@@ -90,13 +90,18 @@ $(document).ready(function(){initNavTree('classwektor3_d.html',''); initResizabl
 </div><!--header-->
 <div class="contents">
 
+<p>Klasa <a class="el" href="classwektor3_d.html" title="Klasa wektor3D.">wektor3D</a>.  
+ <a href="classwektor3_d.html#details">Więcej...</a></p>
+
 <p><code>#include &lt;<a class="el" href="wektor3_d_8h_source.html">wektor3D.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Metody publiczne</h2></td></tr>
 <tr class="memitem:afc98fdfa34a557eb1f681bcd2e2b3ce3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwektor3_d.html#afc98fdfa34a557eb1f681bcd2e2b3ce3">mnozenie</a> (<a class="el" href="classmacierz__rot.html">macierz_rot</a> m)</td></tr>
+<tr class="memdesc:afc98fdfa34a557eb1f681bcd2e2b3ce3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obracanie wektora.  <a href="classwektor3_d.html#afc98fdfa34a557eb1f681bcd2e2b3ce3">Więcej...</a><br /></td></tr>
 <tr class="separator:afc98fdfa34a557eb1f681bcd2e2b3ce3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af09c195f1eea9514e5a508b7abf1de86"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwektor3_d.html#af09c195f1eea9514e5a508b7abf1de86">wektor3D</a> ()</td></tr>
+<tr class="memdesc:af09c195f1eea9514e5a508b7abf1de86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicjuje <a class="el" href="classwektor3_d.html" title="Klasa wektor3D.">wektor3D</a>.  <a href="classwektor3_d.html#af09c195f1eea9514e5a508b7abf1de86">Więcej...</a><br /></td></tr>
 <tr class="separator:af09c195f1eea9514e5a508b7abf1de86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44749596c6ca420802e77de4565424ac"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwektor3_d.html#a44749596c6ca420802e77de4565424ac">odlegloscY</a> ()</td></tr>
 <tr class="separator:a44749596c6ca420802e77de4565424ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -104,9 +109,13 @@ Metody publiczne</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Atrybuty publiczne</h2></td></tr>
 <tr class="memitem:ac303bfa8bea43eb3d4a65a11d80795e0"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwektor3_d.html#ac303bfa8bea43eb3d4a65a11d80795e0">p</a> [3]</td></tr>
+<tr class="memdesc:ac303bfa8bea43eb3d4a65a11d80795e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Współrzędne 3D.  <a href="classwektor3_d.html#ac303bfa8bea43eb3d4a65a11d80795e0">Więcej...</a><br /></td></tr>
 <tr class="separator:ac303bfa8bea43eb3d4a65a11d80795e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>Klasa <a class="el" href="classwektor3_d.html" title="Klasa wektor3D.">wektor3D</a>. </p>
+<p>Klasa ta zawiera informacje o położeniu wektora oraz pozwala na łatwe wyliczenie wektora po obrocie. Dodatkowo istnieje możliwość obliczenia odległości wektora od osi Y. </p>
+</div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
 <a id="af09c195f1eea9514e5a508b7abf1de86"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af09c195f1eea9514e5a508b7abf1de86">&#9670;&nbsp;</a></span>wektor3D()</h2>
 
@@ -121,6 +130,9 @@ Atrybuty publiczne</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Inicjuje <a class="el" href="classwektor3_d.html" title="Klasa wektor3D.">wektor3D</a>. </p>
+<p>Ustawia jego położenie na (0,0,0) </p>
 
 </div>
 </div>
@@ -140,6 +152,8 @@ Atrybuty publiczne</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Obracanie wektora. </p>
 <p>Mnoży wektor przez macierz rotacji 3x3.</p>
 <dl class="params"><dt>Parametry</dt><dd>
   <table class="params">
@@ -164,7 +178,8 @@ Atrybuty publiczne</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Odległość punktu od osi Y.</p>
+<p>\bief Odległość od osi Y.</p>
+<p>Metoda ta wylicza odległość wektora od osi Y.</p>
 <dl class="section return"><dt>Zwraca</dt><dd>- odleglosc od osi Y </dd></dl>
 
 </div>
@@ -181,7 +196,9 @@ Atrybuty publiczne</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
 <p>Współrzędne 3D. </p>
+<p>Współrzędne wektora w kolejności x, y oraz z. W programie oś y jest osią pionową. </p>
 
 </div>
 </div>

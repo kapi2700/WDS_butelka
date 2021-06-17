@@ -2,25 +2,35 @@
 \label{classscena}\index{scena@{scena}}
 
 
+Klasa scena.  
+
+
+
+
 {\ttfamily \#include $<$scena.\+h$>$}
 
 \doxysubsection*{Metody publiczne}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classscena_a77d185d535469329187248af744d1a79}{scena}} (int n)
-\item 
+\begin{DoxyCompactList}\small\item\em Inicjuje klase scena. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classscena_a82f85b563d970cf045a0488bf00e0d4a}{obrot}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Obrot obiektow na scenie. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classscena_acbeaad76c7ea16ae2ae839d08e9051b8}{rysuj}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Atrybuty publiczne}
 \begin{DoxyCompactItemize}
 \item 
 vector$<$ \mbox{\hyperlink{classobiekt3_d}{obiekt3D}} $>$ \mbox{\hyperlink{classscena_aa0c19416c885c927091c9090f8477260}{ob}}
-\item 
+\begin{DoxyCompactList}\small\item\em Obiekty znajdujace sie na scenie (poza wodą). \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classwoda}{woda}} \mbox{\hyperlink{classscena_a6f0ad4a3d6d1fd88c78e437177ba856a}{w}}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Opis szczegółowy}
+Klasa scena. 
+
+Klasa scena zawiera wszystkie wyświetlane obiekty. Pozwala na łatwe obracanie obietków znajdująych się w niej oraz wyświetlanie ich. 
 
 \doxysubsection{Dokumentacja konstruktora i destruktora}
 \mbox{\Hypertarget{classscena_a77d185d535469329187248af744d1a79}\label{classscena_a77d185d535469329187248af744d1a79}} 
@@ -29,11 +39,15 @@ vector$<$ \mbox{\hyperlink{classobiekt3_d}{obiekt3D}} $>$ \mbox{\hyperlink{class
 \doxysubsubsection{\texorpdfstring{scena()}{scena()}}
 {\footnotesize\ttfamily scena\+::scena (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
 
-Inicjuje klase scena.
+
+
+Inicjuje klase scena. 
+
+Inicjuje klase scena. Nie zmienia informacji dotyczących pola ob. Inicjuje ona tylko wartość m oraz w.
 
 
 \begin{DoxyParams}{Parametry}
-{\em n-\/} & ilość kropli wody \\
+{\em n} & -\/ ilość kropli wody \\
 \hline
 \end{DoxyParams}
 
@@ -45,11 +59,17 @@ Inicjuje klase scena.
 \doxysubsubsection{\texorpdfstring{obrot()}{obrot()}}
 {\footnotesize\ttfamily void scena\+::obrot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Obruć wszystko, co znajduje się na scenie. \mbox{\Hypertarget{classscena_acbeaad76c7ea16ae2ae839d08e9051b8}\label{classscena_acbeaad76c7ea16ae2ae839d08e9051b8}} 
+
+
+Obrot obiektow na scenie. 
+
+Pozwala na proste zczytanie z odpowiedniego pliku danych dotyczących obrotu oraz obrót na ich podstawie wszystkich obiektów znajdujących się na scenie, poza kroplami znajdującymi się poza butelką. \mbox{\Hypertarget{classscena_acbeaad76c7ea16ae2ae839d08e9051b8}\label{classscena_acbeaad76c7ea16ae2ae839d08e9051b8}} 
 \index{scena@{scena}!rysuj@{rysuj}}
 \index{rysuj@{rysuj}!scena@{scena}}
 \doxysubsubsection{\texorpdfstring{rysuj()}{rysuj()}}
 {\footnotesize\ttfamily void scena\+::rysuj (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\textbackslash{}biref Rysuje wszystkie obiekty należące do sceny.
 
 Rysuje wszystkie obiekty należące do sceny. 
 
@@ -60,13 +80,19 @@ Rysuje wszystkie obiekty należące do sceny.
 \doxysubsubsection{\texorpdfstring{ob}{ob}}
 {\footnotesize\ttfamily vector$<$\mbox{\hyperlink{classobiekt3_d}{obiekt3D}}$>$ scena\+::ob}
 
+
+
+Obiekty znajdujace sie na scenie (poza wodą). 
+
 Obiekty znajdujace sie na scenie (poza wodą). \mbox{\Hypertarget{classscena_a6f0ad4a3d6d1fd88c78e437177ba856a}\label{classscena_a6f0ad4a3d6d1fd88c78e437177ba856a}} 
 \index{scena@{scena}!w@{w}}
 \index{w@{w}!scena@{scena}}
 \doxysubsubsection{\texorpdfstring{w}{w}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classwoda}{woda}} scena\+::w}
 
-woda znajdująca się na scenie. 
+\textbackslash{}bief Woda znajdująca się na scenie.
+
+Woda znajdująca się na scenie. 
 
 Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
 \item 

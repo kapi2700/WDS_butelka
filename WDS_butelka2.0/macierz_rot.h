@@ -12,7 +12,9 @@
 
 
 /**
- * Klasa macierz rotacji.
+ * \brief Klasa macierz rotacji.
+ * 
+ * Klasa pozwalaj¹ca na wygodny obracanie obiektów klasy wektor3D.
  */
 class macierz_rot
 {
@@ -23,10 +25,12 @@ public:
 	float p[3][3];
 
 	/**
-	 * Inicjuje macierz wartoœciami do macierzy rotacji w wybranej osi.
+	 * \brief Inicjuje macierz wartoœciami do macierzy rotacji w wybranej osi.
 	 * 
-	 * \param a- k¹t obrotu
-	 * \param o- oœ obrotu
+	 * Macierz ta powinna byæ póŸniej wykorzystana podczas wykonywania metody wektor3D::mnozenie.
+	 * 
+	 * \param a - k¹t obrotu w stopniach
+	 * \param o - oœ obrotu, powinna wynosic 'x', 'y' lub 'z'
 	 */
 	macierz_rot(float a,char o);
 };

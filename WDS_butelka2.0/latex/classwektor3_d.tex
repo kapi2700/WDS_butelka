@@ -2,23 +2,33 @@
 \label{classwektor3_d}\index{wektor3D@{wektor3D}}
 
 
+Klasa \mbox{\hyperlink{classwektor3_d}{wektor3D}}.  
+
+
+
+
 {\ttfamily \#include $<$wektor3\+D.\+h$>$}
 
 \doxysubsection*{Metody publiczne}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{classwektor3_d_afc98fdfa34a557eb1f681bcd2e2b3ce3}{mnozenie}} (\mbox{\hyperlink{classmacierz__rot}{macierz\+\_\+rot}} m)
-\item 
+\begin{DoxyCompactList}\small\item\em Obracanie wektora. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classwektor3_d_af09c195f1eea9514e5a508b7abf1de86}{wektor3D}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Inicjuje \mbox{\hyperlink{classwektor3_d}{wektor3D}}. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{classwektor3_d_a44749596c6ca420802e77de4565424ac}{odlegloscY}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Atrybuty publiczne}
 \begin{DoxyCompactItemize}
 \item 
 float \mbox{\hyperlink{classwektor3_d_ac303bfa8bea43eb3d4a65a11d80795e0}{p}} \mbox{[}3\mbox{]}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Współrzędne 3D. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Opis szczegółowy}
+Klasa \mbox{\hyperlink{classwektor3_d}{wektor3D}}. 
+
+Klasa ta zawiera informacje o położeniu wektora oraz pozwala na łatwe wyliczenie wektora po obrocie. Dodatkowo istnieje możliwość obliczenia odległości wektora od osi Y. 
 
 \doxysubsection{Dokumentacja konstruktora i destruktora}
 \mbox{\Hypertarget{classwektor3_d_af09c195f1eea9514e5a508b7abf1de86}\label{classwektor3_d_af09c195f1eea9514e5a508b7abf1de86}} 
@@ -29,12 +39,20 @@ float \mbox{\hyperlink{classwektor3_d_ac303bfa8bea43eb3d4a65a11d80795e0}{p}} \mb
 
 
 
+Inicjuje \mbox{\hyperlink{classwektor3_d}{wektor3D}}. 
+
+Ustawia jego położenie na (0,0,0) 
+
 \doxysubsection{Dokumentacja funkcji składowych}
 \mbox{\Hypertarget{classwektor3_d_afc98fdfa34a557eb1f681bcd2e2b3ce3}\label{classwektor3_d_afc98fdfa34a557eb1f681bcd2e2b3ce3}} 
 \index{wektor3D@{wektor3D}!mnozenie@{mnozenie}}
 \index{mnozenie@{mnozenie}!wektor3D@{wektor3D}}
 \doxysubsubsection{\texorpdfstring{mnozenie()}{mnozenie()}}
 {\footnotesize\ttfamily void wektor3\+D\+::mnozenie (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmacierz__rot}{macierz\+\_\+rot}}}]{m }\end{DoxyParamCaption})}
+
+
+
+Obracanie wektora. 
 
 Mnoży wektor przez macierz rotacji 3x3.
 
@@ -49,7 +67,9 @@ Mnoży wektor przez macierz rotacji 3x3.
 \doxysubsubsection{\texorpdfstring{odlegloscY()}{odlegloscY()}}
 {\footnotesize\ttfamily float wektor3\+D\+::odlegloscY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Odległość punktu od osi Y.
+\textbackslash{}bief Odległość od osi Y.
+
+Metoda ta wylicza odległość wektora od osi Y.
 
 \begin{DoxyReturn}{Zwraca}
 -\/ odleglosc od osi Y 
@@ -63,7 +83,11 @@ Odległość punktu od osi Y.
 \doxysubsubsection{\texorpdfstring{p}{p}}
 {\footnotesize\ttfamily float wektor3\+D\+::p\mbox{[}3\mbox{]}}
 
+
+
 Współrzędne 3D. 
+
+Współrzędne wektora w kolejności x, y oraz z. W programie oś y jest osią pionową. 
 
 Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
 \item 

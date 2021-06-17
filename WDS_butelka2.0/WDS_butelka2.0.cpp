@@ -32,7 +32,10 @@ int stopienObrotu = 0;
 float kat = 0;
 
 /**
- * Funkcja obs³uguj¹ca klawiaturê.
+ * \brief Funkcja obs³uguj¹ca klawiaturê.
+ * 
+ * Funkcja obs³guje wciskanie przycisków "a" oraz "d", na tej podstawie
+ * obracana jest kamera
  * 
  * \param key - wcisniety przycisk
  */
@@ -55,6 +58,11 @@ void keyboard(unsigned char key, int x, int y)
     }
 }
 
+/**
+ * \brief Funkcja inicjuj¹ca OpenGL.
+ * 
+ */
+
 void initGL() {                           //initialize openGL
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f); // Set background color to black and opaque
     glClearDepth(1.0f);                   // Set background depth to farthest
@@ -66,6 +74,14 @@ void initGL() {                           //initialize openGL
     glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);  // Nice perspective corrections
 }
 
+
+/**
+ * \brief Pêtla wyœwietlania
+ * 
+ * Funkcja s³u¿¹ca za pêtlê wykonywan¹ podczas generowania ka¿dej klatki.
+ * W niej wykonywane jest rysowanie, obracanie oraz przesuwanie obiektów.
+ * 
+ */
 void display() {                //What to display
 
     //if (restart)
@@ -97,7 +113,11 @@ void display() {                //What to display
     glutPostRedisplay();
 }
 
-
+/**
+ * \brief Zmiana wielkoœci okna
+ * 
+ * Funkcja pozwala na zmianê wielkoœci okna
+ */
 void reshape(GLsizei width, GLsizei height) {  // GLsizei for non-negative integer
    // Compute aspect ratio of the new window
     if (height == 0) height = 1;                // To prevent divide by 0

@@ -13,19 +13,23 @@ Program wyświetlający butelkę z wodą
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{_w_d_s__butelka2_80_8cpp_aef7ba2f69afb2d954545f64c7fe24b14}{keyboard}} (unsigned char key, int x, int y)
-\item 
+\begin{DoxyCompactList}\small\item\em Funkcja obsługująca klawiaturę. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{_w_d_s__butelka2_80_8cpp_a12791d9e49a2fd3306290a226864aba4}{init\+GL}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Funkcja inicjująca Open\+GL. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{_w_d_s__butelka2_80_8cpp_a1e5b20fed15743656bb6d2e6a6ea6269}{display}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Pętla wyświetlania. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{_w_d_s__butelka2_80_8cpp_a0447aef09d3c4464e6f8d81340f3a4b0}{reshape}} (GLsizei width, GLsizei height)
-\item 
+\begin{DoxyCompactList}\small\item\em Zmiana wielkości okna. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{_w_d_s__butelka2_80_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
 \end{DoxyCompactItemize}
 \doxysubsection*{Zmienne}
 \begin{DoxyCompactItemize}
 \item 
 char \mbox{\hyperlink{_w_d_s__butelka2_80_8cpp_a58a6b319a4aba2259f60972473a2018d}{title}} \mbox{[}$\,$\mbox{]} = \char`\"{}Butelka\char`\"{}
+\item 
+\mbox{\hyperlink{classobiekt3_d}{obiekt3D}} \mbox{\hyperlink{_w_d_s__butelka2_80_8cpp_a4a020521f8eb3e8a0cef547ad5eb53d6}{butelka}} (\char`\"{}butelka\char`\"{}, 0.\+4335f, 0.\+8476f, 1.\+0f, 0.\+5f)
+\item 
+bool \mbox{\hyperlink{_w_d_s__butelka2_80_8cpp_a8649fdfafe4f3ed5fa96bb5261379247}{restart}} = false
 \item 
 GLfloat \mbox{\hyperlink{_w_d_s__butelka2_80_8cpp_a519f0f0bcbeb85e0ddcc911b92fcff1b}{mat\+\_\+specular}} \mbox{[}$\,$\mbox{]} = \{ 1.\+0, 1.\+0,1.\+0,1.\+0 \}
 \item 
@@ -59,11 +63,19 @@ May 2021
 \doxysubsubsection{\texorpdfstring{display()}{display()}}
 {\footnotesize\ttfamily void display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{_w_d_s__butelka2_80_8cpp_a12791d9e49a2fd3306290a226864aba4}\label{_w_d_s__butelka2_80_8cpp_a12791d9e49a2fd3306290a226864aba4}} 
+
+
+Pętla wyświetlania. 
+
+Funkcja służąca za pętlę wykonywaną podczas generowania każdej klatki. W niej wykonywane jest rysowanie, obracanie oraz przesuwanie obiektów. \mbox{\Hypertarget{_w_d_s__butelka2_80_8cpp_a12791d9e49a2fd3306290a226864aba4}\label{_w_d_s__butelka2_80_8cpp_a12791d9e49a2fd3306290a226864aba4}} 
 \index{WDS\_butelka2.0.cpp@{WDS\_butelka2.0.cpp}!initGL@{initGL}}
 \index{initGL@{initGL}!WDS\_butelka2.0.cpp@{WDS\_butelka2.0.cpp}}
 \doxysubsubsection{\texorpdfstring{initGL()}{initGL()}}
 {\footnotesize\ttfamily void init\+GL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Funkcja inicjująca Open\+GL. 
 
 \mbox{\Hypertarget{_w_d_s__butelka2_80_8cpp_aef7ba2f69afb2d954545f64c7fe24b14}\label{_w_d_s__butelka2_80_8cpp_aef7ba2f69afb2d954545f64c7fe24b14}} 
 \index{WDS\_butelka2.0.cpp@{WDS\_butelka2.0.cpp}!keyboard@{keyboard}}
@@ -71,7 +83,11 @@ May 2021
 \doxysubsubsection{\texorpdfstring{keyboard()}{keyboard()}}
 {\footnotesize\ttfamily void keyboard (\begin{DoxyParamCaption}\item[{unsigned char}]{key,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
 
-Funkcja obsługująca klawiaturę.
+
+
+Funkcja obsługująca klawiaturę. 
+
+Funkcja obsłguje wciskanie przycisków \char`\"{}a\char`\"{} oraz \char`\"{}d\char`\"{}, na tej podstawie obracana jest kamera
 
 
 \begin{DoxyParams}{Parametry}
@@ -92,7 +108,17 @@ Funkcja obsługująca klawiaturę.
 
 
 
+Zmiana wielkości okna. 
+
+Funkcja pozwala na zmianę wielkości okna 
+
 \doxysubsection{Dokumentacja zmiennych}
+\mbox{\Hypertarget{_w_d_s__butelka2_80_8cpp_a4a020521f8eb3e8a0cef547ad5eb53d6}\label{_w_d_s__butelka2_80_8cpp_a4a020521f8eb3e8a0cef547ad5eb53d6}} 
+\index{WDS\_butelka2.0.cpp@{WDS\_butelka2.0.cpp}!butelka@{butelka}}
+\index{butelka@{butelka}!WDS\_butelka2.0.cpp@{WDS\_butelka2.0.cpp}}
+\doxysubsubsection{\texorpdfstring{butelka}{butelka}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classobiekt3_d}{obiekt3D}} butelka(\char`\"{}butelka\char`\"{}, 0.\+4335f, 0.\+8476f, 1.\+0f, 0.\+5f) (\begin{DoxyParamCaption}\item[{\char`\"{}butelka\char`\"{}}]{,  }\item[{0.}]{4335f,  }\item[{0.}]{8476f,  }\item[{1.}]{0f,  }\item[{0.}]{5f }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{_w_d_s__butelka2_80_8cpp_afd539d1a13ae0f676020ce114bceb904}\label{_w_d_s__butelka2_80_8cpp_afd539d1a13ae0f676020ce114bceb904}} 
 \index{WDS\_butelka2.0.cpp@{WDS\_butelka2.0.cpp}!kat@{kat}}
 \index{kat@{kat}!WDS\_butelka2.0.cpp@{WDS\_butelka2.0.cpp}}
@@ -116,6 +142,12 @@ Funkcja obsługująca klawiaturę.
 \index{mat\_specular@{mat\_specular}!WDS\_butelka2.0.cpp@{WDS\_butelka2.0.cpp}}
 \doxysubsubsection{\texorpdfstring{mat\_specular}{mat\_specular}}
 {\footnotesize\ttfamily GLfloat mat\+\_\+specular\mbox{[}$\,$\mbox{]} = \{ 1.\+0, 1.\+0,1.\+0,1.\+0 \}}
+
+\mbox{\Hypertarget{_w_d_s__butelka2_80_8cpp_a8649fdfafe4f3ed5fa96bb5261379247}\label{_w_d_s__butelka2_80_8cpp_a8649fdfafe4f3ed5fa96bb5261379247}} 
+\index{WDS\_butelka2.0.cpp@{WDS\_butelka2.0.cpp}!restart@{restart}}
+\index{restart@{restart}!WDS\_butelka2.0.cpp@{WDS\_butelka2.0.cpp}}
+\doxysubsubsection{\texorpdfstring{restart}{restart}}
+{\footnotesize\ttfamily bool restart = false}
 
 \mbox{\Hypertarget{_w_d_s__butelka2_80_8cpp_ae57cfb921bbbb45aecf61c795051d070}\label{_w_d_s__butelka2_80_8cpp_ae57cfb921bbbb45aecf61c795051d070}} 
 \index{WDS\_butelka2.0.cpp@{WDS\_butelka2.0.cpp}!stopienObrotu@{stopienObrotu}}

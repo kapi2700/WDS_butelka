@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['faces_3',['faces',['../struct_model.html#aa0ad6bceba309b4ceb3ff6c97471b535',1,'Model::faces()'],['../classobiekt3_d.html#abaefc0363f647a22b993ac1ac45daf8f',1,'obiekt3D::faces()']]]
+  ['display_3',['display',['../_w_d_s__butelka2_80_8cpp.html#a1e5b20fed15743656bb6d2e6a6ea6269',1,'WDS_butelka2.0.cpp']]]
 ];

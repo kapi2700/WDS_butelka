@@ -10,38 +10,55 @@
 #include "obiekt3D.h"
 #include "woda.h"
 
+/**
+ * \brief Klasa scena.
+ * 
+ * Klasa scena zawiera wszystkie wyœwietlane obiekty. Pozwala na ³atwe obracanie obietków znajduj¹ych siê w niej
+ * oraz wyœwietlanie ich.
+ */
 class scena
 {
 	/**
-	 * Iloœæ kropli.
+	 * \brief ilosc kropli
+	 * 
+	 * Zmienna informuj¹ca o iloœci kropli na scenie
 	 */
 	int m;		//ilosc kropli
 public:
 	/**
+	 * \brief Obiekty znajdujace sie na scenie (poza wod¹).
+	 * 
 	 * Obiekty znajdujace sie na scenie (poza wod¹).
 	 */
 	vector<obiekt3D> ob;
 	/**
-	 * woda znajduj¹ca siê na scenie.
+	 * \bief Woda znajduj¹ca siê na scenie.
+	 * 
+	 * Woda znajduj¹ca siê na scenie.
 	 */
 	woda w;
 
 	/**
-	 * Inicjuje klase scena.
+	 * \brief Inicjuje klase scena.
 	 * 
-	 * \param n- iloœæ kropli wody
+	 * Inicjuje klase scena. Nie zmienia informacji dotycz¹cych pola ob. Inicjuje ona tylko wartoœæ m oraz w.
+	 * 
+	 * \param n - iloœæ kropli wody
 	 */
 	scena(int n);
 	/**
-	 * Obruæ wszystko, co znajduje siê na scenie.
+	 * \brief Obrot obiektow na scenie
+	 * 
+	 * Pozwala na proste zczytanie z odpowiedniego pliku danych dotycz¹cych obrotu oraz obrót na ich podstawie
+	 * wszystkich obiektów znajduj¹cych siê na scenie, poza kroplami znajduj¹cymi siê poza butelk¹.
 	 * 
 	 */
 	void obrot();
 
-	//void init(int n);
 	/**
-	 * Rysuje wszystkie obiekty nale¿¹ce do sceny.
+	 * \biref Rysuje wszystkie obiekty nale¿¹ce do sceny.
 	 * 
+	 * Rysuje wszystkie obiekty nale¿¹ce do sceny.
 	 */
 	void rysuj();
 };

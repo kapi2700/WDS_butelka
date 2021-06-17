@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['initgl_5',['initGL',['../_w_d_s__butelka2_80_8cpp.html#a12791d9e49a2fd3306290a226864aba4',1,'WDS_butelka2.0.cpp']]]
+  ['grawitacja_5',['grawitacja',['../classwoda.html#abfd7503dc26fdf1b22a45d098056fde8',1,'woda']]]
 ];

@@ -90,11 +90,15 @@ $(document).ready(function(){initNavTree('classmacierz__rot.html',''); initResiz
 </div><!--header-->
 <div class="contents">
 
+<p>Klasa macierz rotacji.  
+ <a href="classmacierz__rot.html#details">Więcej...</a></p>
+
 <p><code>#include &lt;<a class="el" href="macierz__rot_8h_source.html">macierz_rot.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Metody publiczne</h2></td></tr>
 <tr class="memitem:aaccb10f0f05bcd18a7e1a0b71a83b7ec"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmacierz__rot.html#aaccb10f0f05bcd18a7e1a0b71a83b7ec">macierz_rot</a> (float a, char o)</td></tr>
+<tr class="memdesc:aaccb10f0f05bcd18a7e1a0b71a83b7ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicjuje macierz wartościami do macierzy rotacji w wybranej osi.  <a href="classmacierz__rot.html#aaccb10f0f05bcd18a7e1a0b71a83b7ec">Więcej...</a><br /></td></tr>
 <tr class="separator:aaccb10f0f05bcd18a7e1a0b71a83b7ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -104,6 +108,7 @@ Atrybuty publiczne</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
 <div class="textblock"><p>Klasa macierz rotacji. </p>
+<p>Klasa pozwalająca na wygodny obracanie obiektów klasy <a class="el" href="classwektor3_d.html" title="Klasa wektor3D.">wektor3D</a>. </p>
 </div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
 <a id="aaccb10f0f05bcd18a7e1a0b71a83b7ec"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaccb10f0f05bcd18a7e1a0b71a83b7ec">&#9670;&nbsp;</a></span>macierz_rot()</h2>
@@ -130,11 +135,13 @@ Atrybuty publiczne</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Inicjuje macierz wartościami do macierzy rotacji w wybranej osi.</p>
+
+<p>Inicjuje macierz wartościami do macierzy rotacji w wybranej osi. </p>
+<p>Macierz ta powinna być później wykorzystana podczas wykonywania metody <a class="el" href="classwektor3_d.html#afc98fdfa34a557eb1f681bcd2e2b3ce3" title="Obracanie wektora.">wektor3D::mnozenie</a>.</p>
 <dl class="params"><dt>Parametry</dt><dd>
   <table class="params">
-    <tr><td class="paramname">a-</td><td>kąt obrotu </td></tr>
-    <tr><td class="paramname">o-</td><td>oś obrotu </td></tr>
+    <tr><td class="paramname">a</td><td>- kąt obrotu w stopniach </td></tr>
+    <tr><td class="paramname">o</td><td>- oś obrotu, powinna wynosic 'x', 'y' lub 'z' </td></tr>
   </table>
   </dd>
 </dl>

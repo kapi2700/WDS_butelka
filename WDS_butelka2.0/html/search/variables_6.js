@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['normals_127',['normals',['../struct_model.html#a913c7d799c7c1288cc3ba2809c87b5f2',1,'Model::normals()'],['../classobiekt3_d.html#a78ac17d2768c857374999a466f068482',1,'obiekt3D::normals()']]]
+  ['mat_5fshininess_127',['mat_shininess',['../_w_d_s__butelka2_80_8cpp.html#adfc8820858e84f99762a3f27350fc384',1,'WDS_butelka2.0.cpp']]],
+  ['mat_5fspecular_128',['mat_specular',['../_w_d_s__butelka2_80_8cpp.html#a519f0f0bcbeb85e0ddcc911b92fcff1b',1,'WDS_butelka2.0.cpp']]],
+  ['model_129',['model',['../classobiekt3_d.html#a28a674f40a5ac31c219122f3871f5507',1,'obiekt3D']]]
 ];
