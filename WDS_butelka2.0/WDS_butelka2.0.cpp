@@ -136,8 +136,8 @@ void reshape(GLsizei width, GLsizei height) {  // GLsizei for non-negative integ
 
 int main(int argc, char** argv)
 {
-    s = new scena(100);
-    s->ob.push_back(butelka);
+    s = new scena(150);
+    s->obiekty.push_back(butelka);
 
     glutInit(&argc, argv);            // Initialize GLUT
     glutInitDisplayMode(GLUT_DOUBLE); // Enable double buffered mode

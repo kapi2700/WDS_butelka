@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['_7ekropla_69',['~kropla',['../classkropla.html#a41d1803ec3673f980768562ac704f110',1,'kropla']]],
-  ['_7eobiekt3d_70',['~obiekt3D',['../classobiekt3_d.html#a7a8683e31a0bf6ea587edd9f8d58abf5',1,'obiekt3D']]]
+  ['_7ekropla_70',['~kropla',['../classkropla.html#a41d1803ec3673f980768562ac704f110',1,'kropla']]],
+  ['_7eobiekt3d_71',['~obiekt3D',['../classobiekt3_d.html#a7a8683e31a0bf6ea587edd9f8d58abf5',1,'obiekt3D']]]
 ];

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['l_125',['l',['../classwoda.html#a6956521cc9d782c218e9633872de546e',1,'woda']]],
-  ['light_5fposition_126',['light_position',['../_w_d_s__butelka2_80_8cpp.html#a9150217d8e8a347844efee8624dd5ee4',1,'WDS_butelka2.0.cpp']]]
+  ['kat_123',['kat',['../_w_d_s__butelka2_80_8cpp.html#afd539d1a13ae0f676020ce114bceb904',1,'WDS_butelka2.0.cpp']]],
+  ['krople_124',['krople',['../classwoda.html#ac855e04788da2899d5f9ce5e1001fd3c',1,'woda']]]
 ];

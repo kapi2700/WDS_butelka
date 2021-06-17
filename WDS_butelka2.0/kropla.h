@@ -31,44 +31,44 @@ public:
 	 * 
 	 * Zawiera informacje o po³o¿eniu kropli, wykorzystuje klasê wektor3D.
 	 */
-	wektor3D p;
+	wektor3D srodek_glob;
 	/**
 	 * \biref Wektor polozenia kropli wewnatrz butelki.
 	 * 
 	 * Zawiera informacje o po³o¿eniu kropli, wzglêdem uk³adu wspó³rzêdnych obróconego, zgodenie z butelk¹,
 	 * wykorzystuje klasê wektor3D
 	 */
-	wektor3D wew;	//wspolrzedne po obróceniu
+	wektor3D srodek_wewn;	//wspolrzedne po obróceniu
 	/**
 	 * \brief Promieñ kropli.
 	 * 
 	 * Promieñ kropli, jego wartoœæ jest sta³a i jest ustawiana podczas inicjalizowania kropli.
 	 */
-	float r;
+	float promien;
 	/**
-	 * \brief K¹t x.
+	 * \brief K¹t x (stopnie).
 	 * 
-	 * K¹t wzglêdem osi x, obrotu kropli wzglêdem œrodka uk³adu wspó³rzêdnych.
+	 * K¹t wzglêdem osi x, obrotu kropli wzglêdem œrodka uk³adu wspó³rzêdnych podany w stopniach.
 	 */
-	float kx;
+	float ostatni_kat_x;
 	/**
-	 * \brief K¹t y.
+	 * \brief K¹t y (stopnie).
 	 * 
-	 * K¹t wzglêdem osi y, obrotu kropli wzglêdem œrodka uk³adu wspó³rzêdnych.
+	 * K¹t wzglêdem osi y, obrotu kropli wzglêdem œrodka uk³adu wspó³rzêdnych podany w stopniach.
 	 */
-	float ky;
+	float ostatni_kat_y;
 	/**
-	 * \brief K¹t z.
+	 * \brief K¹t z (stopnie).
 	 * 
-	 * K¹t wzglêdem osi z, obrotu kropli wzglêdem œrodka uk³adu wspó³rzêdnych.
+	 * K¹t wzglêdem osi z, obrotu kropli wzglêdem œrodka uk³adu wspó³rzêdnych podany w stopniach.
 	 */
-	float kz;
+	float ostatni_kat_z;
 	/**
 	 * \brief Zmienna mówi¹ca, czy kropla jest wewn¹trz butelki
 	 * 
 	 * Zmienna mówi¹ca czy kropla jest wewn¹trz butelki, true- kropla znajduje sie wewnatrz butelki, false- kropla znajduje sie na zewnatrz butelki
 	 */
-	bool wewnatrz;
+	bool czy_wewnatrz;
 	/**
 	 * \brief Rysuje krople na ekranie.
 	 * 
@@ -88,11 +88,11 @@ public:
 	 * 
 	 * Obracanie kropli wykonwane jest, wraz z obrotem butelki, nie potrzeba sprawdzaæ kolizji podczas wykonywania tej metody.
 	 * 
-	 * \param x - k¹t x
-	 * \param y - k¹t y
-	 * \param z - k¹t z
+	 * \param kat_x - k¹t obrotu w osi x podany w radianach
+	 * \param kat_y - k¹t obrotu w osi y  podany w radianach
+	 * \param kat_z - k¹t obrotu w osi z podany w radianach
 	 */
-	void obroc(float x, float y, float z);
+	void obroc(float kat_x, float kat_y, float kat_z);
 
 	//void grawitacja();
 	/**
@@ -111,13 +111,13 @@ public:
 	 * Pozwala na proste sprawdzenie mo¿liwoœci ruchu. Wykorzystywane do symulowania grawitacji
 	 * 
 	 * \param ruch - wokonywany ruch
-	 * \param a - kropla, z któr¹ jest sprawdzana kolizja
+	 * \param sprawdzana - kropla, z któr¹ jest sprawdzana kolizja
 	 * \return  informacje o kolizji
 	 * \retval true - kolizja
 	 * \retval false - brak kolizji
 	 * 
 	 */
-	bool kolizja(wektor3D ruch, kropla a);
+	bool kolizja(wektor3D ruch, kropla sprawdzana);
 	
 	/**
 	 * \brief Wykonuje ruch kropli.

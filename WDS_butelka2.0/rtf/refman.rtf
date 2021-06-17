@@ -108,7 +108,7 @@
 {\info 
 {\title {\comment WDS_butelka }WDS_butelka}
 {\comment Wygenerowano przez doxygen1.9.1.}
-{\creatim \yr2021\mo6\dy17\hr2\min7\sec54}
+{\creatim \yr2021\mo6\dy17\hr11\min40\sec23}
 }\pard\plain 
 \sectd\pgnlcrm
 {\footer \s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid {\chpgn}}
@@ -258,7 +258,7 @@ Inicjalizuje klas\'EA obiekt kropla. }{
 \pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
 {\b ~kropla} ()\par
 \pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
-void {\b obroc} (float x, float y, float z)\par
+void {\b obroc} (float kat_x, float kat_y, float kat_z)\par
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Obraca krople wzgledem \'9Crodka wsp\'F3\'B3rz\'EAdnych. }{
@@ -272,7 +272,7 @@ Sprawdza odleglosc kropli, od podanego wektora. }{
 }\par
 }\par}
 \pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
-bool {\b kolizja} ({\b wektor3D} {\b ruch}, {\b kropla} a)\par
+bool {\b kolizja} ({\b wektor3D} {\b ruch}, {\b kropla} sprawdzana)\par
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Sprawdza czy kropla b\'EAdzie kolidowa\'E6 z inn\'B9 kropl\'B9. }{
@@ -299,44 +299,44 @@ Atrybuty publiczne\par
 
 {
 \pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
-{\b wektor3D} {\b p}\par
+{\b wektor3D} {\b srodek_glob}\par
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Wektor polozenia kropli. }{
 }\par
 }\par}
 \pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
-{\b wektor3D} {\b wew}\par
+{\b wektor3D} {\b srodek_wewn}\par
 \pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
-float {\b r}\par
+float {\b promien}\par
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Promie\'F1 kropli. }{
 }\par
 }\par}
 \pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
-float {\b kx}\par
+float {\b ostatni_kat_x}\par
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-K\'B9t x. }{
+K\'B9t x (stopnie). }{
 }\par
 }\par}
 \pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
-float {\b ky}\par
+float {\b ostatni_kat_y}\par
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-K\'B9t y. }{
+K\'B9t y (stopnie). }{
 }\par
 }\par}
 \pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
-float {\b kz}\par
+float {\b ostatni_kat_z}\par
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-K\'B9t z. }{
+K\'B9t z (stopnie). }{
 }\par
 }\par}
 \pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
-bool {\b wewnatrz}\par
+bool {\b czy_wewnatrz}\par
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Zmienna m\'F3wi\'B9ca, czy kropla jest wewn\'B9trz butelki. }{
@@ -439,7 +439,7 @@ Zwracane warto\'9Cci\par}
 {\xe \v kropla\:kolizja}
 \pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
 {\b 
-bool kropla::kolizja ({\b wektor3D}  {\i ruch}, {\b kropla}  {\i a})}}
+bool kropla::kolizja ({\b wektor3D}  {\i ruch}, {\b kropla}  {\i sprawdzana})}}
 \par
 {\bkmkstart AAAAAAAABM}
 {\bkmkend AAAAAAAABM}
@@ -463,7 +463,7 @@ Parametry\par}
 \clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
 \clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
 \pard \widctlpar\intbl\adjustright
-{{\i a} \cell }{- kropla, z kt\'F3r\'B9 jest sprawdzana kolizja \cell }
+{{\i sprawdzana} \cell }{- kropla, z kt\'F3r\'B9 jest sprawdzana kolizja \cell }
 {\row }
 }
 {{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
@@ -489,7 +489,7 @@ Zwracane warto\'9Cci\par}
 {\xe \v kropla\:obroc}
 \pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
 {\b 
-void kropla::obroc (float  {\i x}, float  {\i y}, float  {\i z})}}
+void kropla::obroc (float  {\i kat_x}, float  {\i kat_y}, float  {\i kat_z})}}
 \par
 {\bkmkstart AAAAAAAABN}
 {\bkmkend AAAAAAAABN}
@@ -507,19 +507,19 @@ Parametry\par}
 \clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
 \clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
 \pard \widctlpar\intbl\adjustright
-{{\i x} \cell }{- k\'B9t x \cell }
+{{\i kat_x} \cell }{- k\'B9t obrotu w osi x podany w radianach \cell }
 {\row }
 \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
 \clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
 \clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
 \pard \widctlpar\intbl\adjustright
-{{\i y} \cell }{- k\'B9t y \cell }
+{{\i kat_y} \cell }{- k\'B9t obrotu w osi y podany w radianach \cell }
 {\row }
 \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
 \clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
 \clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
 \pard \widctlpar\intbl\adjustright
-{{\i z} \cell }{- k\'B9t z \cell }
+{{\i kat_z} \cell }{- k\'B9t obrotu w osi z podany w radianach \cell }
 {\row }
 }
 }}
@@ -599,11 +599,11 @@ Metoda odpowiadaj\'B9ca, za rysowanie kropli na ekranie. Jej po\'B3o\'BFenie jes
 \pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
 Dokumentacja atrybut\'F3w sk\'B3adowych\par
 \pard\plain 
-{\xe \v kx\:kropla}
-{\xe \v kropla\:kx}
+{\xe \v czy_wewnatrz\:kropla}
+{\xe \v kropla\:czy_wewnatrz}
 \pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
 {\b 
-float kropla::kx}}
+bool kropla::czy_wewnatrz}}
 \par
 {\bkmkstart AAAAAAAABR}
 {\bkmkend AAAAAAAABR}
@@ -612,15 +612,15 @@ float kropla::kx}}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-K\'B9t x. }}\par
+Zmienna m\'F3wi\'B9ca, czy kropla jest wewn\'B9trz butelki. }}\par
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-K\'B9t wzgl\'EAdem osi x, obrotu kropli wzgl\'EAdem \'9Crodka uk\'B3adu wsp\'F3\'B3rz\'EAdnych. \par
+Zmienna m\'F3wi\'B9ca czy kropla jest wewn\'B9trz butelki, true- kropla znajduje sie wewnatrz butelki, false- kropla znajduje sie na zewnatrz butelki \par
 }}
-{\xe \v ky\:kropla}
-{\xe \v kropla\:ky}
+{\xe \v ostatni_kat_x\:kropla}
+{\xe \v kropla\:ostatni_kat_x}
 \pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
 {\b 
-float kropla::ky}}
+float kropla::ostatni_kat_x}}
 \par
 {\bkmkstart AAAAAAAABS}
 {\bkmkend AAAAAAAABS}
@@ -629,15 +629,15 @@ float kropla::ky}}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-K\'B9t y. }}\par
+K\'B9t x (stopnie). }}\par
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-K\'B9t wzgl\'EAdem osi y, obrotu kropli wzgl\'EAdem \'9Crodka uk\'B3adu wsp\'F3\'B3rz\'EAdnych. \par
+K\'B9t wzgl\'EAdem osi x, obrotu kropli wzgl\'EAdem \'9Crodka uk\'B3adu wsp\'F3\'B3rz\'EAdnych podany w stopniach. \par
 }}
-{\xe \v kz\:kropla}
-{\xe \v kropla\:kz}
+{\xe \v ostatni_kat_y\:kropla}
+{\xe \v kropla\:ostatni_kat_y}
 \pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
 {\b 
-float kropla::kz}}
+float kropla::ostatni_kat_y}}
 \par
 {\bkmkstart AAAAAAAABT}
 {\bkmkend AAAAAAAABT}
@@ -646,15 +646,15 @@ float kropla::kz}}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-K\'B9t z. }}\par
+K\'B9t y (stopnie). }}\par
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-K\'B9t wzgl\'EAdem osi z, obrotu kropli wzgl\'EAdem \'9Crodka uk\'B3adu wsp\'F3\'B3rz\'EAdnych. \par
+K\'B9t wzgl\'EAdem osi y, obrotu kropli wzgl\'EAdem \'9Crodka uk\'B3adu wsp\'F3\'B3rz\'EAdnych podany w stopniach. \par
 }}
-{\xe \v p\:kropla}
-{\xe \v kropla\:p}
+{\xe \v ostatni_kat_z\:kropla}
+{\xe \v kropla\:ostatni_kat_z}
 \pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
 {\b 
-{\b wektor3D} kropla::p}}
+float kropla::ostatni_kat_z}}
 \par
 {\bkmkstart AAAAAAAABU}
 {\bkmkend AAAAAAAABU}
@@ -663,15 +663,15 @@ K\'B9t wzgl\'EAdem osi z, obrotu kropli wzgl\'EAdem \'9Crodka uk\'B3adu wsp\'F3\
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Wektor polozenia kropli. }}\par
+K\'B9t z (stopnie). }}\par
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Zawiera informacje o po\'B3o\'BFeniu kropli, wykorzystuje klas\'EA {\b wektor3D}. \par
+K\'B9t wzgl\'EAdem osi z, obrotu kropli wzgl\'EAdem \'9Crodka uk\'B3adu wsp\'F3\'B3rz\'EAdnych podany w stopniach. \par
 }}
-{\xe \v r\:kropla}
-{\xe \v kropla\:r}
+{\xe \v promien\:kropla}
+{\xe \v kropla\:promien}
 \pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
 {\b 
-float kropla::r}}
+float kropla::promien}}
 \par
 {\bkmkstart AAAAAAAABV}
 {\bkmkend AAAAAAAABV}
@@ -684,36 +684,36 @@ Promie\'F1 kropli. }}\par
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Promie\'F1 kropli, jego warto\'9C\'E6 jest sta\'B3a i jest ustawiana podczas inicjalizowania kropli. \par
 }}
-{\xe \v wew\:kropla}
-{\xe \v kropla\:wew}
+{\xe \v srodek_glob\:kropla}
+{\xe \v kropla\:srodek_glob}
 \pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
 {\b 
-{\b wektor3D} kropla::wew}}
+{\b wektor3D} kropla::srodek_glob}}
 \par
 {\bkmkstart AAAAAAAABW}
 {\bkmkend AAAAAAAABW}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-\\biref Wektor polozenia kropli wewnatrz butelki.\par
-Zawiera informacje o po\'B3o\'BFeniu kropli, wzgl\'EAdem uk\'B3adu wsp\'F3\'B3rz\'EAdnych obr\'F3conego, zgodenie z butelk\'B9, wykorzystuje klas\'EA {\b wektor3D} \par
+Wektor polozenia kropli. }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Zawiera informacje o po\'B3o\'BFeniu kropli, wykorzystuje klas\'EA {\b wektor3D}. \par
 }}
-{\xe \v wewnatrz\:kropla}
-{\xe \v kropla\:wewnatrz}
+{\xe \v srodek_wewn\:kropla}
+{\xe \v kropla\:srodek_wewn}
 \pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
 {\b 
-bool kropla::wewnatrz}}
+{\b wektor3D} kropla::srodek_wewn}}
 \par
 {\bkmkstart AAAAAAAABX}
 {\bkmkend AAAAAAAABX}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
-\par
-{
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Zmienna m\'F3wi\'B9ca, czy kropla jest wewn\'B9trz butelki. }}\par
-{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Zmienna m\'F3wi\'B9ca czy kropla jest wewn\'B9trz butelki, true- kropla znajduje sie wewnatrz butelki, false- kropla znajduje sie na zewnatrz butelki \par
+\\biref Wektor polozenia kropli wewnatrz butelki.\par
+Zawiera informacje o po\'B3o\'BFeniu kropli, wzgl\'EAdem uk\'B3adu wsp\'F3\'B3rz\'EAdnych obr\'F3conego, zgodenie z butelk\'B9, wykorzystuje klas\'EA {\b wektor3D} \par
 }}
 {\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
 Dokumentacja dla tej klasy zosta\'B3a wygenerowana z plik\'F3w:{\par
@@ -967,7 +967,7 @@ Inicjalizacja obiektu3D za pomoc\'B9 nazwy pliku. }{
 \pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
 {\b ~obiekt3D} ()\par
 \pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
-void {\b obroc} (float x, float y, float z)\par
+void {\b obroc} (float kat_x, float kat_y, float kat_z)\par
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Obraca obiekt o podane k\'B9ty, wzgl\'EAdem pozycji pocz\'B9tkowej. }{
@@ -1132,7 +1132,7 @@ Dokumentacja funkcji sk\'B3adowych\par
 {\xe \v obiekt3D\:obroc}
 \pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
 {\b 
-void obiekt3D::obroc (float  {\i x}, float  {\i y}, float  {\i z})}}
+void obiekt3D::obroc (float  {\i kat_x}, float  {\i kat_y}, float  {\i kat_z})}}
 \par
 {\bkmkstart AAAAAAAACK}
 {\bkmkend AAAAAAAACK}
@@ -1143,26 +1143,26 @@ void obiekt3D::obroc (float  {\i x}, float  {\i y}, float  {\i z})}}
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Obraca obiekt o podane k\'B9ty, wzgl\'EAdem pozycji pocz\'B9tkowej. }}\par
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Obraca obbiekt o podane k\'B9ty, wzgl\'EAdem pozycji pocz\'B9tkowej. K\'B9ty powinny by\'E6 podane w stopniach.\par
+Obraca obbiekt o podane k\'B9ty, wzgl\'EAdem pozycji pocz\'B9tkowej.\par
 {{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
 Parametry\par}
 \pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
 \clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
 \clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
 \pard \widctlpar\intbl\adjustright
-{{\i x} \cell }{- k\'B9t obrotu w osi x \cell }
+{{\i kat_x} \cell }{- k\'B9t obrotu w osi x podany w radianach \cell }
 {\row }
 \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
 \clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
 \clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
 \pard \widctlpar\intbl\adjustright
-{{\i y} \cell }{- k\'B9t obrotu w osi y \cell }
+{{\i kat_y} \cell }{- k\'B9t obrotu w osi y podany w radianach \cell }
 {\row }
 \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
 \clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
 \clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
 \pard \widctlpar\intbl\adjustright
-{{\i z} \cell }{- k\'B9t obrotu w osi z \cell }
+{{\i kat_z} \cell }{- k\'B9t obrotu w osi z podany w radianach \cell }
 {\row }
 }
 }}
@@ -1394,6 +1394,11 @@ Obrot obiektow na scenie. }{
 }\par}
 \pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
 void {\b rysuj} ()\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Rysuje wszystkie obiekty nale\'BF\'B9ce do sceny. }{
+}\par
+}\par}
 }
 \pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
 Atrybuty publiczne\par
@@ -1401,7 +1406,7 @@ Atrybuty publiczne\par
 
 {
 \pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
-vector< {\b obiekt3D} > {\b ob}\par
+vector< {\b obiekt3D} > {\b obiekty}\par
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Obiekty znajdujace sie na scenie (poza wod\'B9). }{
@@ -1483,19 +1488,22 @@ void scena::rysuj ()}}
 {\bkmkend AAAAAAAACZ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-\\biref Rysuje wszystkie obiekty nale\'BF\'B9ce do sceny.\par
+Rysuje wszystkie obiekty nale\'BF\'B9ce do sceny. }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Rysuje wszystkie obiekty nale\'BF\'B9ce do sceny. \par
 }}
 {\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
 \pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
 Dokumentacja atrybut\'F3w sk\'B3adowych\par
 \pard\plain 
-{\xe \v ob\:scena}
-{\xe \v scena\:ob}
+{\xe \v obiekty\:scena}
+{\xe \v scena\:obiekty}
 \pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
 {\b 
-vector<{\b obiekt3D}> scena::ob}}
+vector<{\b obiekt3D}> scena::obiekty}}
 \par
 {\bkmkstart AAAAAAAADA}
 {\bkmkend AAAAAAAADA}
@@ -1719,7 +1727,7 @@ Inicjuje krople wody. }{
 \pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
 void {\b rysuj} ()\par
 \pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
-void {\b obroc} (float x, float y, float z)\par
+void {\b obroc} (float kat_x, float kat_y, float kat_z)\par
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Obraca wod\'EA wzgl\'EAdem pierwotnej pozycji. }{
@@ -1739,14 +1747,14 @@ Atrybuty publiczne\par
 
 {
 \pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
-vector< {\b kropla} > {\b k}\par
+vector< {\b kropla} > {\b krople}\par
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Krople wody. }{
 }\par
 }\par}
 \pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
-int {\b l}\par
+int {\b ilosc_kropli}\par
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Ilosc kropli wody. }{
@@ -1831,7 +1839,7 @@ Metoda ta pozwala na prost\'B9 symulacj\'EA oddzia\'B3ywania grawitacji na wod\'
 {\xe \v woda\:obroc}
 \pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
 {\b 
-void woda::obroc (float  {\i x}, float  {\i y}, float  {\i z})}}
+void woda::obroc (float  {\i kat_x}, float  {\i kat_y}, float  {\i kat_z})}}
 \par
 {\bkmkstart AAAAAAAADL}
 {\bkmkend AAAAAAAADL}
@@ -1849,19 +1857,19 @@ Parametry\par}
 \clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
 \clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
 \pard \widctlpar\intbl\adjustright
-{{\i x} \cell }{- kat w osi x \cell }
+{{\i kat_x} \cell }{- kat w osi x podany w radianach \cell }
 {\row }
 \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
 \clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
 \clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
 \pard \widctlpar\intbl\adjustright
-{{\i y} \cell }{- kat w osi y \cell }
+{{\i kat_y} \cell }{- kat w osi y podany w radianach \cell }
 {\row }
 \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
 \clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
 \clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
 \pard \widctlpar\intbl\adjustright
-{{\i z} \cell }{- kat w osi z \cell }
+{{\i kat_z} \cell }{- kat w osi z podany w radianach \cell }
 {\row }
 }
 }}
@@ -1883,11 +1891,11 @@ Rysuje wszystkie krople sk\'B3adaj\'B9ce si\'EA na wod\'EA. \par
 \pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
 Dokumentacja atrybut\'F3w sk\'B3adowych\par
 \pard\plain 
-{\xe \v k\:woda}
-{\xe \v woda\:k}
+{\xe \v ilosc_kropli\:woda}
+{\xe \v woda\:ilosc_kropli}
 \pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
 {\b 
-vector<{\b kropla}> woda::k}}
+int woda::ilosc_kropli}}
 \par
 {\bkmkstart AAAAAAAADN}
 {\bkmkend AAAAAAAADN}
@@ -1896,15 +1904,15 @@ vector<{\b kropla}> woda::k}}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Krople wody. }}\par
+Ilosc kropli wody. }}\par
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Zmienna przechowywujaca kazda krople wody. \par
+Ilosc kropli wody. \par
 }}
-{\xe \v l\:woda}
-{\xe \v woda\:l}
+{\xe \v krople\:woda}
+{\xe \v woda\:krople}
 \pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
 {\b 
-int woda::l}}
+vector<{\b kropla}> woda::krople}}
 \par
 {\bkmkstart AAAAAAAADO}
 {\bkmkend AAAAAAAADO}
@@ -1913,9 +1921,9 @@ int woda::l}}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Ilosc kropli wody. }}\par
+Krople wody. }}\par
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Ilosc kropli wody. \par
+Zmienna przechowywujaca kazda krople wody. \par
 }}
 {\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
 Dokumentacja dla tej klasy zosta\'B3a wygenerowana z plik\'F3w:{\par

@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['p_134',['p',['../classkropla.html#a298c61d745bb599d61bfa203ae58e2ad',1,'kropla::p()'],['../classmacierz__rot.html#a28b75fc6a45b85dbdcf3ac352221536f',1,'macierz_rot::p()'],['../classwektor3_d.html#ac303bfa8bea43eb3d4a65a11d80795e0',1,'wektor3D::p()']]],
-  ['positions_135',['positions',['../struct_model.html#ab11df4d093f6b97a3d9f1158a183b251',1,'Model::positions()'],['../classobiekt3_d.html#a477f969cc9caac37a7383e5660ebfa9c',1,'obiekt3D::positions()']]],
-  ['positionsstart_136',['positionsStart',['../classobiekt3_d.html#aefc0b7e149cdf6e564de0e45716ce0bf',1,'obiekt3D']]]
+  ['obiekty_130',['obiekty',['../classscena.html#a37ea9f0d313a730d86857130505b6a8e',1,'scena']]],
+  ['ostatni_5fkat_5fx_131',['ostatni_kat_x',['../classkropla.html#a10c5b64e0c1ba3330f7c00ff15d395db',1,'kropla']]],
+  ['ostatni_5fkat_5fy_132',['ostatni_kat_y',['../classkropla.html#ae274499c50c0a149ca2195fe971c8f2d',1,'kropla']]],
+  ['ostatni_5fkat_5fz_133',['ostatni_kat_z',['../classkropla.html#a6c83466a5c8d7b22b764c42648b59b6c',1,'kropla']]],
+  ['ostatnikx_134',['ostatnikx',['../classobiekt3_d.html#a386e6bd06bea328230c6060c285e55f0',1,'obiekt3D']]],
+  ['ostatniky_135',['ostatniky',['../classobiekt3_d.html#ac27740e29927a4afd419aa12e987f065',1,'obiekt3D']]]
 ];

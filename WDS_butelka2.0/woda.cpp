@@ -8,21 +8,21 @@ woda::woda(int n)
 	pom.p[1] = 0;
 	pom.p[2] = 0;
 
-	l = n;
+	ilosc_kropli = n;
 
 	kropla* kr;
 	for (int i = 0; i < n; i++)
 	{
 		kr = new kropla;
-		k.push_back(*kr);
+		krople.push_back(*kr);
 		delete kr;
 
 		for (int j = 0; j < i - 1; j++)
 		{
-			if (k[i].kolizja(pom, k[j]))		//jesli nowa kropla koliduje z inna jest ona usuwana, oraz ilosc kropli 
+			if (krople[i].kolizja(pom, krople[j]))		//jesli nowa kropla koliduje z inna jest ona usuwana, oraz ilosc kropli 
 			{									//zmniejszana w celu ponownej proby wylosowania jej polozenia
 				i--;
-				k.pop_back();
+				krople.pop_back();
 				break;
 			}
 		}
@@ -33,22 +33,22 @@ woda::woda(int n)
 
 void woda::rysuj()
 {
-	for (int i = 0; i < l; i++)
+	for (int i = 0; i < ilosc_kropli; i++)
 	{
-		k[i].rysuj();
+		krople[i].rysuj();
 	}
 }
 
 void woda::obroc(float x, float y, float z)
 {
-	for (int i = 0; i < l; i++)
+	for (int i = 0; i < ilosc_kropli; i++)
 	{
-		k[i].obroc(x, y, z);
+		krople[i].obroc(x, y, z);
 	}
 	x = x * (float)PI / 180.0f;
 	y = y * (float)PI / 180.0f;
-	kx = -x;
-	ky = -y;
+	ostatni_kat_x = -x;
+	ostatni_kat_y = -y;
 }
 
 void woda::grawitacja()
@@ -57,20 +57,20 @@ void woda::grawitacja()
 	bool mozna = false;
 
 
-	for (int i = 0; i < l; i++)
+	for (int i = 0; i < ilosc_kropli; i++)
 	{
 		pom.p[0] = 0;
-		pom.p[1] = -0.01;
+		pom.p[1] = -0.1;
 		pom.p[2] = 0;
 
-		mozna = !k[i].kolizja(pom);
+		mozna = !krople[i].kolizja(pom);
 		if (mozna)
 		{
-			for (int j = 0; j < l; j++)
+			for (int j = 0; j < ilosc_kropli; j++)
 			{
 				if (i != j)
 				{
-					if (k[i].kolizja(pom, k[j]))
+					if (krople[i].kolizja(pom, krople[j]))
 					{
 						mozna = false;
 						break;
@@ -80,23 +80,23 @@ void woda::grawitacja()
 		}
 		if (mozna)
 		{
-			k[i].ruch(pom);
+			krople[i].ruch(pom);
 		}
 
 		if (!mozna)		//jesli nie mozna bezposrednio w dol, sprawdzamy kolejne molzwiosci
 		{
 			pom.p[0] = 0;
-			pom.p[1] = -0.002;
-			pom.p[2] = 0.009;
+			pom.p[1] = -0.02;
+			pom.p[2] = 0.09;
 
-			mozna = !k[i].kolizja(pom);
+			mozna = !krople[i].kolizja(pom);
 			if (mozna)
 			{
-				for (int j = 0; j < l; j++)
+				for (int j = 0; j < ilosc_kropli; j++)
 				{
 					if (i != j)
 					{
-						if (k[i].kolizja(pom, k[j]))
+						if (krople[i].kolizja(pom, krople[j]))
 						{
 							mozna = false;
 							break;
@@ -106,159 +106,24 @@ void woda::grawitacja()
 			}
 			if (mozna)
 			{
-				k[i].ruch(pom);
-			}
-		}
-
-		if (!mozna)		//jesli nie mozna bezposrednio w dol, sprawdzamy kolejne molzwiosci
-		{
-			pom.p[0] = 0;
-			pom.p[1] = -0.002;
-			pom.p[2] = 0.009;
-
-			mozna = !k[i].kolizja(pom);
-			if (mozna)
-			{
-				for (int j = 0; j < l; j++)
-				{
-					if (i != j)
-					{
-						if (k[i].kolizja(pom, k[j]))
-						{
-							mozna = false;
-							break;
-						}
-					}
-				}
-			}
-			if (mozna)
-			{
-				k[i].ruch(pom);
-			}
-		}
-
-		if (!mozna)		//jesli nie mozna bezposrednio w dol, sprawdzamy kolejne molzwiosci
-		{
-			pom.p[0] = -0.009;
-			pom.p[1] = -0.002;
-			pom.p[2] = 0;
-
-			mozna = !k[i].kolizja(pom);
-			if (mozna)
-			{
-				for (int j = 0; j < l; j++)
-				{
-					if (i != j)
-					{
-						if (k[i].kolizja(pom, k[j]))
-						{
-							mozna = false;
-							break;
-						}
-					}
-				}
-			}
-			if (mozna)
-			{
-				k[i].ruch(pom);
-			}
-		}
-
-		if (!mozna)		//jesli nie mozna bezposrednio w dol, sprawdzamy kolejne molzwiosci
-		{
-			pom.p[0] = 0.009;
-			pom.p[1] = -0.002;
-			pom.p[2] = 0;
-
-			mozna = !k[i].kolizja(pom);
-			if (mozna)
-			{
-				for (int j = 0; j < l; j++)
-				{
-					if (i != j)
-					{
-						if (k[i].kolizja(pom, k[j]))
-						{
-							mozna = false;
-							break;
-						}
-					}
-				}
-			}
-			if (mozna)
-			{
-				k[i].ruch(pom);
-			}
-		}
-
-		if (!mozna)		//jesli nie mozna bezposrednio w dol, sprawdzamy kolejne molzwiosci
-		{
-			pom.p[0] = 0.002;
-			pom.p[1] = 0;
-			pom.p[2] = 0;
-
-			mozna = !k[i].kolizja(pom);
-			if (mozna)
-			{
-				for (int j = 0; j < l; j++)
-				{
-					if (i != j)
-					{
-						if (k[i].kolizja(pom, k[j]))
-						{
-							mozna = false;
-							break;
-						}
-					}
-				}
-			}
-			if (mozna)
-			{
-				k[i].ruch(pom);
-			}
-		}
-
-		if (!mozna)		//jesli nie mozna bezposrednio w dol, sprawdzamy kolejne molzwiosci
-		{
-			pom.p[0] = -0.002;
-			pom.p[1] = 0;
-			pom.p[2] = 0;
-
-			mozna = !k[i].kolizja(pom);
-			if (mozna)
-			{
-				for (int j = 0; j < l; j++)
-				{
-					if (i != j)
-					{
-						if (k[i].kolizja(pom, k[j]))
-						{
-							mozna = false;
-							break;
-						}
-					}
-				}
-			}
-			if (mozna)
-			{
-				k[i].ruch(pom);
+				krople[i].ruch(pom);
 			}
 		}
 
 		if (!mozna)		//jesli nie mozna bezposrednio w dol, sprawdzamy kolejne molzwiosci
 		{
 			pom.p[0] = 0;
-			pom.p[1] = 0;
-			pom.p[2] = 0.002;
+			pom.p[1] = -0.02;
+			pom.p[2] = 0.09;
 
-			mozna = !k[i].kolizja(pom);
+			mozna = !krople[i].kolizja(pom);
 			if (mozna)
 			{
-				for (int j = 0; j < l; j++)
+				for (int j = 0; j < ilosc_kropli; j++)
 				{
 					if (i != j)
 					{
-						if (k[i].kolizja(pom, k[j]))
+						if (krople[i].kolizja(pom, krople[j]))
 						{
 							mozna = false;
 							break;
@@ -268,7 +133,115 @@ void woda::grawitacja()
 			}
 			if (mozna)
 			{
-				k[i].ruch(pom);
+				krople[i].ruch(pom);
+			}
+		}
+
+		if (!mozna)		//jesli nie mozna bezposrednio w dol, sprawdzamy kolejne molzwiosci
+		{
+			pom.p[0] = -0.09;
+			pom.p[1] = -0.02;
+			pom.p[2] = 0;
+
+			mozna = !krople[i].kolizja(pom);
+			if (mozna)
+			{
+				for (int j = 0; j < ilosc_kropli; j++)
+				{
+					if (i != j)
+					{
+						if (krople[i].kolizja(pom, krople[j]))
+						{
+							mozna = false;
+							break;
+						}
+					}
+				}
+			}
+			if (mozna)
+			{
+				krople[i].ruch(pom);
+			}
+		}
+
+		if (!mozna)		//jesli nie mozna bezposrednio w dol, sprawdzamy kolejne molzwiosci
+		{
+			pom.p[0] = 0.09;
+			pom.p[1] = -0.02;
+			pom.p[2] = 0;
+
+			mozna = !krople[i].kolizja(pom);
+			if (mozna)
+			{
+				for (int j = 0; j < ilosc_kropli; j++)
+				{
+					if (i != j)
+					{
+						if (krople[i].kolizja(pom, krople[j]))
+						{
+							mozna = false;
+							break;
+						}
+					}
+				}
+			}
+			if (mozna)
+			{
+				krople[i].ruch(pom);
+			}
+		}
+
+		if (!mozna)		//jesli nie mozna bezposrednio w dol, sprawdzamy kolejne molzwiosci
+		{
+			pom.p[0] = 0.02;
+			pom.p[1] = 0;
+			pom.p[2] = 0;
+
+			mozna = !krople[i].kolizja(pom);
+			if (mozna)
+			{
+				for (int j = 0; j < ilosc_kropli; j++)
+				{
+					if (i != j)
+					{
+						if (krople[i].kolizja(pom, krople[j]))
+						{
+							mozna = false;
+							break;
+						}
+					}
+				}
+			}
+			if (mozna)
+			{
+				krople[i].ruch(pom);
+			}
+		}
+
+		if (!mozna)		//jesli nie mozna bezposrednio w dol, sprawdzamy kolejne molzwiosci
+		{
+			pom.p[0] = -0.02;
+			pom.p[1] = 0;
+			pom.p[2] = 0;
+
+			mozna = !krople[i].kolizja(pom);
+			if (mozna)
+			{
+				for (int j = 0; j < ilosc_kropli; j++)
+				{
+					if (i != j)
+					{
+						if (krople[i].kolizja(pom, krople[j]))
+						{
+							mozna = false;
+							break;
+						}
+					}
+				}
+			}
+			if (mozna)
+			{
+				krople[i].ruch(pom);
 			}
 		}
 
@@ -276,16 +249,16 @@ void woda::grawitacja()
 		{
 			pom.p[0] = 0;
 			pom.p[1] = 0;
-			pom.p[2] = -0.002;
+			pom.p[2] = 0.02;
 
-			mozna = !k[i].kolizja(pom);
+			mozna = !krople[i].kolizja(pom);
 			if (mozna)
 			{
-				for (int j = 0; j < l; j++)
+				for (int j = 0; j < ilosc_kropli; j++)
 				{
 					if (i != j)
 					{
-						if (k[i].kolizja(pom, k[j]))
+						if (krople[i].kolizja(pom, krople[j]))
 						{
 							mozna = false;
 							break;
@@ -295,7 +268,34 @@ void woda::grawitacja()
 			}
 			if (mozna)
 			{
-				k[i].ruch(pom);
+				krople[i].ruch(pom);
+			}
+		}
+
+		if (!mozna)		//jesli nie mozna bezposrednio w dol, sprawdzamy kolejne molzwiosci
+		{
+			pom.p[0] = 0;
+			pom.p[1] = 0;
+			pom.p[2] = -0.02;
+
+			mozna = !krople[i].kolizja(pom);
+			if (mozna)
+			{
+				for (int j = 0; j < ilosc_kropli; j++)
+				{
+					if (i != j)
+					{
+						if (krople[i].kolizja(pom, krople[j]))
+						{
+							mozna = false;
+							break;
+						}
+					}
+				}
+			}
+			if (mozna)
+			{
+				krople[i].ruch(pom);
 			}
 		}
 	}

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['stopienobrotu_139',['stopienObrotu',['../_w_d_s__butelka2_80_8cpp.html#ae57cfb921bbbb45aecf61c795051d070',1,'WDS_butelka2.0.cpp']]]
+  ['restart_140',['restart',['../_w_d_s__butelka2_80_8cpp.html#a8649fdfafe4f3ed5fa96bb5261379247',1,'WDS_butelka2.0.cpp']]]
 ];

@@ -102,9 +102,9 @@ Metody publiczne</h2></td></tr>
 <tr class="separator:a2c6d03ad93feb729adf148c38107f22e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a8683e31a0bf6ea587edd9f8d58abf5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classobiekt3_d.html#a7a8683e31a0bf6ea587edd9f8d58abf5">~obiekt3D</a> ()</td></tr>
 <tr class="separator:a7a8683e31a0bf6ea587edd9f8d58abf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af354b163a4da9969404db3bdba62f1ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classobiekt3_d.html#af354b163a4da9969404db3bdba62f1ee">obroc</a> (float x, float y, float z)</td></tr>
-<tr class="memdesc:af354b163a4da9969404db3bdba62f1ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obraca obiekt o podane kąty, względem pozycji początkowej.  <a href="classobiekt3_d.html#af354b163a4da9969404db3bdba62f1ee">Więcej...</a><br /></td></tr>
-<tr class="separator:af354b163a4da9969404db3bdba62f1ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8ba8442d2b7bc1ed9194e8572b8bb2d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classobiekt3_d.html#af8ba8442d2b7bc1ed9194e8572b8bb2d">obroc</a> (float kat_x, float kat_y, float kat_z)</td></tr>
+<tr class="memdesc:af8ba8442d2b7bc1ed9194e8572b8bb2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obraca obiekt o podane kąty, względem pozycji początkowej.  <a href="classobiekt3_d.html#af8ba8442d2b7bc1ed9194e8572b8bb2d">Więcej...</a><br /></td></tr>
+<tr class="separator:af8ba8442d2b7bc1ed9194e8572b8bb2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33f368c6946f9c1a11d2d111a152743b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classobiekt3_d.html#a33f368c6946f9c1a11d2d111a152743b">rysuj</a> ()</td></tr>
 <tr class="memdesc:a33f368c6946f9c1a11d2d111a152743b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rysuje <a class="el" href="classobiekt3_d.html" title="Klasa obiektow zczytywanych z plikow .obj.">obiekt3D</a>.  <a href="classobiekt3_d.html#a33f368c6946f9c1a11d2d111a152743b">Więcej...</a><br /></td></tr>
 <tr class="separator:a33f368c6946f9c1a11d2d111a152743b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -221,8 +221,8 @@ Atrybuty publiczne</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Dokumentacja funkcji składowych</h2>
-<a id="af354b163a4da9969404db3bdba62f1ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af354b163a4da9969404db3bdba62f1ee">&#9670;&nbsp;</a></span>obroc()</h2>
+<a id="af8ba8442d2b7bc1ed9194e8572b8bb2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8ba8442d2b7bc1ed9194e8572b8bb2d">&#9670;&nbsp;</a></span>obroc()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -231,19 +231,19 @@ Atrybuty publiczne</h2></td></tr>
           <td class="memname">void obiekt3D::obroc </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
+          <td class="paramname"><em>kat_x</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
+          <td class="paramname"><em>kat_y</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>z</em>&#160;</td>
+          <td class="paramname"><em>kat_z</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -254,12 +254,12 @@ Atrybuty publiczne</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Obraca obiekt o podane kąty, względem pozycji początkowej. </p>
-<p>Obraca obbiekt o podane kąty, względem pozycji początkowej. Kąty powinny być podane w stopniach.</p>
+<p>Obraca obbiekt o podane kąty, względem pozycji początkowej.</p>
 <dl class="params"><dt>Parametry</dt><dd>
   <table class="params">
-    <tr><td class="paramname">x</td><td>- kąt obrotu w osi x </td></tr>
-    <tr><td class="paramname">y</td><td>- kąt obrotu w osi y </td></tr>
-    <tr><td class="paramname">z</td><td>- kąt obrotu w osi z </td></tr>
+    <tr><td class="paramname">kat_x</td><td>- kąt obrotu w osi x podany w radianach </td></tr>
+    <tr><td class="paramname">kat_y</td><td>- kąt obrotu w osi y podany w radianach </td></tr>
+    <tr><td class="paramname">kat_z</td><td>- kąt obrotu w osi z podany w radianach </td></tr>
   </table>
   </dd>
 </dl>

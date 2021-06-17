@@ -23,14 +23,14 @@ class scena
 	 * 
 	 * Zmienna informuj¹ca o iloœci kropli na scenie
 	 */
-	int m;		//ilosc kropli
+	int ilosc_kropli;		//ilosc kropli
 public:
 	/**
 	 * \brief Obiekty znajdujace sie na scenie (poza wod¹).
 	 * 
 	 * Obiekty znajdujace sie na scenie (poza wod¹).
 	 */
-	vector<obiekt3D> ob;
+	vector<obiekt3D> obiekty;
 	/**
 	 * \bief Woda znajduj¹ca siê na scenie.
 	 * 
@@ -56,7 +56,7 @@ public:
 	void obrot();
 
 	/**
-	 * \biref Rysuje wszystkie obiekty nale¿¹ce do sceny.
+	 * \brief Rysuje wszystkie obiekty nale¿¹ce do sceny.
 	 * 
 	 * Rysuje wszystkie obiekty nale¿¹ce do sceny.
 	 */

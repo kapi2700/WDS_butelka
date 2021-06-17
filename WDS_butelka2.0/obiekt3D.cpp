@@ -190,15 +190,15 @@ obiekt3D::~obiekt3D()
     delete[](faces);
 }
 
-void obiekt3D::obroc(float x, float y, float z)
+void obiekt3D::obroc(float kat_x, float kat_y, float kat_z)
 {
-    x = x * (float)PI / 180.0f;
-    y = y * (float)PI / 180.0f;
-    z = z * (float)PI / 180.0f;
+    kat_x = kat_x * (float)PI / 180.0f;
+    kat_y = kat_y * (float)PI / 180.0f;
+    kat_z = kat_z * (float)PI / 180.0f;
 
-    macierz_rot macx(x, 'x');
-    macierz_rot macy(y, 'y');
-    macierz_rot macz(z, 'z');
+    macierz_rot macx(kat_x, 'x');
+    macierz_rot macy(kat_y, 'y');
+    macierz_rot macz(kat_z, 'z');
     
 
     for (int i = 0; i < model.positions; i++)

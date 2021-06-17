@@ -18,11 +18,11 @@ void \mbox{\hyperlink{classkropla_a82e8ecd74ec1926cdcef78a8cffa4bc8}{rysuj}} ()
 \begin{DoxyCompactList}\small\item\em Inicjalizuje klasę obiekt kropla. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classkropla_a41d1803ec3673f980768562ac704f110}{$\sim$kropla}} ()
 \item 
-void \mbox{\hyperlink{classkropla_a1f922a1406ddcedb9ad21675bf155f80}{obroc}} (float x, float y, float z)
+void \mbox{\hyperlink{classkropla_a39bb2900744ab920c9fe63d0d6c15a49}{obroc}} (float kat\+\_\+x, float kat\+\_\+y, float kat\+\_\+z)
 \begin{DoxyCompactList}\small\item\em Obraca krople wzgledem środka współrzędnych. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{classkropla_af7ddee788b65ad4155f2f5032c39f9eb}{odleglosc}} (\mbox{\hyperlink{classwektor3_d}{wektor3D}} start)
 \begin{DoxyCompactList}\small\item\em Sprawdza odleglosc kropli, od podanego wektora. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classkropla_af831f38beb7eb2a72db34f4d5b51a4ce}{kolizja}} (\mbox{\hyperlink{classwektor3_d}{wektor3D}} \mbox{\hyperlink{classkropla_ac47c98278213d8bc14891da7c142c8e7}{ruch}}, \mbox{\hyperlink{classkropla}{kropla}} a)
+bool \mbox{\hyperlink{classkropla_ac855ac03116a68d9e125f04275ce051d}{kolizja}} (\mbox{\hyperlink{classwektor3_d}{wektor3D}} \mbox{\hyperlink{classkropla_ac47c98278213d8bc14891da7c142c8e7}{ruch}}, \mbox{\hyperlink{classkropla}{kropla}} sprawdzana)
 \begin{DoxyCompactList}\small\item\em Sprawdza czy kropla będzie kolidować z inną kroplą. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classkropla_ac47c98278213d8bc14891da7c142c8e7}{ruch}} (\mbox{\hyperlink{classwektor3_d}{wektor3D}} wek)
 \begin{DoxyCompactList}\small\item\em Wykonuje ruch kropli. \end{DoxyCompactList}\item 
@@ -31,19 +31,19 @@ bool \mbox{\hyperlink{classkropla_a180465469c3069fc6f79eb07c36429d7}{kolizja}} (
 \doxysubsection*{Atrybuty publiczne}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classwektor3_d}{wektor3D}} \mbox{\hyperlink{classkropla_a298c61d745bb599d61bfa203ae58e2ad}{p}}
+\mbox{\hyperlink{classwektor3_d}{wektor3D}} \mbox{\hyperlink{classkropla_a3c11b79c7041226cf416a9914c609613}{srodek\+\_\+glob}}
 \begin{DoxyCompactList}\small\item\em Wektor polozenia kropli. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classwektor3_d}{wektor3D}} \mbox{\hyperlink{classkropla_a2cf6d5b9da1bf37fe5d5588cd7f4acae}{wew}}
+\mbox{\hyperlink{classwektor3_d}{wektor3D}} \mbox{\hyperlink{classkropla_a3b16de138c98496c21a56bb096327aca}{srodek\+\_\+wewn}}
 \item 
-float \mbox{\hyperlink{classkropla_a574a1e7dcb1999173115cdeb1edae837}{r}}
+float \mbox{\hyperlink{classkropla_a755fcf740c6ed647d980c65fb5945962}{promien}}
 \begin{DoxyCompactList}\small\item\em Promień kropli. \end{DoxyCompactList}\item 
-float \mbox{\hyperlink{classkropla_a9d92b8ed91afaaa1d38b71f487b6cf42}{kx}}
-\begin{DoxyCompactList}\small\item\em Kąt x. \end{DoxyCompactList}\item 
-float \mbox{\hyperlink{classkropla_abd7b767dee09303c5fb683fea75bd285}{ky}}
-\begin{DoxyCompactList}\small\item\em Kąt y. \end{DoxyCompactList}\item 
-float \mbox{\hyperlink{classkropla_a90947f022a09baebc8bd085a2d34e2c5}{kz}}
-\begin{DoxyCompactList}\small\item\em Kąt z. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classkropla_ae4f8fe6b5eaac01567bb3951660a3ccf}{wewnatrz}}
+float \mbox{\hyperlink{classkropla_a10c5b64e0c1ba3330f7c00ff15d395db}{ostatni\+\_\+kat\+\_\+x}}
+\begin{DoxyCompactList}\small\item\em Kąt x (stopnie). \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classkropla_ae274499c50c0a149ca2195fe971c8f2d}{ostatni\+\_\+kat\+\_\+y}}
+\begin{DoxyCompactList}\small\item\em Kąt y (stopnie). \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classkropla_a6c83466a5c8d7b22b764c42648b59b6c}{ostatni\+\_\+kat\+\_\+z}}
+\begin{DoxyCompactList}\small\item\em Kąt z (stopnie). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classkropla_acb32d69485cddd36726ee16412acf235}{czy\+\_\+wewnatrz}}
 \begin{DoxyCompactList}\small\item\em Zmienna mówiąca, czy kropla jest wewnątrz butelki. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -99,11 +99,11 @@ informacje o kolizji
 {\em false} & -\/ brak kolizji \\
 \hline
 \end{DoxyRetVals}
-\mbox{\Hypertarget{classkropla_af831f38beb7eb2a72db34f4d5b51a4ce}\label{classkropla_af831f38beb7eb2a72db34f4d5b51a4ce}} 
+\mbox{\Hypertarget{classkropla_ac855ac03116a68d9e125f04275ce051d}\label{classkropla_ac855ac03116a68d9e125f04275ce051d}} 
 \index{kropla@{kropla}!kolizja@{kolizja}}
 \index{kolizja@{kolizja}!kropla@{kropla}}
 \doxysubsubsection{\texorpdfstring{kolizja()}{kolizja()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily bool kropla\+::kolizja (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classwektor3_d}{wektor3D}}}]{ruch,  }\item[{\mbox{\hyperlink{classkropla}{kropla}}}]{a }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool kropla\+::kolizja (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classwektor3_d}{wektor3D}}}]{ruch,  }\item[{\mbox{\hyperlink{classkropla}{kropla}}}]{sprawdzana }\end{DoxyParamCaption})}
 
 
 
@@ -115,7 +115,7 @@ Pozwala na proste sprawdzenie możliwości ruchu. Wykorzystywane do symulowania 
 \begin{DoxyParams}{Parametry}
 {\em ruch} & -\/ wokonywany ruch \\
 \hline
-{\em a} & -\/ kropla, z którą jest sprawdzana kolizja \\
+{\em sprawdzana} & -\/ kropla, z którą jest sprawdzana kolizja \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Zwraca}
@@ -128,11 +128,11 @@ informacje o kolizji
 {\em false} & -\/ brak kolizji \\
 \hline
 \end{DoxyRetVals}
-\mbox{\Hypertarget{classkropla_a1f922a1406ddcedb9ad21675bf155f80}\label{classkropla_a1f922a1406ddcedb9ad21675bf155f80}} 
+\mbox{\Hypertarget{classkropla_a39bb2900744ab920c9fe63d0d6c15a49}\label{classkropla_a39bb2900744ab920c9fe63d0d6c15a49}} 
 \index{kropla@{kropla}!obroc@{obroc}}
 \index{obroc@{obroc}!kropla@{kropla}}
 \doxysubsubsection{\texorpdfstring{obroc()}{obroc()}}
-{\footnotesize\ttfamily void kropla\+::obroc (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{z }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void kropla\+::obroc (\begin{DoxyParamCaption}\item[{float}]{kat\+\_\+x,  }\item[{float}]{kat\+\_\+y,  }\item[{float}]{kat\+\_\+z }\end{DoxyParamCaption})}
 
 
 
@@ -142,11 +142,11 @@ Obracanie kropli wykonwane jest, wraz z obrotem butelki, nie potrzeba sprawdzać
 
 
 \begin{DoxyParams}{Parametry}
-{\em x} & -\/ kąt x \\
+{\em kat\+\_\+x} & -\/ kąt obrotu w osi x podany w radianach \\
 \hline
-{\em y} & -\/ kąt y \\
+{\em kat\+\_\+y} & -\/ kąt obrotu w osi y podany w radianach \\
 \hline
-{\em z} & -\/ kąt z \\
+{\em kat\+\_\+z} & -\/ kąt obrotu w osi z podany w radianach \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classkropla_af7ddee788b65ad4155f2f5032c39f9eb}\label{classkropla_af7ddee788b65ad4155f2f5032c39f9eb}} 
@@ -199,75 +199,75 @@ Rysuje krople na ekranie.
 Metoda odpowiadająca, za rysowanie kropli na ekranie. Jej położenie jest definiowane za pomocą pola p. 
 
 \doxysubsection{Dokumentacja atrybutów składowych}
-\mbox{\Hypertarget{classkropla_a9d92b8ed91afaaa1d38b71f487b6cf42}\label{classkropla_a9d92b8ed91afaaa1d38b71f487b6cf42}} 
-\index{kropla@{kropla}!kx@{kx}}
-\index{kx@{kx}!kropla@{kropla}}
-\doxysubsubsection{\texorpdfstring{kx}{kx}}
-{\footnotesize\ttfamily float kropla\+::kx}
-
-
-
-Kąt x. 
-
-Kąt względem osi x, obrotu kropli względem środka układu współrzędnych. \mbox{\Hypertarget{classkropla_abd7b767dee09303c5fb683fea75bd285}\label{classkropla_abd7b767dee09303c5fb683fea75bd285}} 
-\index{kropla@{kropla}!ky@{ky}}
-\index{ky@{ky}!kropla@{kropla}}
-\doxysubsubsection{\texorpdfstring{ky}{ky}}
-{\footnotesize\ttfamily float kropla\+::ky}
-
-
-
-Kąt y. 
-
-Kąt względem osi y, obrotu kropli względem środka układu współrzędnych. \mbox{\Hypertarget{classkropla_a90947f022a09baebc8bd085a2d34e2c5}\label{classkropla_a90947f022a09baebc8bd085a2d34e2c5}} 
-\index{kropla@{kropla}!kz@{kz}}
-\index{kz@{kz}!kropla@{kropla}}
-\doxysubsubsection{\texorpdfstring{kz}{kz}}
-{\footnotesize\ttfamily float kropla\+::kz}
-
-
-
-Kąt z. 
-
-Kąt względem osi z, obrotu kropli względem środka układu współrzędnych. \mbox{\Hypertarget{classkropla_a298c61d745bb599d61bfa203ae58e2ad}\label{classkropla_a298c61d745bb599d61bfa203ae58e2ad}} 
-\index{kropla@{kropla}!p@{p}}
-\index{p@{p}!kropla@{kropla}}
-\doxysubsubsection{\texorpdfstring{p}{p}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classwektor3_d}{wektor3D}} kropla\+::p}
-
-
-
-Wektor polozenia kropli. 
-
-Zawiera informacje o położeniu kropli, wykorzystuje klasę \mbox{\hyperlink{classwektor3_d}{wektor3D}}. \mbox{\Hypertarget{classkropla_a574a1e7dcb1999173115cdeb1edae837}\label{classkropla_a574a1e7dcb1999173115cdeb1edae837}} 
-\index{kropla@{kropla}!r@{r}}
-\index{r@{r}!kropla@{kropla}}
-\doxysubsubsection{\texorpdfstring{r}{r}}
-{\footnotesize\ttfamily float kropla\+::r}
-
-
-
-Promień kropli. 
-
-Promień kropli, jego wartość jest stała i jest ustawiana podczas inicjalizowania kropli. \mbox{\Hypertarget{classkropla_a2cf6d5b9da1bf37fe5d5588cd7f4acae}\label{classkropla_a2cf6d5b9da1bf37fe5d5588cd7f4acae}} 
-\index{kropla@{kropla}!wew@{wew}}
-\index{wew@{wew}!kropla@{kropla}}
-\doxysubsubsection{\texorpdfstring{wew}{wew}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classwektor3_d}{wektor3D}} kropla\+::wew}
-
-\textbackslash{}biref Wektor polozenia kropli wewnatrz butelki.
-
-Zawiera informacje o położeniu kropli, względem układu współrzędnych obróconego, zgodenie z butelką, wykorzystuje klasę \mbox{\hyperlink{classwektor3_d}{wektor3D}} \mbox{\Hypertarget{classkropla_ae4f8fe6b5eaac01567bb3951660a3ccf}\label{classkropla_ae4f8fe6b5eaac01567bb3951660a3ccf}} 
-\index{kropla@{kropla}!wewnatrz@{wewnatrz}}
-\index{wewnatrz@{wewnatrz}!kropla@{kropla}}
-\doxysubsubsection{\texorpdfstring{wewnatrz}{wewnatrz}}
-{\footnotesize\ttfamily bool kropla\+::wewnatrz}
+\mbox{\Hypertarget{classkropla_acb32d69485cddd36726ee16412acf235}\label{classkropla_acb32d69485cddd36726ee16412acf235}} 
+\index{kropla@{kropla}!czy\_wewnatrz@{czy\_wewnatrz}}
+\index{czy\_wewnatrz@{czy\_wewnatrz}!kropla@{kropla}}
+\doxysubsubsection{\texorpdfstring{czy\_wewnatrz}{czy\_wewnatrz}}
+{\footnotesize\ttfamily bool kropla\+::czy\+\_\+wewnatrz}
 
 
 
 Zmienna mówiąca, czy kropla jest wewnątrz butelki. 
 
-Zmienna mówiąca czy kropla jest wewnątrz butelki, true-\/ kropla znajduje sie wewnatrz butelki, false-\/ kropla znajduje sie na zewnatrz butelki 
+Zmienna mówiąca czy kropla jest wewnątrz butelki, true-\/ kropla znajduje sie wewnatrz butelki, false-\/ kropla znajduje sie na zewnatrz butelki \mbox{\Hypertarget{classkropla_a10c5b64e0c1ba3330f7c00ff15d395db}\label{classkropla_a10c5b64e0c1ba3330f7c00ff15d395db}} 
+\index{kropla@{kropla}!ostatni\_kat\_x@{ostatni\_kat\_x}}
+\index{ostatni\_kat\_x@{ostatni\_kat\_x}!kropla@{kropla}}
+\doxysubsubsection{\texorpdfstring{ostatni\_kat\_x}{ostatni\_kat\_x}}
+{\footnotesize\ttfamily float kropla\+::ostatni\+\_\+kat\+\_\+x}
+
+
+
+Kąt x (stopnie). 
+
+Kąt względem osi x, obrotu kropli względem środka układu współrzędnych podany w stopniach. \mbox{\Hypertarget{classkropla_ae274499c50c0a149ca2195fe971c8f2d}\label{classkropla_ae274499c50c0a149ca2195fe971c8f2d}} 
+\index{kropla@{kropla}!ostatni\_kat\_y@{ostatni\_kat\_y}}
+\index{ostatni\_kat\_y@{ostatni\_kat\_y}!kropla@{kropla}}
+\doxysubsubsection{\texorpdfstring{ostatni\_kat\_y}{ostatni\_kat\_y}}
+{\footnotesize\ttfamily float kropla\+::ostatni\+\_\+kat\+\_\+y}
+
+
+
+Kąt y (stopnie). 
+
+Kąt względem osi y, obrotu kropli względem środka układu współrzędnych podany w stopniach. \mbox{\Hypertarget{classkropla_a6c83466a5c8d7b22b764c42648b59b6c}\label{classkropla_a6c83466a5c8d7b22b764c42648b59b6c}} 
+\index{kropla@{kropla}!ostatni\_kat\_z@{ostatni\_kat\_z}}
+\index{ostatni\_kat\_z@{ostatni\_kat\_z}!kropla@{kropla}}
+\doxysubsubsection{\texorpdfstring{ostatni\_kat\_z}{ostatni\_kat\_z}}
+{\footnotesize\ttfamily float kropla\+::ostatni\+\_\+kat\+\_\+z}
+
+
+
+Kąt z (stopnie). 
+
+Kąt względem osi z, obrotu kropli względem środka układu współrzędnych podany w stopniach. \mbox{\Hypertarget{classkropla_a755fcf740c6ed647d980c65fb5945962}\label{classkropla_a755fcf740c6ed647d980c65fb5945962}} 
+\index{kropla@{kropla}!promien@{promien}}
+\index{promien@{promien}!kropla@{kropla}}
+\doxysubsubsection{\texorpdfstring{promien}{promien}}
+{\footnotesize\ttfamily float kropla\+::promien}
+
+
+
+Promień kropli. 
+
+Promień kropli, jego wartość jest stała i jest ustawiana podczas inicjalizowania kropli. \mbox{\Hypertarget{classkropla_a3c11b79c7041226cf416a9914c609613}\label{classkropla_a3c11b79c7041226cf416a9914c609613}} 
+\index{kropla@{kropla}!srodek\_glob@{srodek\_glob}}
+\index{srodek\_glob@{srodek\_glob}!kropla@{kropla}}
+\doxysubsubsection{\texorpdfstring{srodek\_glob}{srodek\_glob}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classwektor3_d}{wektor3D}} kropla\+::srodek\+\_\+glob}
+
+
+
+Wektor polozenia kropli. 
+
+Zawiera informacje o położeniu kropli, wykorzystuje klasę \mbox{\hyperlink{classwektor3_d}{wektor3D}}. \mbox{\Hypertarget{classkropla_a3b16de138c98496c21a56bb096327aca}\label{classkropla_a3b16de138c98496c21a56bb096327aca}} 
+\index{kropla@{kropla}!srodek\_wewn@{srodek\_wewn}}
+\index{srodek\_wewn@{srodek\_wewn}!kropla@{kropla}}
+\doxysubsubsection{\texorpdfstring{srodek\_wewn}{srodek\_wewn}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classwektor3_d}{wektor3D}} kropla\+::srodek\+\_\+wewn}
+
+\textbackslash{}biref Wektor polozenia kropli wewnatrz butelki.
+
+Zawiera informacje o położeniu kropli, względem układu współrzędnych obróconego, zgodenie z butelką, wykorzystuje klasę \mbox{\hyperlink{classwektor3_d}{wektor3D}} 
 
 Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
 \item 

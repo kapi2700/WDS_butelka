@@ -6,123 +6,121 @@
 void kropla::rysuj()
 {
 	glColor3f(0.4335f, 0.8476f, 1.0);
-	glTranslatef(p.p[0], p.p[1], p.p[2]);
-	glutSolidSphere(r, 100, 100);
-	glTranslatef(-p.p[0], -p.p[1], -p.p[2]);
+	glTranslatef(srodek_glob.p[0], srodek_glob.p[1], srodek_glob.p[2]);
+	glutSolidSphere(promien, 100, 100);
+	glTranslatef(-srodek_glob.p[0], -srodek_glob.p[1], -srodek_glob.p[2]);
 }
 
 kropla::kropla()
 {
 	bool czydobre = false;
-	r = 0.05;						//promien kropli
-	kx = 0;
-	ky = 0;
-	kz = 0;
+	promien = 0.05;						//promien kropli
+	ostatni_kat_x = 0;
+	ostatni_kat_y = 0;
+	ostatni_kat_z = 0;
 
 
 	while (!czydobre)
 	{
-		p.p[0] = ((float)(rand() % 8000)) / 10000 - 0.4f;
-		p.p[1] = ((float)(rand() % 8000)) / 10000 - 0.4f;
-		p.p[2] = ((float)(rand() % 8000)) / 10000 - 0.4f;
+		srodek_glob.p[0] = ((float)(rand() % 8000)) / 10000 - 0.4f;
+		srodek_glob.p[1] = ((float)(rand() % 8000)) / 10000 - 0.4f;
+		srodek_glob.p[2] = ((float)(rand() % 8000)) / 10000 - 0.4f;
 
-		if ((p.odlegloscY() < 0.4))
+		if ((srodek_glob.odlegloscY() < 0.4))
 			czydobre = true;
 	}
 
-	wew = p;
-	wewnatrz = true;
+	srodek_wewn = srodek_glob;
+	czy_wewnatrz = true;
 }
 
 kropla::~kropla()
 {
 }
 
-void kropla::obroc(float x, float y, float z)
+void kropla::obroc(float kat_x, float kat_y, float kat_z)
 {
-	if (!wewnatrz)
+	if (!czy_wewnatrz)
 		return;
 
-	macierz_rot macz(kz, 'z');
-	macierz_rot macx(kx, 'x');
-	macierz_rot macy(ky, 'y');
+	macierz_rot macx(ostatni_kat_x, 'x');
+	macierz_rot macy(ostatni_kat_y, 'y');
 
-    x = x * (float)PI / 180.0f;
-    y = y * (float)PI / 180.0f;
-    
-	//p = pstart;
-	p.mnozenie(macy);
-	p.mnozenie(macx);
+    kat_x = kat_x * (float)PI / 180.0f;
+    kat_y = kat_y * (float)PI / 180.0f;
 
-	macx = { x, 'x' };
-	macy = { y, 'y' };
+	srodek_glob.mnozenie(macy);
+	srodek_glob.mnozenie(macx);
 
-	p.mnozenie(macx);
-	p.mnozenie(macy);
+	macx = { kat_x, 'x' };
+	macy = { kat_y, 'y' };
 
-	kx = -x;
-	ky = -y;
-	//kz = -z;
+	srodek_glob.mnozenie(macx);
+	srodek_glob.mnozenie(macy);
+
+	ostatni_kat_x = -kat_x;
+	ostatni_kat_y = -kat_y;
 }
 
 void kropla::ruch(wektor3D wek)
 {
-	macierz_rot macx(kx, 'x');
-	macierz_rot macy(ky, 'y');
+	macierz_rot macx(ostatni_kat_x, 'x');
+	macierz_rot macy(ostatni_kat_y, 'y');
 
-	p = p + wek;
-	wek.mnozenie(macx);
+	srodek_glob = srodek_glob + wek;
 	wek.mnozenie(macy);
+	wek.mnozenie(macx);
 
-	wew = wew + wek;
+	srodek_wewn = srodek_wewn + wek;
 }
 
 bool kropla::kolizja(wektor3D ruch)
 {
 	wektor3D poruchuwew;
 	wektor3D poruchu;
-	macierz_rot rotx(kx, 'x');
-	macierz_rot roty(ky, 'y');
+	macierz_rot rotx(ostatni_kat_x, 'x');
+	macierz_rot roty(ostatni_kat_y, 'y');
 
-	poruchu = p + ruch;
+	poruchu = srodek_glob + ruch;
 
-	ruch.mnozenie(rotx);
 	ruch.mnozenie(roty);
+	ruch.mnozenie(rotx);
 
-	poruchuwew = wew + ruch;
+
+	poruchuwew = srodek_wewn + ruch;
 
 
-	if (poruchuwew.p[1] < (-1+r))												//kropla na spodzie butelki
+	if (poruchuwew.p[1] < (-1+promien))												//kropla na spodzie butelki
 		return true;
-	if ((poruchuwew.p[1] >= (-1+r)) && (poruchuwew.p[1] < (1.1-r)))				//kropla w g³ównej czêœci butelki
+	if ((poruchuwew.p[1] >= (-1+ promien)) && (poruchuwew.p[1] < (1- promien)))				//kropla w g³ównej czêœci butelki
 	{
-		if (poruchuwew.odlegloscY() > (0.5 - r-0.05))
+		if (poruchuwew.odlegloscY() > (0.5 - promien -0.05))
 		{
 			return true;
 		}
 	}
-	else if ((poruchuwew.p[1] >= (1.1 - r)) && (poruchuwew.p[1] <= 1.5 + r))	//kropla w w¹skiej czêœci butelki
+	else if ((poruchuwew.p[1] >= (1 - promien)) && (poruchuwew.p[1] <= 1.5 + promien))	//kropla w w¹skiej czêœci butelki
 	{
-		if (poruchuwew.odlegloscY() > (0.15 - r))
+		if (poruchuwew.odlegloscY() > (0.15 - promien))
 		{
 			return true;
 		}
 	}
-	else if ((poruchuwew.p[1] > 1.5 + r))										
+	else if ((poruchuwew.p[1] > 1.5 + promien))
 	{
-		wewnatrz = false;
+		czy_wewnatrz = false;
 		return false;
 	}	
 	return false;
 }
 
 
-bool kropla::kolizja(wektor3D ruch, kropla a)
+bool kropla::kolizja(wektor3D ruch, kropla sprawdzana)
 {
 	wektor3D poruchu;
-	poruchu = p + ruch;
+	poruchu = srodek_glob + ruch;
 
-	if (a.odleglosc(poruchu) < (2 * r))
+	if (sprawdzana.odleglosc(poruchu) < (2 * promien))
 		return true;
 	return false;
 }
@@ -132,7 +130,7 @@ float kropla::odleglosc(wektor3D start)
 {
 	float odl;
 
-	start = start - p;
+	start = start - srodek_glob;
 
 	odl = (float)sqrt(((double)start.p[0] * start.p[0]) + ((double)start.p[1] * start.p[1]) + ((double)start.p[2] * start.p[2]));
 

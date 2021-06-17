@@ -2,7 +2,7 @@
 
 scena::scena(int n)
 {
-    m = n;
+    ilosc_kropli = n;
     w = n;
 }
 
@@ -22,7 +22,7 @@ void scena::obrot()
 
 
 
-    ////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////
 
     ////=====================Do Testow=====================
     ////================Butelka do gory nogami=============
@@ -38,7 +38,7 @@ void scena::obrot()
     //return;
     ////===================================================
 
-    ////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////
 
     ////=====================Do Testow=====================
     ////================Butelka do na boku=================
@@ -122,9 +122,9 @@ void scena::obrot()
         obry = obry / iloscDanych;
         obrz = obrz / iloscDanych;
 
-        for (int i = 0; i < ob.size(); i++)
+        for (int i = 0; i < obiekty.size(); i++)
         {
-            ob[i].obroc(obrx + 90.0f, obry, obrz);
+            obiekty[i].obroc(obrx + 90.0f, obry, obrz);
         }
         w.obroc(obrx + 90.0f, obry, obrz);
     }
@@ -134,9 +134,9 @@ void scena::rysuj()
 {
     w.rysuj();
     glBegin(GL_TRIANGLES);            //Begin drawing the bottle as traingles
-    for (unsigned int i = 0; i < ob.size(); i++)
+    for (unsigned int i = 0; i < obiekty.size(); i++)
     {
-        ob[i].rysuj();
+        obiekty[i].rysuj();
     }
     glEnd();
 }

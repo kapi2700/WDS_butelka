@@ -2,7 +2,7 @@ var classobiekt3_d =
 [
     [ "obiekt3D", "classobiekt3_d.html#a2c6d03ad93feb729adf148c38107f22e", null ],
     [ "~obiekt3D", "classobiekt3_d.html#a7a8683e31a0bf6ea587edd9f8d58abf5", null ],
-    [ "obroc", "classobiekt3_d.html#af354b163a4da9969404db3bdba62f1ee", null ],
+    [ "obroc", "classobiekt3_d.html#af8ba8442d2b7bc1ed9194e8572b8bb2d", null ],
     [ "rysuj", "classobiekt3_d.html#a33f368c6946f9c1a11d2d111a152743b", null ],
     [ "alpha", "classobiekt3_d.html#a696cc5b198651f3f0e5e237f08e7bcbd", null ],
     [ "color", "classobiekt3_d.html#a109bd50141b9ab8722406df36d7d6167", null ],

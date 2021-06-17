@@ -1,42 +1,20 @@
-﻿  WDS_butelka2.0.cpp
-C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\WDS_butelka2.0.cpp(47,19): warning C4305: '+=': truncation from 'double' to 'float'
-C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\WDS_butelka2.0.cpp(52,19): warning C4305: '-=': truncation from 'double' to 'float'
-  kropla.cpp
-C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\kropla.cpp(17,10): warning C4305: '=': truncation from 'double' to 'float'
-  macierz_rot.cpp
-C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\macierz_rot.cpp(21,16): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\macierz_rot.cpp(22,13): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\macierz_rot.cpp(25,16): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\macierz_rot.cpp(26,16): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\macierz_rot.cpp(29,16): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\macierz_rot.cpp(31,16): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\macierz_rot.cpp(37,13): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\macierz_rot.cpp(39,16): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\macierz_rot.cpp(42,16): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\macierz_rot.cpp(43,13): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\macierz_rot.cpp(46,16): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\macierz_rot.cpp(47,16): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-  obiekt3D.cpp
-C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\obiekt3D.cpp(107,41): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\obiekt3D.cpp(123,36): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\obiekt3D.cpp(137,37): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\obiekt3D.cpp(151,35): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+﻿  kropla.cpp
+C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\kropla.cpp(17,16): warning C4305: '=': truncation from 'double' to 'float'
   scena.cpp
 C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\scena.cpp(125,27): warning C4018: '<': signed/unsigned mismatch
-  wektor3D.cpp
   woda.cpp
-C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\woda.cpp(63,19): warning C4305: '=': truncation from 'double' to 'float'
-C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\woda.cpp(89,21): warning C4305: '=': truncation from 'double' to 'float'
-C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\woda.cpp(90,20): warning C4305: '=': truncation from 'double' to 'float'
-C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\woda.cpp(116,21): warning C4305: '=': truncation from 'double' to 'float'
-C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\woda.cpp(117,20): warning C4305: '=': truncation from 'double' to 'float'
-C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\woda.cpp(142,21): warning C4305: '=': truncation from 'double' to 'float'
-C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\woda.cpp(143,21): warning C4305: '=': truncation from 'double' to 'float'
-C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\woda.cpp(169,20): warning C4305: '=': truncation from 'double' to 'float'
-C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\woda.cpp(170,21): warning C4305: '=': truncation from 'double' to 'float'
-C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\woda.cpp(196,20): warning C4305: '=': truncation from 'double' to 'float'
-C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\woda.cpp(223,21): warning C4305: '=': truncation from 'double' to 'float'
-C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\woda.cpp(252,20): warning C4305: '=': truncation from 'double' to 'float'
-C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\woda.cpp(279,21): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\woda.cpp(63,18): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\woda.cpp(89,20): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\woda.cpp(90,19): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\woda.cpp(116,20): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\woda.cpp(117,19): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\woda.cpp(142,20): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\woda.cpp(143,20): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\woda.cpp(169,19): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\woda.cpp(170,20): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\woda.cpp(196,19): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\woda.cpp(223,20): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\woda.cpp(252,19): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\kapi2\source\repos\WDS_butelka2.0\WDS_butelka2.0\woda.cpp(279,20): warning C4305: '=': truncation from 'double' to 'float'
   Generating Code...
   WDS_butelka2.0.vcxproj -> C:\Users\kapi2\source\repos\WDS_butelka2.0\Debug\WDS_butelka2.0.exe

@@ -137,13 +137,13 @@ public:
     /**
      * \brief Obraca obiekt o podane k¹ty, wzglêdem pozycji pocz¹tkowej.
      * 
-     * Obraca obbiekt o podane k¹ty, wzglêdem pozycji pocz¹tkowej. K¹ty powinny byæ podane w stopniach.
+     * Obraca obbiekt o podane k¹ty, wzglêdem pozycji pocz¹tkowej.
      * 
-     * \param x - k¹t obrotu w osi x
-     * \param y - k¹t obrotu w osi y
-     * \param z - k¹t obrotu w osi z
+     * \param kat_x - k¹t obrotu w osi x podany w radianach
+     * \param kat_y - k¹t obrotu w osi y  podany w radianach
+     * \param kat_z - k¹t obrotu w osi z podany w radianach
      */
-    void obroc(float x, float y, float z);
+    void obroc(float kat_x, float kat_y, float kat_z);
 
     /**
      * \brief Rysuje obiekt3D.

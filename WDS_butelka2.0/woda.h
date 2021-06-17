@@ -27,30 +27,30 @@ class woda
 	 * \brief Zmienna przechowywujace kat x obrotu wody.
 	 * K¹t obrotu wody wzglêdem osi x, wzglêdem pierwotnej pozycji.
 	 */
-	float kx;
+	float ostatni_kat_x;
 	/**
 	 * \brief Zmienna przechowywujace kat y obrotu wody.
 	 * K¹t obrotu wody wzglêdem osi y, wzglêdem pierwotnej pozycji.
 	 */
-	float ky;
+	float ostatni_kat_y;
 	/**
 	 * \brief Zmienna przechowywujace kat z obrotu wody.
 	 * K¹t obrotu wody wzglêdem osi z, wzglêdem pierwotnej pozycji.
 	 */
-	float kz;
+	float ostatni_kat_z;
 public:
 	/**
 	 * \brief Krople wody.
 	 * 
 	 * Zmienna przechowywujaca kazda krople wody.
 	 */
-	vector<kropla> k;
+	vector<kropla> krople;
 	/**
 	 * \brief Ilosc kropli wody.
 	 *
 	 * Ilosc kropli wody.
 	 */
-	int l;
+	int ilosc_kropli;
 	woda() {}
 	/**
 	 * \brief Inicjuje krople wody.
@@ -71,11 +71,11 @@ public:
 	 * 
 	 * Wykorzystywane do obracania wody, podczas obracania butelki.
 	 * 
-	 * \param x - kat w osi x
-	 * \param y - kat w osi y
-	 * \param z - kat w osi z
+	 * \param kat_x - kat w osi x podany w radianach
+	 * \param kat_y - kat w osi y podany w radianach
+	 * \param kat_z - kat w osi z podany w radianach
 	 */
-	void obroc(float x, float y, float z);
+	void obroc(float kat_x, float kat_y, float kat_z);
 	/**
 	 * \brief Grawitacja dzialajaca na wode.
 	 * 
