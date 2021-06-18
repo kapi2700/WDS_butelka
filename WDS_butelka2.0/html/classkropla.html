@@ -111,9 +111,9 @@ Metody publiczne</h2></td></tr>
 <tr class="memitem:af7ddee788b65ad4155f2f5032c39f9eb"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkropla.html#af7ddee788b65ad4155f2f5032c39f9eb">odleglosc</a> (<a class="el" href="classwektor3_d.html">wektor3D</a> start)</td></tr>
 <tr class="memdesc:af7ddee788b65ad4155f2f5032c39f9eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sprawdza odleglosc kropli, od podanego wektora.  <a href="classkropla.html#af7ddee788b65ad4155f2f5032c39f9eb">Więcej...</a><br /></td></tr>
 <tr class="separator:af7ddee788b65ad4155f2f5032c39f9eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac855ac03116a68d9e125f04275ce051d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkropla.html#ac855ac03116a68d9e125f04275ce051d">kolizja</a> (<a class="el" href="classwektor3_d.html">wektor3D</a> <a class="el" href="classkropla.html#ac47c98278213d8bc14891da7c142c8e7">ruch</a>, <a class="el" href="classkropla.html">kropla</a> sprawdzana)</td></tr>
-<tr class="memdesc:ac855ac03116a68d9e125f04275ce051d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sprawdza czy kropla będzie kolidować z inną kroplą.  <a href="classkropla.html#ac855ac03116a68d9e125f04275ce051d">Więcej...</a><br /></td></tr>
-<tr class="separator:ac855ac03116a68d9e125f04275ce051d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67317413364f7b2482a06c7039382010"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkropla.html#a67317413364f7b2482a06c7039382010">kolizja</a> (<a class="el" href="classwektor3_d.html">wektor3D</a> const &amp;<a class="el" href="classkropla.html#ac47c98278213d8bc14891da7c142c8e7">ruch</a>, <a class="el" href="classkropla.html">kropla</a> sprawdzana)</td></tr>
+<tr class="memdesc:a67317413364f7b2482a06c7039382010"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sprawdza czy kropla będzie kolidować z inną kroplą.  <a href="classkropla.html#a67317413364f7b2482a06c7039382010">Więcej...</a><br /></td></tr>
+<tr class="separator:a67317413364f7b2482a06c7039382010"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac47c98278213d8bc14891da7c142c8e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkropla.html#ac47c98278213d8bc14891da7c142c8e7">ruch</a> (<a class="el" href="classwektor3_d.html">wektor3D</a> wek)</td></tr>
 <tr class="memdesc:ac47c98278213d8bc14891da7c142c8e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wykonuje ruch kropli.  <a href="classkropla.html#ac47c98278213d8bc14891da7c142c8e7">Więcej...</a><br /></td></tr>
 <tr class="separator:ac47c98278213d8bc14891da7c142c8e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -186,8 +186,8 @@ Atrybuty publiczne</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Dokumentacja funkcji składowych</h2>
-<a id="a180465469c3069fc6f79eb07c36429d7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a180465469c3069fc6f79eb07c36429d7">&#9670;&nbsp;</a></span>kolizja() <span class="overload">[1/2]</span></h2>
+<a id="a67317413364f7b2482a06c7039382010"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67317413364f7b2482a06c7039382010">&#9670;&nbsp;</a></span>kolizja() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -195,42 +195,7 @@ Atrybuty publiczne</h2></td></tr>
         <tr>
           <td class="memname">bool kropla::kolizja </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classwektor3_d.html">wektor3D</a>&#160;</td>
-          <td class="paramname"><em>ruch</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sprawdza, czy kropla będzie kolidować z butelką. </p>
-<p>Pozwala na proste sprwadzenie możliwości ruchu. W tej metodzie, butelka jest przybliżana do dwóch połączonych ze sobą walców.</p>
-<dl class="params"><dt>Parametry</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">ruch</td><td>- ruch jaki kropla ma wykonać </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Zwraca</dt><dd>informacje o kolizji </dd></dl>
-<dl class="retval"><dt>Zwracane wartości</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">true</td><td>- kolizja </td></tr>
-    <tr><td class="paramname">false</td><td>- brak kolizji </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ac855ac03116a68d9e125f04275ce051d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac855ac03116a68d9e125f04275ce051d">&#9670;&nbsp;</a></span>kolizja() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool kropla::kolizja </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classwektor3_d.html">wektor3D</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classwektor3_d.html">wektor3D</a> const &amp;&#160;</td>
           <td class="paramname"><em>ruch</em>, </td>
         </tr>
         <tr>
@@ -251,12 +216,45 @@ Atrybuty publiczne</h2></td></tr>
 <p>Pozwala na proste sprawdzenie możliwości ruchu. Wykorzystywane do symulowania grawitacji</p>
 <dl class="params"><dt>Parametry</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ruch</td><td>- wokonywany ruch </td></tr>
-    <tr><td class="paramname">sprawdzana</td><td>- kropla, z którą jest sprawdzana kolizja </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ruch</td><td>- wokonywany ruch </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sprawdzana</td><td>- kropla, z którą jest sprawdzana kolizja </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Zwraca</dt><dd>informacje o kolizji </dd></dl>
+<dl class="retval"><dt>Zwracane wartości</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>- kolizja </td></tr>
+    <tr><td class="paramname">false</td><td>- brak kolizji </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a180465469c3069fc6f79eb07c36429d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a180465469c3069fc6f79eb07c36429d7">&#9670;&nbsp;</a></span>kolizja() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool kropla::kolizja </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classwektor3_d.html">wektor3D</a>&#160;</td>
+          <td class="paramname"><em>ruch</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sprawdza, czy kropla będzie kolidować z butelką. </p>
+<p>Pozwala na proste sprwadzenie możliwości ruchu. W tej metodzie, butelka jest przybliżana do dwóch połączonych ze sobą walców.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ruch</td><td>- ruch jaki kropla ma wykonać </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="retval"><dt>Zwracane wartości</dt><dd>
   <table class="retval">
     <tr><td class="paramname">true</td><td>- kolizja </td></tr>
@@ -303,9 +301,9 @@ Atrybuty publiczne</h2></td></tr>
 <p>Obracanie kropli wykonwane jest, wraz z obrotem butelki, nie potrzeba sprawdzać kolizji podczas wykonywania tej metody.</p>
 <dl class="params"><dt>Parametry</dt><dd>
   <table class="params">
-    <tr><td class="paramname">kat_x</td><td>- kąt obrotu w osi x podany w radianach </td></tr>
-    <tr><td class="paramname">kat_y</td><td>- kąt obrotu w osi y podany w radianach </td></tr>
-    <tr><td class="paramname">kat_z</td><td>- kąt obrotu w osi z podany w radianach </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">kat_x</td><td>- kąt obrotu w osi x podany w radianach </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">kat_y</td><td>- kąt obrotu w osi y podany w radianach </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">kat_z</td><td>- kąt obrotu w osi z podany w radianach </td></tr>
   </table>
   </dd>
 </dl>
@@ -332,7 +330,7 @@ Atrybuty publiczne</h2></td></tr>
 <p>Metoda pozwalająca na łatwe ustalenie odległości kroli, względem środka innego obiektu.</p>
 <dl class="params"><dt>Parametry</dt><dd>
   <table class="params">
-    <tr><td class="paramname">start</td><td>- wektor od ktorego sprawdzana jest odleglosc </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">start</td><td>- wektor od ktorego sprawdzana jest odleglosc </td></tr>
   </table>
   </dd>
 </dl>
@@ -360,7 +358,7 @@ Atrybuty publiczne</h2></td></tr>
 <p>Metoda ta zmienia dane o położeniu kropli zmieniając pola p oraz wew klasy kropla.</p>
 <dl class="params"><dt>Parametry</dt><dd>
   <table class="params">
-    <tr><td class="paramname">wek</td><td>- jak kropla powinna się ruszyć </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">wek</td><td>- jak kropla powinna się ruszyć </td></tr>
   </table>
   </dd>
 </dl>

@@ -30,7 +30,7 @@ public:
 	 * 
 	 * Mno¿y wektor przez macierz rotacji 3x3.
 	 * 
-	 * \param m - macierz rotacji
+	 * \param[in] m - macierz rotacji
 	 */
 	void mnozenie(macierz_rot m);
 	/**

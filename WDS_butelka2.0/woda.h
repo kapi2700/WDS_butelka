@@ -25,17 +25,20 @@ class woda
 {
 	/**
 	 * \brief Zmienna przechowywujace kat x obrotu wody.
-	 * K¹t obrotu wody wzglêdem osi x, wzglêdem pierwotnej pozycji.
+	 * 
+	 * K¹t obrotu wody wzglêdem osi x, wzglêdem pierwotnej pozycji podany w stopniach.
 	 */
 	float ostatni_kat_x;
 	/**
 	 * \brief Zmienna przechowywujace kat y obrotu wody.
-	 * K¹t obrotu wody wzglêdem osi y, wzglêdem pierwotnej pozycji.
+	 * 
+	 * K¹t obrotu wody wzglêdem osi y, wzglêdem pierwotnej pozycji podany w stopniach.
 	 */
 	float ostatni_kat_y;
 	/**
 	 * \brief Zmienna przechowywujace kat z obrotu wody.
-	 * K¹t obrotu wody wzglêdem osi z, wzglêdem pierwotnej pozycji.
+	 * 
+	 * K¹t obrotu wody wzglêdem osi z, wzglêdem pierwotnej pozycji podany w stopniach.
 	 */
 	float ostatni_kat_z;
 public:
@@ -57,7 +60,7 @@ public:
 	 * 
 	 * Zape³nie zmienn¹ k, odpowiedni¹ iloœci¹ kropli wody
 	 * 
-	 * \param n - iloœæ kropli
+	 * \param[in] n - iloœæ kropli
 	 */
 	woda(int n);
 	/**
@@ -71,9 +74,9 @@ public:
 	 * 
 	 * Wykorzystywane do obracania wody, podczas obracania butelki.
 	 * 
-	 * \param kat_x - kat w osi x podany w radianach
-	 * \param kat_y - kat w osi y podany w radianach
-	 * \param kat_z - kat w osi z podany w radianach
+	 * \param[in] kat_x - kat w osi x podany w radianach
+	 * \param[in] kat_y - kat w osi y podany w radianach
+	 * \param[in] kat_z - kat w osi z podany w radianach
 	 */
 	void obroc(float kat_x, float kat_y, float kat_z);
 	/**

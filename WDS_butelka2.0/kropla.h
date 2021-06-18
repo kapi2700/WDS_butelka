@@ -88,9 +88,9 @@ public:
 	 * 
 	 * Obracanie kropli wykonwane jest, wraz z obrotem butelki, nie potrzeba sprawdzaæ kolizji podczas wykonywania tej metody.
 	 * 
-	 * \param kat_x - k¹t obrotu w osi x podany w radianach
-	 * \param kat_y - k¹t obrotu w osi y  podany w radianach
-	 * \param kat_z - k¹t obrotu w osi z podany w radianach
+	 * \param[in] kat_x - k¹t obrotu w osi x podany w radianach
+	 * \param[in] kat_y - k¹t obrotu w osi y  podany w radianach
+	 * \param[in] kat_z - k¹t obrotu w osi z podany w radianach
 	 */
 	void obroc(float kat_x, float kat_y, float kat_z);
 
@@ -100,7 +100,7 @@ public:
 	 * 
 	 * Metoda pozwalaj¹ca na ³atwe ustalenie odleg³oœci kroli, wzglêdem œrodka innego obiektu.
 	 * 
-	 * \param start - wektor od ktorego sprawdzana jest odleglosc
+	 * \param[in] start - wektor od ktorego sprawdzana jest odleglosc
 	 * \return - otrzymana odleglosc
 	 */
 	float odleglosc(wektor3D start);
@@ -110,21 +110,20 @@ public:
 	 * 
 	 * Pozwala na proste sprawdzenie mo¿liwoœci ruchu. Wykorzystywane do symulowania grawitacji
 	 * 
-	 * \param ruch - wokonywany ruch
-	 * \param sprawdzana - kropla, z któr¹ jest sprawdzana kolizja
-	 * \return  informacje o kolizji
+	 * \param[in] ruch - wokonywany ruch
+	 * \param[in] sprawdzana - kropla, z któr¹ jest sprawdzana kolizja
 	 * \retval true - kolizja
 	 * \retval false - brak kolizji
 	 * 
 	 */
-	bool kolizja(wektor3D ruch, kropla sprawdzana);
+	bool kolizja(wektor3D const& ruch, kropla sprawdzana);
 	
 	/**
 	 * \brief Wykonuje ruch kropli.
 	 * 
 	 * Metoda ta zmienia dane o po³o¿eniu kropli zmieniaj¹c pola p oraz wew klasy kropla.
 	 * 
-	 * \param wek - jak kropla powinna siê ruszyæ
+	 * \param[in] wek - jak kropla powinna siê ruszyæ
 	 */
 	void ruch(wektor3D wek);
 	/**
@@ -132,8 +131,7 @@ public:
 	 * 
 	 * Pozwala na proste sprwadzenie mo¿liwoœci ruchu. W tej metodzie, butelka jest przybli¿ana do dwóch po³¹czonych ze sob¹ walców.
 	 * 
-	 * \param ruch - ruch jaki kropla ma wykonaæ
-	 * \return  informacje o kolizji
+	 * \param[in] ruch - ruch jaki kropla ma wykonaæ
 	 * \retval true - kolizja
 	 * \retval false - brak kolizji
 	 */

@@ -43,7 +43,7 @@ public:
 	 * 
 	 * Inicjuje klase scena. Nie zmienia informacji dotycz¹cych pola ob. Inicjuje ona tylko wartoœæ m oraz w.
 	 * 
-	 * \param n - iloœæ kropli wody
+	 * \param[in] n - iloœæ kropli wody
 	 */
 	scena(int n);
 	/**

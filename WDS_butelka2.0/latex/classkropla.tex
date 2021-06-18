@@ -22,7 +22,7 @@ void \mbox{\hyperlink{classkropla_a39bb2900744ab920c9fe63d0d6c15a49}{obroc}} (fl
 \begin{DoxyCompactList}\small\item\em Obraca krople wzgledem środka współrzędnych. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{classkropla_af7ddee788b65ad4155f2f5032c39f9eb}{odleglosc}} (\mbox{\hyperlink{classwektor3_d}{wektor3D}} start)
 \begin{DoxyCompactList}\small\item\em Sprawdza odleglosc kropli, od podanego wektora. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classkropla_ac855ac03116a68d9e125f04275ce051d}{kolizja}} (\mbox{\hyperlink{classwektor3_d}{wektor3D}} \mbox{\hyperlink{classkropla_ac47c98278213d8bc14891da7c142c8e7}{ruch}}, \mbox{\hyperlink{classkropla}{kropla}} sprawdzana)
+bool \mbox{\hyperlink{classkropla_a67317413364f7b2482a06c7039382010}{kolizja}} (\mbox{\hyperlink{classwektor3_d}{wektor3D}} const \&\mbox{\hyperlink{classkropla_ac47c98278213d8bc14891da7c142c8e7}{ruch}}, \mbox{\hyperlink{classkropla}{kropla}} sprawdzana)
 \begin{DoxyCompactList}\small\item\em Sprawdza czy kropla będzie kolidować z inną kroplą. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classkropla_ac47c98278213d8bc14891da7c142c8e7}{ruch}} (\mbox{\hyperlink{classwektor3_d}{wektor3D}} wek)
 \begin{DoxyCompactList}\small\item\em Wykonuje ruch kropli. \end{DoxyCompactList}\item 
@@ -72,10 +72,36 @@ Podczas inicjalizowania, nadaje wartość r=0.\+05 oraz sprawdza, czy jej poło�
 
 
 \doxysubsection{Dokumentacja funkcji składowych}
-\mbox{\Hypertarget{classkropla_a180465469c3069fc6f79eb07c36429d7}\label{classkropla_a180465469c3069fc6f79eb07c36429d7}} 
+\mbox{\Hypertarget{classkropla_a67317413364f7b2482a06c7039382010}\label{classkropla_a67317413364f7b2482a06c7039382010}} 
 \index{kropla@{kropla}!kolizja@{kolizja}}
 \index{kolizja@{kolizja}!kropla@{kropla}}
 \doxysubsubsection{\texorpdfstring{kolizja()}{kolizja()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool kropla\+::kolizja (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classwektor3_d}{wektor3D}} const \&}]{ruch,  }\item[{\mbox{\hyperlink{classkropla}{kropla}}}]{sprawdzana }\end{DoxyParamCaption})}
+
+
+
+Sprawdza czy kropla będzie kolidować z inną kroplą. 
+
+Pozwala na proste sprawdzenie możliwości ruchu. Wykorzystywane do symulowania grawitacji
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ in}}  & {\em ruch} & -\/ wokonywany ruch \\
+\hline
+\mbox{\texttt{ in}}  & {\em sprawdzana} & -\/ kropla, z którą jest sprawdzana kolizja \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Zwracane wartości}
+{\em true} & -\/ kolizja \\
+\hline
+{\em false} & -\/ brak kolizji \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classkropla_a180465469c3069fc6f79eb07c36429d7}\label{classkropla_a180465469c3069fc6f79eb07c36429d7}} 
+\index{kropla@{kropla}!kolizja@{kolizja}}
+\index{kolizja@{kolizja}!kropla@{kropla}}
+\doxysubsubsection{\texorpdfstring{kolizja()}{kolizja()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily bool kropla\+::kolizja (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classwektor3_d}{wektor3D}}}]{ruch }\end{DoxyParamCaption})}
 
 
@@ -85,42 +111,10 @@ Sprawdza, czy kropla będzie kolidować z butelką.
 Pozwala na proste sprwadzenie możliwości ruchu. W tej metodzie, butelka jest przybliżana do dwóch połączonych ze sobą walców.
 
 
-\begin{DoxyParams}{Parametry}
-{\em ruch} & -\/ ruch jaki kropla ma wykonać \\
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ in}}  & {\em ruch} & -\/ ruch jaki kropla ma wykonać \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Zwraca}
-informacje o kolizji 
-\end{DoxyReturn}
-
-\begin{DoxyRetVals}{Zwracane wartości}
-{\em true} & -\/ kolizja \\
-\hline
-{\em false} & -\/ brak kolizji \\
-\hline
-\end{DoxyRetVals}
-\mbox{\Hypertarget{classkropla_ac855ac03116a68d9e125f04275ce051d}\label{classkropla_ac855ac03116a68d9e125f04275ce051d}} 
-\index{kropla@{kropla}!kolizja@{kolizja}}
-\index{kolizja@{kolizja}!kropla@{kropla}}
-\doxysubsubsection{\texorpdfstring{kolizja()}{kolizja()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily bool kropla\+::kolizja (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classwektor3_d}{wektor3D}}}]{ruch,  }\item[{\mbox{\hyperlink{classkropla}{kropla}}}]{sprawdzana }\end{DoxyParamCaption})}
-
-
-
-Sprawdza czy kropla będzie kolidować z inną kroplą. 
-
-Pozwala na proste sprawdzenie możliwości ruchu. Wykorzystywane do symulowania grawitacji
-
-
-\begin{DoxyParams}{Parametry}
-{\em ruch} & -\/ wokonywany ruch \\
-\hline
-{\em sprawdzana} & -\/ kropla, z którą jest sprawdzana kolizja \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Zwraca}
-informacje o kolizji 
-\end{DoxyReturn}
 
 \begin{DoxyRetVals}{Zwracane wartości}
 {\em true} & -\/ kolizja \\
@@ -141,12 +135,12 @@ Obraca krople wzgledem środka współrzędnych.
 Obracanie kropli wykonwane jest, wraz z obrotem butelki, nie potrzeba sprawdzać kolizji podczas wykonywania tej metody.
 
 
-\begin{DoxyParams}{Parametry}
-{\em kat\+\_\+x} & -\/ kąt obrotu w osi x podany w radianach \\
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ in}}  & {\em kat\+\_\+x} & -\/ kąt obrotu w osi x podany w radianach \\
 \hline
-{\em kat\+\_\+y} & -\/ kąt obrotu w osi y podany w radianach \\
+\mbox{\texttt{ in}}  & {\em kat\+\_\+y} & -\/ kąt obrotu w osi y podany w radianach \\
 \hline
-{\em kat\+\_\+z} & -\/ kąt obrotu w osi z podany w radianach \\
+\mbox{\texttt{ in}}  & {\em kat\+\_\+z} & -\/ kąt obrotu w osi z podany w radianach \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classkropla_af7ddee788b65ad4155f2f5032c39f9eb}\label{classkropla_af7ddee788b65ad4155f2f5032c39f9eb}} 
@@ -162,8 +156,8 @@ Sprawdza odleglosc kropli, od podanego wektora.
 Metoda pozwalająca na łatwe ustalenie odległości kroli, względem środka innego obiektu.
 
 
-\begin{DoxyParams}{Parametry}
-{\em start} & -\/ wektor od ktorego sprawdzana jest odleglosc \\
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ in}}  & {\em start} & -\/ wektor od ktorego sprawdzana jest odleglosc \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Zwraca}
@@ -182,8 +176,8 @@ Wykonuje ruch kropli.
 Metoda ta zmienia dane o położeniu kropli zmieniając pola p oraz wew klasy kropla.
 
 
-\begin{DoxyParams}{Parametry}
-{\em wek} & -\/ jak kropla powinna się ruszyć \\
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ in}}  & {\em wek} & -\/ jak kropla powinna się ruszyć \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classkropla_a82e8ecd74ec1926cdcef78a8cffa4bc8}\label{classkropla_a82e8ecd74ec1926cdcef78a8cffa4bc8}} 

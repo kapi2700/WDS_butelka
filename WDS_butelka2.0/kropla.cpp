@@ -115,7 +115,7 @@ bool kropla::kolizja(wektor3D ruch)
 }
 
 
-bool kropla::kolizja(wektor3D ruch, kropla sprawdzana)
+bool kropla::kolizja(wektor3D const& ruch, kropla sprawdzana)
 {
 	wektor3D poruchu;
 	poruchu = srodek_glob + ruch;

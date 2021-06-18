@@ -29,8 +29,8 @@ public:
 	 * 
 	 * Macierz ta powinna byæ póŸniej wykorzystana podczas wykonywania metody wektor3D::mnozenie.
 	 * 
-	 * \param a - k¹t obrotu w stopniach
-	 * \param o - oœ obrotu, powinna wynosic 'x', 'y' lub 'z'
+	 * \param[in] a - k¹t obrotu w stopniach
+	 * \param[in] o - oœ obrotu, powinna wynosic 'x', 'y' lub 'z'
 	 */
 	macierz_rot(float a,char o);
 };
